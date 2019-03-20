@@ -1,0 +1,610 @@
+/*
+  * Forever21 USA v1.1.1 10/18/2017 - Version 1
+  * Copyright Forever21
+  * Created by Elisha Lee
+*/
+/*#taco *,#taco body,#taco button,#taco a {
+  cursor: url("/us/shop/_common/images/TacoCursor.cur"), auto !important;
+}*/
+@font-face{
+  font-family:"Trade Gothic W01 BoldCn_20";
+  src:url("../Fonts/tradegothic/257c802f-349c-4b4d-aefa-546d5de15ec6.eot");
+  src:url("../Fonts/tradegothic/257c802f-349c-4b4d-aefa-546d5de15ec6.eot?#iefix") format("embedded-opentype"),
+  url("../Fonts/tradegothic/257c802f-349c-4b4d-aefa-546d5de15ec6.eot?#iefix") format("eot"),
+  url("../Fonts/tradegothic/1ba28851-f34b-4cb8-bf58-6a4b160ba249.woff2") format("woff2"),
+  url("../Fonts/tradegothic/5fdc935e-9e30-442a-bbe9-8d887b858471.woff") format("woff"),
+  url("../Fonts/tradegothic/616c4c87-a077-43f4-a9f4-f01267c13818.ttf") format("truetype"),
+  url("../Fonts/tradegothic/c901ad5f-a842-4549-a1f4-583a97f7e169.svg#c901ad5f-a842-4549-a1f4-583a97f7e169") format("svg");
+}
+/*@font-face{
+  font-family:"Avenir Next W05 Thin";
+  src:url("/us/shop/_common/fonts/avenir/745bb133-46ca-494f-903d-cfa54346eeb6.eot?#iefix");
+  src:url("/us/shop/_common/fonts/avenir/745bb133-46ca-494f-903d-cfa54346eeb6.eot?#iefix") format("eot"),
+  url("/us/shop/_common/fonts/avenir/97b33212-73e3-4d73-9848-5e562aa4cee6.woff2") format("woff2"),
+  url("/us/shop/_common/fonts/avenir/503e8637-3bba-4aa6-bb67-c6af30b96cba.woff") format("woff"),
+  url("/us/shop/_common/fonts/avenir/4126079e-77d3-4d1d-a0b2-edfc52bb6162.ttf") format("truetype"),
+  url("/us/shop/_common/fonts/avenir/d901799b-dca5-4c5f-b854-934f1977dc86.svg#d901799b-dca5-4c5f-b854-934f1977dc86") format("svg");
+}
+@font-face {
+  font-family:"AvenirNextLTW02-Regular";
+  src:url("/us/shop/_common/fonts/avenir/7a1b7ae7-5c29-481f-83ac-652e932c5509.eot?#iefix");
+  src:url("/us/shop/_common/fonts/avenir/7a1b7ae7-5c29-481f-83ac-652e932c5509.eot?#iefix") format("eot"),
+  url("/us/shop/_common/fonts/avenir/bb590848-4012-46d6-a8d5-48c9893a176b.woff2") format("woff2"),
+  url("/us/shop/_common/fonts/avenir/3a42a252-67ff-4186-88cf-762f56719ca1.woff") format("woff"),
+  url("/us/shop/_common/fonts/avenir/dbc39ae3-2636-4653-a23e-8938bce2cf51.ttf") format("truetype"),
+  url("/us/shop/_common/fonts/avenir/8e46b6cb-85f2-4400-a9d8-7cbd8ed30dd8.svg#8e46b6cb-85f2-4400-a9d8-7cbd8ed30dd8") format("svg");
+}
+@font-face{
+  font-family:"Avenir Next W05 Medium";
+  src:url("/us/shop/_common/fonts/avenir/a7d3bd64-119b-40ad-985c-a50776f2ae49.eot?#iefix");
+  src:url("/us/shop/_common/fonts/avenir/a7d3bd64-119b-40ad-985c-a50776f2ae49.eot?#iefix") format("eot"),
+  url("/us/shop/_common/fonts/avenir/9851da0a-2481-4687-bbeb-ed4ab170dc38.woff2") format("woff2"),
+  url("/us/shop/_common/fonts/avenir/cebce072-9561-4c6d-8c89-f0cefec63289.woff") format("woff"),
+  url("/us/shop/_common/fonts/avenir/8d00a64e-2d77-46b1-8804-6012868d61c9.ttf") format("truetype"),
+  url("/us/shop/_common/fonts/avenir/bd1a6360-2055-4426-b79c-125cc744940c.svg#bd1a6360-2055-4426-b79c-125cc744940c") format("svg");
+}
+@font-face{
+  font-family:"Avenir Next W05 Demi";
+  src:url("/us/shop/_common/fonts/avenir/ad075618-025f-46f7-810a-93c2052fe2cb.eot?#iefix");
+  src:url("/us/shop/_common/fonts/avenir/ad075618-025f-46f7-810a-93c2052fe2cb.eot?#iefix") format("eot"),
+  url("/us/shop/_common/fonts/avenir/e78b17bb-11fb-4860-8d66-4ee0d0c1e117.woff2") format("woff2"),
+  url("/us/shop/_common/fonts/avenir/d4ffabb3-dd7c-472a-bdfb-6700383c6354.woff") format("woff"),
+  url("/us/shop/_common/fonts/avenir/d4c776aa-fc5c-46da-abe5-5974fcbb1251.ttf") format("truetype"),
+  url("/us/shop/_common/fonts/avenir/b0a54a47-369f-439a-a181-6598ef4ba52f.svg#b0a54a47-369f-439a-a181-6598ef4ba52f") format("svg");
+}*/
+/* ============================== */
+/* Loading Code                   */
+/*================================*/
+.item_loading > span {
+  position: relative;
+  top: 40%;
+  left: 40%;
+  background:url("/us/shop/_common/images/loading.gif") center center no-repeat;
+  background-size: 100%;
+  z-index: 9;
+  width: 20%;
+  height: 15%;
+  min-width: 50px;
+  min-height: 50px;
+  /*-webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.58);
+  -moz-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.58);
+  box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.58);*/
+}
+/* ============================== */
+/* Select Country & Language Code */
+/*================================*/
+/*#lang {
+  background:#cee2e8 no-repeat center top;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: table;
+  text-align: center;
+}*/
+
+#lang select {
+  background: url(https://www.forever21.com/images/f21/us/icon_down.svg) #fff no-repeat 96% 50%;
+  background-size: 13px;
+  float: left;
+}
+/* ============================== */
+/* Header Code                    */
+/*================================*/
+.logo {
+  background: url("https://www.forever21.com/images/f21/us/f21_logo_black.svg") no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+  display: block;
+  position: relative;
+  width: 120px;
+  height: 22px;
+  float:none;
+  margin: auto;
+  z-index: 8;
+}
+.logo.white {
+  background: url("https://www.forever21.com/images/f21/us/f21_logo_white.svg") no-repeat;
+  background-position: bottom left;
+  height: 26px;
+}
+
+.icon_close {
+  background: url("/us/shop/_common/images/icon_close.png") no-repeat center right;
+  width: 15px !important;
+  height: 15px !important;
+  opacity: 1 !important;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 999;
+  font-size: .5em;
+}
+.icon_menu {
+  background: url("https://www.forever21.com/images/f21/us/top_menu.svg") no-repeat bottom left;
+  margin-right: 1.5em;
+}
+.icon_search {
+  background: url("https://www.forever21.com/images/f21/us/top_search.svg") no-repeat bottom left;
+}
+.icon_cart {
+  background: url("https://www.forever21.com/images/f21/us/top_cart.svg") no-repeat bottom left;
+  margin-left: 1.5em;
+}
+.icon_wishlist {
+  background: url("https://www.forever21.com/images/f21/us/top_wishlist.svg") no-repeat center left;
+}
+.icon_wishlist.active {
+  background: url("https://www.forever21.com/images/f21/us/top_wishlist_select.svg") no-repeat center left;
+  background-size: contain;
+}
+.icon_wishlist_white {
+  background: url("https://www.forever21.com/images/f21/us/top_wishlist_white.svg") no-repeat center left;
+  width: 25px !important;
+  height: 25px !important; 
+  margin-left: .9em;
+}
+.icon_cart_white {
+  background: url("https://www.forever21.com/images/f21/us/top_cart_white.svg") no-repeat bottom left;
+  margin-left: .6em;
+  width: 28px !important;
+  height: 25px !important; 
+  opacity: 1 !important;
+}
+
+.icon_signin {
+  background: url("https://www.forever21.com/images/f21/us/top_myaccount.svg") no-repeat bottom left;
+  margin-right: 7px;
+}
+.icon_mail {
+  background: url("https://www.forever21.com/images/f21/us/icon_mail.svg") no-repeat bottom left;
+  margin-right: 5px;
+  width: 18px !important;
+  height:12px !important;
+  float: none !important;
+}
+.icon_share {
+  background: url("https://www.forever21.com/images/f21/us/icon_share.svg") no-repeat bottom left;
+}
+.icon_video {
+  background: url("https://www.forever21.com/images/f21/us/icon_video.svg") no-repeat bottom left;
+}
+.icon_gps {
+ background: url("https://www.forever21.com/images/f21/us/icon_gps.svg") no-repeat bottom left;
+ width: 25px !important;
+ height:25px !important;
+}
+.icon_edit_white {
+  background: url("https://www.forever21.com/images/f21/us/icon_edit_white.svg") no-repeat bottom left;
+  width: 30px !important;
+  height: 30px !important;
+}
+.icon_tag {
+  background: url("https://www.forever21.com/images/f21/us/label.svg") no-repeat top left;
+}
+/*span[class^="btn_"] {
+  background: url(/us/shop/_common/images/icon_round_check.png) no-repeat;
+  width: 25px;
+  height: 25px;
+  float: left;
+  background-size: cover;
+  vertical-align: bottom;
+}
+.btn_uncheck {
+  background-position: 0 0 !important;
+}
+.btn_check {
+  background-position: 0 -30px !important;
+}*/
+
+/* ============================== */
+/* Form Code                      */
+/*================================*/
+input.add_icon {
+  background: url("https://www.forever21.com/images/f21/us/top_search.svg") #fff no-repeat center left;
+  background-size: 14px 14px;
+  background-position: 1em .65em;
+  display: block;
+  float: left;
+  width: 100%;
+  padding: .55em;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border: 0 !important;
+  position: relative;
+  z-index: 5;
+  text-indent: 2em
+}
+
+input[type="radio"] + label, input[type="checkbox"] + label {
+  background: url(/us/shop/_common/images/radiocheck.png) no-repeat top center;
+  background-size: cover;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.p_next {
+  position: relative;
+  background: url("https://www.forever21.com/images/f21/us/icon_next.svg") no-repeat center center;
+  background-size: 100%;
+  width: 30px;
+  height:17px;
+  vertical-align: middle;
+}
+.p_prev {
+  position: relative;
+  background: url("https://www.forever21.com/images/f21/us/icon_prev.svg") no-repeat center center;
+  background-size: 100%;
+  width: 30px;
+  height:17px;
+  vertical-align: middle;
+}
+
+/* ============================== */
+/* PDP Code                       */
+/*================================*/
+.icon_size {
+  background:url("https://www.forever21.com/images/f21/us/icon_size.svg") no-repeat center left;
+  width: 44px !important;
+  height: 25px !important;
+}
+
+.star_full {
+  background:url("/us/shop/_common/images/star_full.png") no-repeat center center;
+}
+.star_half {
+  background:url("/us/shop/_common/images/star_half.png") no-repeat center center;
+}
+.star_no {
+  background:url("/us/shop/_common/images/star_noscore.png") no-repeat center center;
+}
+
+/* ============================== */
+/* Footer Code                    */
+/*================================*/
+span[class^="fa_"]{
+  display: inline-block;
+  position: relative;
+  background: url("/us/shop/_common/images/icon_apps.png") no-repeat bottom right;
+  background-size: 100%;
+  width: 96px;
+  height: 33px;
+  vertical-align: middle;
+}
+
+/* ============================== */
+/* Social Code                    */
+/*================================*/
+span[class^="fs_"]{
+  display: inline-block;
+  position: relative;
+  background: url("/us/shop/_common/images/icon_social.png") no-repeat bottom right;
+  background-size: 100%;
+  width: 24px;
+  height: 26px;
+  vertical-align: middle;
+  margin: 0 .5em;
+}
+
+/* ============================== */
+/* Dropdown Code                  */
+/*================================*/
+/*.arrow_down:before {
+  content:"";
+  position: absolute;
+  right: 0px;
+  bottom: 16px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 4px 0 4px;
+  border-color: #fff transparent transparent transparent;
+  line-height: 0;
+  _border-color: #fff #fff #fff #fff;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#ffffff');
+  z-index:9;
+}*/
+.arrow_down:after {
+  /*content: "";
+  background: url("/us/shop/_common/images/icon_down.svg") no-repeat center center;
+  background-size: contain;
+  background-position: 50%;
+  padding: 5px 6px;
+  margin: 0 5px;
+  width: 15px;
+  height: 20px;*/
+  content: '';
+  position: absolute;
+  right: -16px;
+  bottom: 5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 4px 0 4px;
+  border-color: #727272 transparent transparent transparent;
+  line-height: 0;
+  _border-color: #727272 #fff #fff #fff;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#ffffff');
+}
+.arrow_down.white:after {
+  background: url("https://www.forever21.com/images/f21/us/icon_down_white.svg") no-repeat center center;
+}
+
+/* ============================== */
+/* Checkout Code                  */
+/*================================*/
+.icon_delete {
+  position: absolute;
+  background:url("https://www.forever21.com/images/f21/us/icon_delete.svg") no-repeat center center #fff;
+  top: 3px;
+  right: 0;
+  width: 17px !important;
+  height: 17px !important;
+  opacity: 0.6 !important;
+  z-index: 99;
+}
+.icon_trash {
+  background:url("https://www.forever21.com/images/f21/us/icon_trash.svg") no-repeat center center;
+  width: 30px !important;
+  height: 30px !important;
+}
+.icon_question {
+  position: absolute;
+  display: inline-block;
+  background:url("https://www.forever21.com/images/f21/us/icon_question.svg") no-repeat center center #fff;
+  top: 13px;
+  right: 10px;
+  width: 17px !important;
+  height: 17px !important;
+  opacity: 0.6 !important;
+  z-index: 99;
+}
+.checkout select, .quick select, .select.show_mobile select, .set_item select{
+  text-indent: 0;
+  padding: 10px 0;
+  background: url("https://www.forever21.com/images/f21/us/icon_down.svg") no-repeat 96% 50%;
+  background-size: 13px;
+  float: left;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+.checkout select {
+  width: 50%;
+  padding: 1.1em 0;
+  background: url("https://www.forever21.com/images/f21/us/icon_down.svg") no-repeat 100% 50%;
+  background-size: 11px;
+  border-bottom: 1px dotted #ddd;
+}
+
+.i_question {
+  background: url(/us/shop/_common/images/icon_common_question_mark.png) no-repeat center center;
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.btn_edit:before {
+  content: "";
+  position: absolute;
+  background: url("https://www.forever21.com/images/f21/us/icon_edit.svg") no-repeat center center;
+  background-size: contain;
+  width: 20px;
+  height:20px;
+  z-index: 9;
+  top: 2px;
+  right: 2px;
+}
+span[class^="c_card_"] {
+  display: inline-block;
+  width: 100%;
+  max-width: 39px;
+  min-width: 33px;
+  height: 26px;
+  vertical-align: middle;
+  background-size: contain;
+}
+span[class^="c_card_"].small {
+  width: 25px;
+  height: 16px;
+}
+.c_card_card {
+  background: url("https://www.forever21.com/images/f21/us/icon_card_card.svg") no-repeat center left;
+}
+.c_card_f21 {
+  background: url("https://www.forever21.com/images/f21/us/icon_card_f21.svg") no-repeat center left;
+}
+.c_card_paypal {
+  background: url("https://www.forever21.com/images/f21/us/icon_card_paypal.svg") no-repeat center left;
+}
+.c_card_visa {
+  background: url("https://www.forever21.com/images/f21/us/icon_card_visa.svg") no-repeat center left;
+}
+.c_card_discover {
+  background: url("https://www.forever21.com/images/f21/us/icon_card_discover.svg") no-repeat center left;
+}
+.c_card_master {
+  background: url("https://www.forever21.com/images/f21/us/icon_card_master.svg") no-repeat center left;
+}
+.c_card_amex {
+  background: url("https://www.forever21.com/images/f21/us/icon_card_amex.svg") no-repeat center left;
+}
+/* ============================== */
+/* Signup Code                    */
+/*================================*/
+.signup_slider {
+  background: #f4dadb no-repeat bottom left;
+  padding: 1em;
+  display: inline-block;
+  position: relative;
+  margin-bottom: -5px;
+  background-size: contain;
+}
+
+
+
+/* ============================== */
+/* Modal Popup Code               */
+/*================================*/
+.quick_close {
+  background: url("/us/shop/_common/images/icon_close.png") no-repeat center center;
+  background-size: 80%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  padding: 0;
+  z-index: 999;
+  
+}
+.quick_close.big {
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  background-size: 50%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+/* ============================== */
+/* Owl Carousel Code              */
+/*================================*/
+.owl-nav > div[class*="owl-"] {
+  position: absolute;
+  width: 2.2em;
+  height: 2.2em;
+  background-size: 100%;
+  color: transparent;
+  top: 41%;
+  opacity: .8;
+}
+.owl-next {
+  right: 1em;
+  background: url("https://www.forever21.com/images/f21/us/icon_next.svg") no-repeat center center;
+}
+.owl-prev {
+  left: 1em;
+  background: url("https://www.forever21.com/images/f21/us/icon_prev.svg") no-repeat center center;
+  margin-left: 0;
+}
+.owl-item.loading {
+  min-height: 150px;
+  background: url("/us/shop/_common/images/loading.gif") no-repeat center center;
+}
+
+/* ============================== */
+/* F21 Credit Card                */
+/*================================*/
+
+.f21_card {
+  background: #fadbf0;
+}
+
+/* ============================== */
+/* Mobile Left Menu               */
+/*================================*/
+.mega_menu.first_menu > span:after {
+  content:"" !important;
+  width: 11px;
+  height: 13px;
+  background: url("https://www.forever21.com/images/f21/us/icon_arrow_right.svg") no-repeat center right;
+  right: 21px;
+  background-size: contain;
+}
+
+.go_back:before {
+  position: absolute;
+  content:"" !important;
+  width: 11px;
+  height: 15px;
+  background: url("https://www.forever21.com/images/f21/us/icon_back_white.svg") no-repeat center left;
+  left: 15px;
+  background-size: contain;
+}
+
+.swatch .color li span.oos:after, .drop_c.open dd span.oos:after {
+  content: "";
+  position: absolute;
+  background: url("https://www.forever21.com/images/f21/us/so_line.svg") no-repeat;
+  width: 27px;
+  height: 27px;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  opacity: .5;
+  background-position: 100% 100%;
+}
+.swatch.round .color li span.oos:after{
+  width: 23px;
+  height: 23px;
+}
+@media (min-device-width:320px) and (max-device-width:767px) {
+  .pdp_container .swatch .color li span.oos:after {
+    width: 33px;
+    height: 33px;
+    background-position: 45% 50%;
+    left:0;
+    top:0;
+  }
+}
+/* ============================== */
+/* Small Desktop Code             */
+/*================================*/
+@media (min-width:768px) {
+  /* ============================== */
+  /* Quick View Code                */
+  /*================================*/
+  .zoom {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    top:45%;
+    left:45%;
+    background:url("https://www.forever21.com/images/f21/us/icon_zoom.svg") no-repeat center center;
+    background-size: contain;
+    width:35px;
+    height:35px;
+    cursor: pointer;
+   }
+   .p_zoomin .zoom {
+    width: 40px;
+    height:40px;
+    left:47%;
+    top:45%;
+   }
+  /* ============================== */
+  /* Checkout Code                  */
+  /*================================*/
+  #account {
+      background:url("/us/shop/_common/images/bg_account.jpg") no-repeat #f69ba9 left top;
+      background-position: 0 0;
+      background-size: contain;
+      padding: 6.5em 0;
+  }
+  /* ============================== */
+  /* F21 Credit Card                */
+  /*================================*/
+  .f21_money, .f21_crown, .f21_kit, .f21_bday, .f21_double, .f21_anni, .f21_exclusive, .f21_firstpurchase, .f21_3point, .f21_2point, .f21_1point, .f21_check {
+    background: url(/us/shop/_common/images/f21card/f21_cc_icons.png) no-repeat;
+    background-size: 100%;
+  }
+  .f21_card {
+    background: url("/us/shop/_common/images/f21_cc_pic.jpg") no-repeat #fadbf0;
+    background-position:90% 20%;
+    background-size:contain;
+  }
+}

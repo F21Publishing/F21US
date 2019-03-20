@@ -1,0 +1,366 @@
+/*
+  * Forever21 USA v1.1.1 6/28/2017 - 1
+  * Copyright Forever21
+  * Created by Elisha Lee
+*/
+/* ============================== */
+/* Loading Code                   */
+/*================================*/
+.item_loading > span {
+  position: relative;
+  top:  40%;
+  left: 42%;
+  background:url("https://qa06ecomus/us/shop/_common/images/loading.gif") center center no-repeat;
+  background-size: 100%;
+  z-index: 9;
+  width: 20%;
+  height: 15%;
+}
+/* ============================== */
+/* Select Country & Language Code */
+/*================================*/
+#lang {
+  background:url("https://qa06ecomus/us/shop/_common/images/bg_lang.jpg") #cee2e8 no-repeat center top;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: table;
+  text-align: center;
+}
+
+#lang select {
+  background: url(https://qa06ecomus/us/shop/_common/images/icon_down.svg) #fff no-repeat 96% 50%;
+  background-size: 13px;
+  float: left;
+}
+/* ============================== */
+/* Header Code                    */
+/*================================*/
+.logo {
+  background: url("https://qa06ecomus/us/shop/_common/images/f21_logo_black.svg") no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+  display: block;
+  position: relative;
+  width: 120px;
+  height: 22px;
+  float:none;
+  margin: auto;
+  z-index: 8;
+}
+.logo.white {
+  background: url("https://qa06ecomus/us/shop/_common/images/f21_logo_white.svg") no-repeat;
+  background-position: bottom left;
+  height: 26px;
+}
+
+.icon_close {
+  background: url("https://qa06ecomus/us/shop/_common/images/icon_close.png") no-repeat center right;
+  width: 15px !important;
+  height: 15px !important;
+  opacity: 1 !important;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 999;
+  font-size: .5em;
+}
+.icon_menu {
+  background: url("https://qa06ecomus/us/shop/_common/images/top_menu.svg") no-repeat bottom left;
+  margin-right: 1.5em;
+}
+.icon_search {
+  background: url("https://qa06ecomus/us/shop/_common/images/top_search.svg") no-repeat bottom left;
+}
+.icon_cart {
+  background: url("https://qa06ecomus/us/shop/_common/images/top_cart.svg") no-repeat bottom left;
+  margin-left: 1.5em;
+}
+.icon_wishlist {
+  background: url("https://qa06ecomus/us/shop/_common/images/top_wishlist.svg") no-repeat bottom left;
+}
+.icon_wishlist.active {
+  background: url("https://qa06ecomus/us/shop/_common/images/top_wishlist_select.svg") no-repeat bottom left;
+}
+.icon_signin {
+  background: url("https://qa06ecomus/us/shop/_common/images/top_myaccount.svg") no-repeat bottom left;
+  margin-right: 7px;
+}
+.icon_mail {
+  background: url("https://qa06ecomus/us/shop/_common/images/icon_mail.svg") no-repeat bottom left;
+  margin-right: 5px;
+  width: 18px !important;
+  height:12px !important;
+  float: none !important;
+}
+.icon_share {
+  background: url("https://qa06ecomus/us/shop/_common/images/icon_share.svg") no-repeat bottom left;
+}
+.icon_video {
+  background: url("https://qa06ecomus/us/shop/_common/images/icon_video.svg") no-repeat bottom left;
+}
+.icon_gps {
+ background: url("https://qa06ecomus/us/shop/_common/images/icon_gps.svg") no-repeat bottom left;
+ width: 25px !important;
+ height:25px !important;
+}
+
+/* ============================== */
+/* Form Code                      */
+/*================================*/
+input.add_icon {
+  background: url("https://qa06ecomus/us/shop/_common/images/top_search.svg") no-repeat center left;
+  background-size: 14px 14px;
+  background-position: 2px 3px;
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 1px 0 5px 17px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border: 0 !important;
+  position: relative;
+  z-index: 5;
+}
+
+input[type="radio"] + label, input[type="checkbox"] + label {
+  background: url(https://qa06ecomus/us/shop/_common/images/radiocheck.png) no-repeat top center;
+  background-size: cover;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: top;
+  margin-right: 5px;
+}
+
+.p_next {
+  position: relative;
+  background: url("https://qa06ecomus/us/shop/_common/images/icon_next.svg") no-repeat center center;
+  background-size: 100%;
+  width: 30px;
+  height:17px;
+  vertical-align: middle;
+}
+.p_prev {
+  position: relative;
+  background: url("https://qa06ecomus/us/shop/_common/images/icon_prev.svg") no-repeat center center;
+  background-size: 100%;
+  width: 30px;
+  height:17px;
+  vertical-align: middle;
+}
+
+/* ============================== */
+/* PDP Code                       */
+/*================================*/
+.icon_size {
+  background:url("https://qa06ecomus/us/shop/_common/images/icon_size.svg") no-repeat center left;
+  width: 44px !important;
+  height: 25px !important;
+}
+
+/* ============================== */
+/* Footer Code                    */
+/*================================*/
+span[class^="fa_"]{
+  display: inline-block;
+  position: relative;
+  background: url("https://qa06ecomus/us/shop/_common/images/icon_apps.png") no-repeat bottom right;
+  background-size: 100%;
+  width: 96px;
+  height: 33px;
+  vertical-align: middle;
+}
+
+/* ============================== */
+/* Social Code                    */
+/*================================*/
+span[class^="fs_"]{
+  display: inline-block;
+  position: relative;
+  background: url("https://qa06ecomus/us/shop/_common/images/icon_social.png") no-repeat bottom right;
+  background-size: 100%;
+  width: 24px;
+  height: 26px;
+  vertical-align: middle;
+  margin: 0 .5em;
+}
+
+/* ============================== */
+/* Dropdown Code                  */
+/*================================*/
+.arrow_down:after {
+  content: "";
+  background: url("https://qa06ecomus/us/shop/_common/images/icon_down.svg") no-repeat center center;
+  background-size: contain;
+  padding: 4px;
+  margin: 0 5px;
+  width: 15px;
+  height: 20px;
+}
+.arrow_down.white:after {
+  background: url("https://qa06ecomus/us/shop/_common/images/icon_down_white.svg") no-repeat center center;
+}
+
+/* ============================== */
+/* Checkout Code                  */
+/*================================*/
+.icon_delete {
+  position: absolute;
+  display: inline-block;
+  background:url("https://qa06ecomus/us/shop/_common/images/icon_delete.svg") no-repeat center center #fff;
+  top: 3px;
+  right: 0;
+  width: 17px !important;
+  height: 17px !important;
+  opacity: 0.6 !important;
+  z-index: 99;
+}
+.icon_question {
+  position: absolute;
+  display: inline-block;
+  background:url("https://qa06ecomus/us/shop/_common/images/icon_question.svg") no-repeat center center #fff;
+  top: 13px;
+  right: 10px;
+  width: 17px !important;
+  height: 17px !important;
+  opacity: 0.6 !important;
+  z-index: 99;
+}
+.checkout select, .quick select, .select.show_mobile select, .set_item select{
+  text-indent: 0;
+  padding: 10px 0;
+  background: url(https://qa06ecomus/us/shop/_common/images/icon_down.svg) no-repeat 96% 50%;
+  background-size: 13px;
+  float: left;
+}
+.checkout select {
+  width: 50%;
+  background: url(https://qa06ecomus/us/shop/_common/images/icon_down.svg) no-repeat 100% 50%;
+  background-size: 11px;
+}
+.i_question {
+  background: url(https://qa06ecomus/us/shop/_common/images/icon_common_question_mark.png) no-repeat center center;
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.btn_edit:before {
+  content: "";
+  position: absolute;
+  background: url(https://qa06ecomus/us/shop/_common/images/icon_edit.svg) no-repeat center center;
+  background-size: contain;
+  width: 20px;
+  height:20px;
+  z-index: 9;
+  top: 2px;
+  right: 2px;
+}
+/* ============================== */
+/* Signup Code                    */
+/*================================*/
+.signup_slider {
+  background: #f4dadb no-repeat bottom left;
+  padding: 1em;
+  display: inline-block;
+  position: relative;
+  margin-bottom: -5px;
+  background-size: contain;
+}
+
+/* ============================== */
+/* Small Desktop Code             */
+/*================================*/
+@media (min-width:768px) {
+  /* ============================== */
+    /* Quick View Code                */
+    /*================================*/
+  .zoom {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    top:45%;
+    left:45%;
+    background:url("https://qa06ecomus/us/shop/_common/images/icon_zoom.svg") no-repeat center center;
+    width:25px;
+    height:25px;
+    cursor: pointer;
+   }
+  /* ============================== */
+  /* Checkout Code                  */
+  /*================================*/
+  #account {
+      background:url("https://qa06ecomus/us/shop/_common/images/bg_account.jpg") no-repeat #f69ba9 left top;
+      background-position: 0 0;
+      background-size: contain;
+      padding: 6.5em 0;
+  }
+  /* ============================== */
+  /* F21 Credit Card                */
+  /*================================*/
+  .f21_money, .f21_crown, .f21_kit, .f21_bday, .f21_double, .f21_anni, .f21_exclusive, .f21_firstpurchase, .f21_3point, .f21_2point, .f21_1point, .f21_check {
+    background: url(http://www.forever21.com/images/en/f21card/f21_cc_icons.png) no-repeat;
+    background-size: 100%;
+  }
+}
+
+/* ============================== */
+/* Modal Popup Code               */
+/*================================*/
+.quick_close {
+  background: url("https://qa06ecomus/us/shop/_common/images/icon_close.png") no-repeat center center;
+  background-size: 100%;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  padding:0;
+  z-index: 999;
+}
+
+/* ============================== */
+/* Owl Carousel Code              */
+/*================================*/
+.owl-next {
+    right: 1em;
+    position: absolute;
+    background: url("https://qa06ecomus/us/shop/_common/images/icon_next.svg") no-repeat center center;
+    background-size: 100%;
+    color: transparent;
+    width: 30%;
+    max-width: 50px;
+    opacity: .5;
+}
+.owl-prev {
+    left: 1em;
+    position: absolute;
+    background: url("https://qa06ecomus/us/shop/_common/images/icon_prev.svg") no-repeat center center;
+    background-size: 100%;
+    color: transparent;
+    margin-left: 0;
+    width: 30%;
+    max-width: 50px;
+    opacity: .5;
+}
+.owl-item.loading {
+    min-height: 150px;
+    background: url("https://qa06ecomus/us/shop/_common/images/loading.gif") no-repeat center center;
+}
+
+/* ============================== */
+/* F21 Credit Card                */
+/*================================*/
+.f21_card {
+  background-image: url("http://www.forever21.com/images/en/f21card/f21_cc_pic.jpg") no-repeat;
+  background-color: #fadbf0;
+}

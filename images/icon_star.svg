@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="132px" height="255px" viewBox="0 0 132 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="65.4555645 85.5781801 34.2723107 101.972187 40.2277823 67.2491234 15 42.6581134 49.8639376 37.5920867 65.4555645 6 81.0471914 37.5920867 115.911129 42.6581134 90.6833468 67.2491234 96.6388183 101.972187"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="100.911129" height="95.9721868" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <polygon id="path-3" points="65.4555645 233.57818 34.2723107 249.972187 40.2277823 215.249123 15 190.658113 49.8639376 185.592087 65.4555645 154 81.0471914 185.592087 115.911129 190.658113 90.6833468 215.249123 96.6388183 249.972187"></polygon>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="100.911129" height="95.9721868" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <use id="Star" stroke="#AAAAAA" mask="url(#mask-2)" stroke-width="12" fill-opacity="0" fill="#D8D8D8" xlink:href="#path-1"></use>
+            <use id="Star" stroke="#E95E93" mask="url(#mask-4)" stroke-width="14" fill="#E95E93" xlink:href="#path-3"></use>
+        </g>
+    </g>
+</svg>

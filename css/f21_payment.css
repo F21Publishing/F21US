@@ -1,0 +1,140 @@
+/*
+  * Forever21 Common v1.1.1 7/20/2017 - 1
+  * Copyright Forever21
+  * Created by Elisha Lee
+*/
+
+/* ============================== */
+/* Common Code                    */
+/*================================*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+body {
+  font-family:"Helvetica Neue", Helvetica, Arial, "Verdana","Geneva", sans-serif ;
+  font-size: 14px;
+  font-size: 0.875em;
+  color: #333;
+  overflow-x: hidden;
+  background:#fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+a:focus, *:focus {
+  outline: none;
+  /*outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;*/
+}
+
+/* ============================== */
+/* Form Code                      */
+/*================================*/
+input, select {
+  outline: 0;
+  border:1px solid #ddd;
+  background: transparent;
+  color: #111;
+  /*appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-expand: none;
+  -o-expand: none;*/
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+  height: 35px;
+  margin-bottom: 3px;
+}
+input {
+	background: #fff !important;
+	z-index: 99999;
+	position: relative;
+	text-indent: 10px;
+}
+table {
+	font-size: 80%;
+}
+select[id^="cresecure_cc"] {
+	width: 48%;
+}
+select[id^="cresecure_cc"], label + select[id^="cresecure_cc_"] {
+	float: left;
+	position: relative;
+}
+label + select[id^="cresecure_cc_"] {
+	float: right;
+}
+
+.main {
+	position: relative;
+}
+.main:last-child select + label {
+	position: relative;
+	width: 49%;
+	display: inline-block;
+	position: relative;
+}
+#cresecure_cc_expires_year{
+	width: 100% !important;
+}
+.main > a {
+	width: 100%;
+  display: block;
+  float: left;
+  text-align: center;
+  padding-top: 10px;
+  text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.submitButton {
+	text-indent: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #eee;
+  background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(87,87,87,1) 22%, rgba(71,71,71,1) 35%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 60%, rgba(17,17,17,1) 72%, rgba(28,28,28,1) 91%, rgba(0,0,0,1) 100%) !important;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76,76,76,1)), color-stop(12%, rgba(89,89,89,1)), color-stop(22%, rgba(87,87,87,1)), color-stop(35%, rgba(71,71,71,1)), color-stop(50%, rgba(44,44,44,1)), color-stop(60%, rgba(0,0,0,1)), color-stop(72%, rgba(17,17,17,1)), color-stop(91%, rgba(28,28,28,1)), color-stop(100%, rgba(0,0,0,1))) !important;
+  background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(87,87,87,1) 22%, rgba(71,71,71,1) 35%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 60%, rgba(17,17,17,1) 72%, rgba(28,28,28,1) 91%, rgba(0,0,0,1) 100%) !important;
+  background: -o-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(87,87,87,1) 22%, rgba(71,71,71,1) 35%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 60%, rgba(17,17,17,1) 72%, rgba(28,28,28,1) 91%, rgba(0,0,0,1) 100%) !important;
+  background: -ms-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(87,87,87,1) 22%, rgba(71,71,71,1) 35%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 60%, rgba(17,17,17,1) 72%, rgba(28,28,28,1) 91%, rgba(0,0,0,1) 100%) !important;
+  background: linear-gradient(to bottom, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(87,87,87,1) 22%, rgba(71,71,71,1) 35%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 60%, rgba(17,17,17,1) 72%, rgba(28,28,28,1) 91%, rgba(0,0,0,1) 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#000000', GradientType=0 ) !important;
+}
+
+#cancelButton {
+  display: none !important;
+}
+#paymentButtons > .main {
+  height: 60px !important;
+}
