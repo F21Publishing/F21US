@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 03/28/2019 - Version 1
+  * Forever21 Common v1.1.1 4/11/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve Chen
 */
@@ -4714,6 +4714,11 @@ width: 650px;
 .fix_img_small img {
   width: 45px
 }
+
+.c_wm_20 {
+  width: 20% !important;
+  padding:0.8em !important;
+}
 /* ============================== */
 /* iPhone 5 Code                  */
 /*================================*/
@@ -6814,9 +6819,9 @@ width: 650px;
           width: 160px
       }
 
-  /* 03/28/2019 Due to Design Tab, 95% --> changed to 96%  */
+  /* 10/16/2018 Due to Design Tab, 96% --> changed to 95%  */
   .new_search input {
-      width: 96%
+      width: 95%
   }
 
   .new_top.top_count {
