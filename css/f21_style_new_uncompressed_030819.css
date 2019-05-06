@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 4/11/2019 - Version 1
+  * Forever21 Common v1.1.1 05/06/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve Chen
 */
@@ -8398,5 +8398,10 @@ html {
   
   
   
-  
+  /*  Email Popup Yellow Border 05/06/2019 added by Eve  */
+.pop_border {
+    margin: 30px;
+    outline: 4px solid #ff0;
+    outline-offset: 10px;
+}
   
