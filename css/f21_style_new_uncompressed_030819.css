@@ -2358,7 +2358,7 @@ html {
   border-bottom: 1px solid #eee;
   }*/
   .mega_sub {
-    border-top: 1px solid #ddd;
+    /*border-top: 1px solid #ddd;*/ /* TopNavRedesign 05/14/2019 Removed by Eve */
     clear: both
   }
   
@@ -2373,7 +2373,7 @@ html {
   }
   
   .second_menu {
-    border-bottom: 1px solid #ddd;
+    /*border-bottom: 1px solid #ddd;/* TopNavRedesign 05/14/2019 Removed by Eve */
     clear: both
   }
   
