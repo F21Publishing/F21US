@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 4/11/2019 - Version 1
+  * Forever21 Common v1.1.1 05/14/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve Chen
 */
@@ -1340,6 +1340,11 @@ ol li {
   line-height: initial !important
 }
 
+ /* TopNavRedesign 05/14/2019 Added by Eve */
+.lh_small {
+    line-height: 100%
+}
+
 .lh_normal {
   line-height: 150%
 }
@@ -2265,11 +2270,12 @@ footer.main_fixed {
   display: inline-block;
   float: left;
   text-decoration: none;
-  background: #eee;
-  border-bottom: 2px solid #fff;
+  background: #fff; /* TopNavRedesign 05/14/2019 Changed by Eve, #eee --> changed to #fff */
+  border-bottom: 1px solid #e4e4e4; /* TopNavRedesign 05/14/2019 Changed by Eve, 2px #fff --> changed to 1px #e4e4e4 */
   margin-bottom: 0
 }
-/*.mega_menu.active > span, .second_menu.active > span, */ .go_back {
+/*.mega_menu.active > span, .second_menu.active > span, */ 
+.go_back {
   background: #2d2d2d !important;
   color: #fff;
   letter-spacing: 2px;
@@ -2309,6 +2315,7 @@ border-bottom: 10px solid #f4f4f4;
 .left_slide .expand_p {
   padding-left: 15px;
   color: #000 !important
+  font-weight: bold; /* TopNavRedesign 05/14/2019 Added by Eve */
 }
 
 .expand_c, .mega_sub, .m_expand_c {
@@ -2351,13 +2358,13 @@ color: #111;
 border-bottom: 1px solid #eee;
 }*/
 .mega_sub {
-  border-top: 1px solid #ddd;
+  /*border-top: 1px solid #ddd;*/ /* TopNavRedesign 05/14/2019 Removed by Eve */
   clear: both
 }
 
   .mega_sub li /*, .mobile_myaccount li*/, .child_wrapper li {
       padding: 1em 25px;
-      border-bottom: 1px solid #ddd;
+      /*border-bottom: 1px solid #ddd;*/ /* TopNavRedesign 05/14/2019 Removed by Eve */
       cursor: pointer
   }
 
@@ -2366,7 +2373,7 @@ border-bottom: 1px solid #eee;
 }
 
 .second_menu {
-  border-bottom: 1px solid #ddd;
+  /*border-bottom: 1px solid #ddd;/* TopNavRedesign 05/14/2019 Removed by Eve */
   clear: both
 }
 
@@ -2375,8 +2382,8 @@ border-bottom: 1px solid #eee;
   }
 
   .second_menu > span, .m_expand_c li {
-      border-bottom: 1px solid #ddd;
-      background: #fff !important;
+      /*border-bottom: 1px solid #ddd;*//* TopNavRedesign 05/14/2019 Removed by Eve */
+      background: #f4f4f4 !important; /* TopNavRedesign 05/14/2019 Changed by Eve, #fff --> changed to #f4f4f4  */
       display: inline-block;
       width: 100%;
       font-size: 90%;
@@ -6863,7 +6870,7 @@ width: 650px;
 
   .d_new_mega_menu:hover > a:after {
       content: "";
-      background: #eee;
+      background: #fff; /* TopNavRedesign 05/14/2019 Changed by Eve, #eee --> changed to #fff  */
       position: absolute;
       width: 100%;
       height: 100%;
@@ -6874,16 +6881,16 @@ width: 650px;
   }
 
   .d_new_mega_menu.m_sale:hover > a > span {
-      color: #fff
+      color: #ec1f35 /* TopNavRedesign 05/14/2019 Changed by Eve, #fff --> changed to #ec1f35 */
   }
 
   .d_new_mega_menu.m_sale:hover > a:after {
-      background: #ec1f35
+      background: #fff /* TopNavRedesign 05/14/2019 Changed by Eve, #ec1f35 --> changed to #fff */
   }
 
   .d_new_mega_sub {
       position: absolute;
-      background: #eee;
+      background: #fff; /* TopNavRedesign 05/14/2019 Changed by Eve, #eee --> changed to #fff */
       color: #666;
       width: 75%;
       visibility: hidden;
