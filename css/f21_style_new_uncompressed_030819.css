@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 05/14/2019 - Version 1
+  * Forever21 Common v1.1.1 06/19/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve Chen
 */
@@ -8399,8 +8399,17 @@ html {
     padding: 5px 0px 0px 25px;
     margin-top: -5px;
   }
-  
-  
+
+
+/*   06/19/2019 added by Eve / For Donde widget   */
+.donde-background {
+    background-color: white !important;
+}
+.donde-clear-button {
+    background-color: white !important;
+}
+
+   
   
   
   
