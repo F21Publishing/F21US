@@ -1,7 +1,7 @@
 /*
-  * Forever21 USA v1.1.1 10/17/2018 - Version 1
+  * Forever21 USA v1.1.1 07/02/2019 - Version 1
   * Copyright Forever21
-  * Created by Namhee & Eunice
+  * Created by Namhee & Eve
 */
 /*#taco *,#taco body,#taco button,#taco a {
   cursor: url("/us/shop/_common/images/TacoCursor.cur"), auto !important;
@@ -203,6 +203,12 @@
 .icon_cart {
   background: url("https://www.forever21.com/images/f21/us/top_cart.svg") no-repeat bottom left;
   margin-left: 1.5em;
+}
+/* PromotionCoupon 07/02/2019 Added by Eve */
+.icon_coupon {
+   background: url("/us/shop/_common/images/img_tag.svg") no-repeat center left;
+   width: 20px!important;
+   height: 20px!important
 }
 .icon_wishlist {
   background: url("https://www.forever21.com/images/f21/us/top_wishlist.svg") no-repeat center left;
