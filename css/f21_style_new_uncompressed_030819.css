@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 06/19/2019 - Version 1
+  * Forever21 Common v1.1.1 07/03/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve Chen
 */
@@ -7060,6 +7060,21 @@ html {
     right: 10px
   }
   
+   /* Video Popup 07/03/2019 Added by Eve */
+  .video-container {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0
+  }
+
+  .video-container iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute
+  }
   /* ============================== */
   /* Owl Carousel Code              */
   /*================================*/
