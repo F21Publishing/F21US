@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 07/03/2019 - Version 1
+  * Forever21 Common v1.1.1 07/08/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve Chen
 */
@@ -5534,7 +5534,7 @@ html {
             }
   
     .p_item:hover .qv, .sbo_container > div:hover .qv {
-        display: block
+        display: none   /* Quick View Hide Tablet 07/08/2019 Changed by Eve, display: block --> changed to display: none */
     }
   
     .quick .p_name {
@@ -6494,6 +6494,10 @@ html {
     .sbo_round > .table > span > span {
         width: 180px;
         height: 180px
+    }
+    /* 07/08/2019 Added by Eve */
+    .p_item:hover .qv, .sbo_container > div:hover .qv {
+        display: block   
     }
     /* ============================== */
     /* PDP Code                   */
