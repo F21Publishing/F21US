@@ -1,5 +1,5 @@
 /*
-  * Forever21 USA v1.1.1 07/02/2019 - Version 1
+  * Forever21 USA v1.1.1 07/09/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve
 */
@@ -629,7 +629,7 @@ span[class^="c_card_"].small {
 .quick_close {
   background: url("/us/shop/_common/images/icon_close.png") no-repeat center center;
   background-size: 80%;
-  width: 20px;
+  width: 20px !important; /* 07/09/2019 Changed by Eve, Adding !important */
   height: 20px;
   position: absolute;
   top: 10px;
