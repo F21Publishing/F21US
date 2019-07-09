@@ -204,12 +204,6 @@
   background: url("https://www.forever21.com/images/f21/us/top_cart.svg") no-repeat bottom left;
   margin-left: 1.5em;
 }
-/* PromotionCoupon 07/02/2019 Added by Eve */
-.icon_coupon {
-   background: url("/us/shop/_common/images/img_tag.svg") no-repeat center left;
-   width: 20px!important;
-   height: 20px!important
-}
 .icon_wishlist {
   background: url("https://www.forever21.com/images/f21/us/top_wishlist.svg") no-repeat center left;
 }
