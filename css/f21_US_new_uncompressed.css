@@ -1,5 +1,5 @@
 /*
-  * Forever21 USA v1.1.1 07/09/2019 - Version 1
+  * Forever21 USA v1.1.1 07/23/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve
 */
@@ -254,6 +254,12 @@
 }
 .icon_tag {
   background: url("https://www.forever21.com/images/f21/us/label.svg") no-repeat top left;
+}
+/* 07/23/2019 Applied promo code on product, Added by Eve */
+.icon_coupon {
+    background: url("/us/shop/_common/images/img_tag.svg") no-repeat center left;
+    width: 20px!important;
+    height: 20px!important;
 }
 /*span[class^="btn_"] {
   background: url(/us/shop/_common/images/icon_round_check.png) no-repeat;
