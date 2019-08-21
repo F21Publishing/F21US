@@ -1,11 +1,12 @@
 /*
-  * Forever21 USA v1.1.1 07/23/2019 - Version 1
+  * Forever21 USA v1.1.1 08/15/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve
 */
 /*#taco *,#taco body,#taco button,#taco a {
   cursor: url("/us/shop/_common/images/TacoCursor.cur"), auto !important;
 }*/
+/* Font changed 08/15/2019 Removed by Eve
 @font-face{
   font-family:"Trade Gothic W01 BoldCn_20";
   src:url("/us/shop/_common/images/fonts/tradegothic/257c802f-349c-4b4d-aefa-546d5de15ec6.eot");
@@ -99,9 +100,11 @@
   url("/us/shop/_common/images/fonts/avenir/b0a54a47-369f-439a-a181-6598ef4ba52f.svg#b0a54a47-369f-439a-a181-6598ef4ba52f") format("svg");
 }*/
 
+/* Font changed 08/15/2019 Removed by Eve
 .t_trade {
   font-family: "Trade Gothic W01 BoldCn_20",Arial,Helvetica,sans-serif;
-}
+}*/
+
 .t_avenir_thin {
   font-family: "Avenir Next W05 Thin",Arial,Helvetica,sans-serif;
 }
@@ -111,6 +114,7 @@
 .t_avenir_demi {
   font-family: "Avenir Next W05 Demi",Arial,Helvetica,sans-serif;
 }
+/* Font changed 08/15/2019 Removed by Eve
 .t_futura {
   font-family:"Futura W05_n2",Helvetica,Arial,sans-serif;
 }
@@ -123,6 +127,19 @@
 .t_futura_bold {
   font-family: "Futura W05_n5",Helvetica,Arial,sans-serif;
   font-weight: 900;
+}*/
+
+/* Font changed 08/15/2019 Added by Eve */
+.t_barlow {
+    font-family: "Barlow Condensed",Arial,Helvetica,sans-serif;
+    font-weight: 600
+}
+.t_source {
+    font-family: "Source Sans Pro",Helvetica,Arial,sans-serif
+}
+.t_source_bold {
+    font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+    font-weight: 700
 }
 /* ============================== */
 /* Loading Code                   */

@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 07/23/2019 - Version 1
+  * Forever21 Common v1.1.1 08/15/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve Chen
 */
@@ -2143,7 +2143,7 @@ html {
   .keywords {
     font-weight: bold;
     text-decoration: underline;
-    font-family: "Futura W05_n5",Airal,Helvetica,Sans-Serif
+    font-family: "Source Sans Pro",Airal,Helvetica,Sans-Serif
   }
   
   .search_content .pi_container {
@@ -4311,6 +4311,7 @@ html {
     position: relative;
     display: inline-block;
   }
+  /* 08/15/2019 Not showing promo code on product, Removed
   .coupontip .coupontiptext {
     visibility: hidden;
     width: 120px;
@@ -4337,7 +4338,7 @@ html {
   }
   .coupontip:hover .coupontiptext {
     visibility: visible;
-  }
+  }*/
   
   /* ============================== */
   /* Quick View Code                */
@@ -6895,7 +6896,7 @@ html {
         padding: 21px .85em;
         position: relative;
         letter-spacing: 1px;
-        font-size: .85em
+        font-size: 14px; /* Font changed 08/15/2019 Changed by Eve */
     }
   
     .d_new_mega_menu:hover > a > span {
@@ -6935,9 +6936,10 @@ html {
         overflow: visible;
         opacity: 1;
         padding: 2em 1em;
-        font-size: .85em;
+        font-size: 13px; /* Font changed 08/15/2019 Changed by Eve */
         margin-left: 0;
-        margin-top: 6px;
+        margin-top: 8px; /* Font changed 08/15/2019 Changed by Eve */
+        line-height: 28px; /* Font changed 08/15/2019 Added by Eve */
         letter-spacing: 1px;
         box-shadow: 0 0 0 0;
         -webkit-box-shadow: 0 0 0 0;
