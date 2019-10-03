@@ -1466,7 +1466,7 @@ html {
   }
   
   .t_red {
-    color: #ce0013
+    color: #ec1f35; /* Top Bar 09/02/19, Changed by Eve */
   }
   
   .t_pink, .FinalSale {
@@ -1650,6 +1650,48 @@ html {
   .bb_no {
     border-bottom: 0 !important
   }
+
+  /* Top Bar 09/02/19, Added by Eve */
+  .pro_auto{
+      background: #fff700;
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-size: 10px;
+  }
+    .pro_auto:hover {
+      color: #000000;
+      cursor:pointer;
+      text-decoration: underline;
+    }
+  .pro_tip {
+      visibility: hidden;
+      position: absolute;
+      top: 34px;
+      left: 60%;
+      width: auto;
+      padding: 10px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      z-index: 9999;
+  }
+    .pro_tip.applied {
+        visibility: visible;
+        background: #00c57d15;
+        color: #00c57d !important;
+    }
+    .pro_tip.noapplied {
+        visibility: visible;
+        background: #e6444415;
+        color: #e64444 !important;
+    }
+        .pro_tip.noapplied > a {
+            text-decoration: underline;
+        }
+  .popup_tip{
+      left: 50%;
+      top: 60px;
+  }
+  
   /* Show Hide Code */
   .show_mobile, .show_both {
     display: block
@@ -2058,8 +2100,8 @@ html {
     width: 22px;
     height: 22px
   }
-  
-  .search_suggestion {
+  /* Top Bar 09/02/19, Removed by Eve */
+  /*.search_suggestion {
     background: #eee;
     position: absolute;
     z-index: 9999;
@@ -2080,16 +2122,16 @@ html {
     -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.22);
     -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.22);
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.22)
-  }
+  }*/
   /* ============================== */
   /* Header Fixed Code              */
   /*================================*/
   .header_fixed {
     position: fixed;
     z-index: 999;
-    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.22);
-    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.22);
-    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.22)
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1); /* Top Bar 09/02/19, Changed by Eve */
+    /*-moz-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.22);*/ /* Top Bar 09/02/19, Removed by Eve */
+    /* box-shadow: 0 3px 5px 0 rgba(0,0,0,0.22)*/ /* Top Bar 09/02/19, Removed by Eve */
   }
   
     .header_fixed .pre_header {
@@ -2157,8 +2199,8 @@ html {
     position: absolute;
     visibility: hidden;
     overflow-x: hidden;
-    /*width: 85%;*/
-    width: 320px;
+    width: 83%; /* Top Bar 09/02/19, Added by Eve */
+    /*width: 320px;*/
     height: 100%;
     letter-spacing: .5px;
     left: -320px;
@@ -2246,7 +2288,7 @@ html {
     -ms-transition: all .25s ease-in-out;
     -o-transition: all .25s ease-in-out;
     position: absolute;
-    left: -320px;
+    left: -100%;   /* Top Bar 09/02/19, Changed by Eve */
     display: inline-block
   }
   
@@ -2266,7 +2308,7 @@ html {
   .mega_menu > span {
     width: 100%;
     position: relative;
-    padding: 1.1em 20px;
+    padding: 1.5em 0px;  /* Top Bar 09/02/19, Changed by Eve */
     display: inline-block;
     float: left;
     text-decoration: none;
@@ -2276,18 +2318,20 @@ html {
   }
   /*.mega_menu.active > span, .second_menu.active > span, */ 
   .go_back {
-    background: #2d2d2d !important;
-    color: #fff;
-    letter-spacing: 2px;
+    background: #ffffff!important; /* Top Bar 09/02/19, Changed by Eve */
+    color: #111; /* Top Bar 09/02/19, Changed by Eve */
+    letter-spacing: 1px; /* Top Bar 09/02/19, Changed by Eve */
     position: relative;
-    padding: 14px;
-    height: 50px
+    padding: 30px 20px 20px 20px; /* Top Bar 09/02/19, Changed by Eve */
+    height: 70px; /* Top Bar 09/02/19, Changed by Eve */
+    text-decoration: underline; /* Top Bar 09/02/19, Added by Eve */
   }
   
     .go_back.top_fixed {
-        width: 320px !important;
+        width: 83%!important;/* Top Bar 09/02/19, Added by Eve */
         position: fixed;
-        z-index: 999
+        z-index: 999;
+        border-bottom: 1px solid #ddd;    /* Top Bar 09/02/19, Added by Eve */
     }
   
   .expand_p, .mega_menu {
@@ -2298,7 +2342,7 @@ html {
   }
   
     .expand_p > span {
-        padding: 10px 0;
+        padding: 15px 0; /* Top Bar 09/02/19, Changed by Eve */
         cursor: pointer
     }
   
@@ -2313,9 +2357,9 @@ html {
   border-bottom: 10px solid #f4f4f4;
   }*/
   .left_slide .expand_p {
-    padding-left: 15px;
+    /* padding-left: 15px; *//* Top Bar 09/02/19, Removed by Eve */
     color: #000 !important
-    font-weight: bold; /* TopNavRedesign 05/14/2019 Added by Eve */
+    /*font-weight: bold;*/ /* Top Bar 09/02/19, Removed by Eve */
   }
   
   .expand_c, .mega_sub, .m_expand_c {
@@ -2326,8 +2370,8 @@ html {
   
   .expand_p > span:after, .mega_menu > span:after, .left_slide .expand_p > span:after {
     content: "+";
-    right: 20px;
-    top: 30%;
+    right: 5px; /* Top Bar 09/02/19, Changed by Eve */
+    top: 33%; /* Top Bar 09/02/19, Changed by Eve */
     position: absolute;
     float: right;
     font-weight: normal;
@@ -2363,7 +2407,7 @@ html {
   }
   
     .mega_sub li /*, .mobile_myaccount li*/, .child_wrapper li {
-        padding: 1em 25px;
+        padding: 1em 20px; /* Top Bar 09/02/19, Changed by Eve */
         /*border-bottom: 1px solid #ddd;*/ /* TopNavRedesign 05/14/2019 Removed by Eve */
         cursor: pointer
     }
@@ -2376,14 +2420,19 @@ html {
     /*border-bottom: 1px solid #ddd;/* TopNavRedesign 05/14/2019 Removed by Eve */
     clear: both
   }
-  
+
+    /* Top Bar 09/02/19, Added by Eve */
+    .second_menu li{
+      padding-left: 60px;
+    }
+
     .second_menu > span {
         border-bottom: 0 !important
     }
   
     .second_menu > span, .m_expand_c li {
         /*border-bottom: 1px solid #ddd;*//* TopNavRedesign 05/14/2019 Removed by Eve */
-        background: #f4f4f4 !important; /* TopNavRedesign 05/14/2019 Changed by Eve, #fff --> changed to #f4f4f4  */
+        background: #fff!important; /* Top Bar 09/02/19, Changed by Eve */
         display: inline-block;
         width: 100%;
         font-size: 90%;
@@ -2392,6 +2441,7 @@ html {
   
     .second_menu li {
         font-size: 90%
+        padding: 1em 0px 1em 60px; /* Top Bar 09/02/19, Added by Eve */
     }
   
   .noscroll {
@@ -4693,6 +4743,15 @@ html {
   .new_preheader {
     width: 330px
   }
+
+  /* Top Bar 09/02/19, Added by Eve */
+  .d_new_mega_search{
+    position: relative;
+    right: 0px;
+    top: 0px;
+    left: 10px;
+  }
+
   /* ============================== */
   /* New Navigation Code 03/27/2018 - Another Version */
   /*================================*/
@@ -4711,7 +4770,12 @@ html {
   .d_new_header > div:last-child {
     width: 180px
   }
-  
+  /* Top Bar 09/02/19, Added by Eve */
+  .search_exp input {
+    border: 0!important;
+    width: 80%;
+    position: relative;
+  }
   .new_search input {
     height: 35px;
     border: 0 !important;
@@ -4769,7 +4833,7 @@ html {
     }
   
     .l_container, .go_back {
-        width: 266px
+        width: 83%; /* Top Bar 09/02/19, Changed by Eve */
     }
   
     .slider_close {
@@ -4781,9 +4845,73 @@ html {
     }
   
     .go_back.top_fixed {
-        width: 266px !important
+        width: 83%!important; /* Top Bar 09/02/19, Changed by Eve */
     }
-  
+    /* Top Bar 09/02/19, Added by Eve */
+    .container .search_exp{
+        width: 100%;
+        margin-left: 0;
+        top: 90px;
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .search_exp{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        text-align: left;
+        background: #ffffff;
+        padding: 20px 20px;
+        line-height: 30px;
+        font-size: 0.85em;
+        margin-left: -20px;
+        z-index: 9999;
+        height: fit-content;
+        overflow-y: auto;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        box-shadow: 0 2px 3px 0 rgba(0,0,0,0.2);
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .search_exp.open{
+        opacity: 1;
+        visibility: visible;
+        top: 90px;
+    }
+      /* Top Bar 09/02/19, Added by Eve */
+      .search_exp.open label { 
+          font-size: 14px;
+          width: 70%;
+          padding: 0px 10px;
+          display:  inline-block;
+          cursor: pointer;
+      }
+      /* Top Bar 09/02/19, Added by Eve */
+      .search_exp.open input {
+          height: 30px;
+      }
+    /* Top Bar 09/02/19, Added by Eve */
+    .left_slide>.search_exp.open{
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        top: 0px;
+        height: fit-content;
+        z-index: 999999;
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .left_slide input{
+        height: 30px;
+        border: 0!important;
+        width: 90%;
+        position: relative;
+    }  
+    /* Top Bar 09/02/19, Added by Eve */
+    .m_pt_15 {
+        padding-top: 15px;
+    }
   }
   /* ============================== */
   /* Small Desktop Code             */
@@ -4802,6 +4930,10 @@ html {
     #iframeChaseCreditCard {
         width: 100%;
         padding: 3px
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .m_pt_15 {
+        padding-top: 15px;
     }
   }
   
@@ -5031,7 +5163,89 @@ html {
         .s_page li:first-child, .s_page li:last-child, .s_page li.dot {
             background: #fff
         }
-  }
+
+   /* Top Bar 09/02/19, Added by Eve */
+    .container .search_exp{
+        width: 100%;
+        margin-left: 0;
+        top: 110px;
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .search_exp{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        text-align: left;
+        background: #ffffff;
+        padding: 20px 20px;
+        line-height: 30px;
+        font-size: 0.85em;
+        margin-left: -20px;
+        z-index: 9999999;
+        height: fit-content;
+        overflow-y: auto;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        box-shadow: 0 2px 3px 0 rgba(0,0,0,0.2);
+    }   
+    /* Top Bar 09/02/19, Added by Eve */
+    .search_exp.open{
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+    }   
+      /* Top Bar 09/02/19, Added by Eve */
+      .search_exp.open label {
+          font-size: 14px;
+          width: 70%;
+          padding: 0px 10px;
+          display:  inline-block;
+      }
+      /* Top Bar 09/02/19, Added by Eve */
+      .search_exp.open input {
+          height: 30px;
+      }
+    /* Top Bar 09/02/19, Added by Eve */
+    .left_slide>.search_exp.open{
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        top: 80px;
+        height: fit-content;
+        z-index: 999999;
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+     .left_slide input{
+        height: 30px;
+        border: 0!important;
+        width: 90%;
+        position: relative;
+    }  
+    /* Top Bar 09/02/19, Added by Eve */
+    .search_exp a:hover {
+        color: #0e73d0;
+        text-decoration: underline;
+    }    
+    /* Top Bar 09/02/19, Added by Eve */
+    .m_pt_15 {
+        padding-top: 15px;
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .pro_tip {
+        visibility: hidden;
+        position: absolute;
+        top: 0px;
+        left: 60%;
+        width: auto;
+        padding: 10px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        z-index: 9999;
+     }
+   }
   
   /* ============================== */
   /* Tablet Device Portrait Code    */
@@ -5140,7 +5354,14 @@ html {
             background: #fff
         }
   }
-  
+  /* Top Bar 09/02/19, Added by Eve */
+    .left_slide input{
+        height: 30px;
+        border: 0!important;
+        width: 90%;
+        position: relative;
+  }
+
   /* ============================== */
   /* Smallest Tablet Code           */
   /*================================*/
@@ -5151,7 +5372,7 @@ html {
     button.slider_close {
         width: 50px !important;
         height: 50px !important;
-        left: 0 !important
+        /* left: 0!important */ /* Top Bar 09/02/19, Removed by Eve */
     }
   
     .logo.left {
@@ -5172,20 +5393,103 @@ html {
     .d_new_header > div:last-child {
         width: 130px
     }
-  
-    .search_suggestion {
+    /* Top Bar 09/02/19, Removed by Eve */
+    /*.search_suggestion {
         width: 102.7%;
         left: -1em
-    }
+    }*/
   
     span[class^="top_new"], span[class^="flag_"] {
         margin-left: 10px
     }
+    /* Top Bar 09/02/19, Added by Eve */
+    .container .search_exp{
+        width: 100%;
+        margin-left: 0;
+        top: 90px;
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .search_exp{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        text-align: left;
+        background: #ffffff;
+        padding: 20px 20px;
+        line-height: 30px;
+        font-size: 0.85em;
+        margin-left: -20px;
+        z-index: 9999;
+        overflow-y: auto;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .search_exp.open{
+        opacity: 1;
+        visibility: visible;
+        top: 110px;
+    }
+      /* Top Bar 09/02/19, Added by Eve */
+      .search_exp.open label {
+          font-size: 14px;
+          width: 70%;
+          padding: 0px 10px;
+          display:  inline-block;
+      }
+      /* Top Bar 09/02/19, Added by Eve */
+      .search_exp.open input {
+          height: 30px;
+      }
+    /* Top Bar 09/02/19, Added by Eve */
+    .left_slide>.search_exp.open{
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        top: 80px;
+        height: fit-content;
+        z-index: 999999;
+        padding: 20px; !important
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .left_slide input{
+        height: 30px;
+        border: 0!important;
+        width: 90%;
+        position: relative;
+    }  
+    /* Top Bar 09/02/19, Added by Eve */
+    .search_exp a:hover {
+        color: #0e73d0;
+        text-decoration: underline;
+    }
   }
   
   
+  /* Top Bar 09/02/19, Added by Eve */
+  @media(min-width:500px) and (max-width:767px){
+    .m_pt_15 {
+        padding-top: 15px
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .pro_tip {
+        visibility: hidden;
+        position: absolute;
+        top: 0px;
+        left: 60%;
+        width: auto;
+        padding: 10px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        z-index: 9999;
+     }
+  }
   
-  
+
   /* ========================================== */
   /* New HP Kicker's copy sizings.  11/01/2018  */
   /*============================================*/
@@ -6124,9 +6428,75 @@ html {
         padding: 10px
     }
   
-    .search_suggestion {
+    /* Top Bar 09/02/19, Removed by Eve */
+    /*.search_suggestion {
         width: 100%;
         left: -15px
+    }*/
+    /* Top Bar 09/02/19, Added by Eve */
+    .container .search_exp{
+        width: 100%;
+        margin-left: 0;
+        top: 90px;
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .search_exp{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        text-align: left;
+        background: #ffffff;
+        padding: 20px 100px;
+        line-height: 30px;
+        font-size: 0.85em;
+        margin-left: -20px;
+        z-index: 9999;
+        overflow-y: auto;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .search_exp.open{
+        opacity: 1;
+        visibility: visible;
+        top: 88px;
+    }
+      /* Top Bar 09/02/19, Added by Eve */
+      .search_exp.open label {
+          font-size: 14px;
+          width: 60%;
+          padding: 0px 10px;
+          display:  inline-block;
+      }
+      /* Top Bar 09/02/19, Added by Eve */
+      .search_exp.open input {
+          height: 30px;
+      }
+    /* Top Bar 09/02/19, Added by Eve */
+    .left_slide>.search_exp.open{
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        top: 80px;
+        height: 640px;
+        z-index: 999999;
+        padding: 20px; !important
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .left_slide input{
+        height: 30px;
+        border: 0!important;
+        width: 90%;
+        position: relative;
+    }  
+    /* Top Bar 09/02/19, Added by Eve */
+    .search_exp a:hover {
+        color: #0e73d0;
+        text-decoration: underline;
     }
   }
   
@@ -6398,13 +6768,15 @@ html {
   
     .hover_c, .d_mega_sub {
         top: 52px;
+        width: fit-content; /* Top Bar 09/02/19, Changed by Eve */
+        width: -moz-max-content; /* Top Bar 09/02/19, Added by Eve */
         opacity: 0;
         visibility: hidden;
         position: absolute;
         text-align: left;
         background: #fff;
         padding: 15px 20px;
-        line-height: 25px;
+        line-height: 28px; /* Top Bar 09/02/19, Changed by Eve */
         margin-left: -20px;
         z-index: 9999999;
         /*border-top: 1px solid #eee;*/
@@ -6415,9 +6787,41 @@ html {
         transition: all .15s ease-in-out;
         -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.22);
         -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.22);
-        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.22)
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1)/* Top Bar 09/02/19, Changed by Eve */
     }
   
+    /* Top Bar 09/02/19, Added by Eve */
+    .country_hover.hover_c {
+        top: 34px;
+        right: 0px;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .help_hover.hover_c {
+        top: 34px;
+        right: 110px;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .top_bar a:hover {
+        color: #0e73d0;
+        text-decoration: underline;
+    }
+
+    /* Top Bar 09/02/19, Added by Eve */
+    .top_bar:hover>span {
+        background-color: #ffffff;
+        padding-bottom:5px;
+    }
+
     .new_hover.hover_c {
         top: 50px;
         right: -11px;
@@ -6774,7 +7178,12 @@ html {
     .wmx_500 {
         max-width: 500px !important
     }
-  
+    
+    /* Top Bar 09/02/19, Added by Eve */
+    .wmx_600 {
+        max-width: 600px
+    }
+
     .wmx_800 {
         max-width: 800px
     }
@@ -6833,12 +7242,12 @@ html {
         .row_5 > div:nth-child(5n+1) {
             clear: left
         }
-  
-    .suggestion_grid {
+    /* Top Bar 09/02/19, Removed by Eve */
+    /*.suggestion_grid {
         top: 0px;
         padding-bottom: 0px;
         margin-top: 0
-    }
+    }*/
     /* ============================== */
     /* New Navigation Code 04/30/2018 */
     /*================================*/
@@ -6868,7 +7277,14 @@ html {
     .new_search input {
         width: 95%
     }
-  
+
+    /* Top Bar 09/02/19, Added by Eve */
+    .search_exp input {
+        border: 0!important;
+        width: 80%;
+        position: relative;
+    }
+
     .new_top.top_count {
         top: 15px
     }
@@ -6888,12 +7304,70 @@ html {
             opacity: 1;
             visibility: visible
         }
-  
+
+    /* Top Bar 09/02/19, Added by Eve */
+    .container .search_exp{
+        width: 100%;
+        margin-left: 0;
+        top: 90px;
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .search_exp{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        text-align: left;
+        background: #ffffff;
+        padding: 20px 180px;
+        line-height: 30px;
+        font-size: 0.85em;
+        margin-left: -20px;
+        z-index: 9999;
+        overflow-y: auto;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+    }
+
+    /* Top Bar 09/02/19, Added by Eve */
+    .search_exp.open{
+        opacity: 1;
+        visibility: visible;
+        top: 90px;
+    }
+      /* Top Bar 09/02/19, Added by Eve */
+      .search_exp.open label {
+          font-size: 14px;
+          width: 60%;
+          padding: 0px 10px;
+          display:  inline-block;
+      }
+      /* Top Bar 09/02/19, Added by Eve */
+      .search_exp.open input {
+          height: 30px;
+      }
+    /* Top Bar 09/02/19, Added by Eve */
+    .search_exp a:hover {
+        color: #0e73d0;
+        text-decoration: underline;
+    }
+    /* Top Bar 09/02/19, Added by Eve */
+    .d_new_mega_search>a {
+        display: inline-block;
+        letter-spacing: 1px;
+        font-size: .85em;
+        color: #a5a5a5;
+        padding: 15px; /* Top Bar 09/02/19, Added by Eve */
+    }  
+
     .d_new_mega_menu > a {
         display: inline-block;
         float: left;
         height: 100%;
-        padding: 21px .85em;
+        padding: 21px 1.6em; /* Top Bar 09/02/19, Changed by Eve */
         position: relative;
         letter-spacing: 1px;
         font-size: 14px; /* Font changed 08/15/2019 Changed by Eve */
@@ -6903,7 +7377,16 @@ html {
         height: 100%;
         z-index: 999;
         color: #111;
-        position: relative
+        position: relative;
+        font-weight: 700; /* Top Bar 09/02/19, Added by Eve */
+        letter-spacing: 1px; /* Top Bar 09/02/19, Added by Eve */
+        margin-top: -2px; /* Top Bar 09/02/19, Added by Eve */
+        margin-bottom: -2px; /* Top Bar 09/02/19, Added by Eve */
+        margin-right: -2px; /* Top Bar 09/02/19, Added by Eve */
+        margin-left: 0px; /* Top Bar 09/02/19, Added by Eve */
+        border-bottom: 2px #111111 solid; /* Top Bar 09/02/19, Added by Eve */
+        left: 0px;/* Top Bar 09/02/19, Added by Eve */
+        right: 0px;/* Top Bar 09/02/19, Added by Eve */
     }
   
     .d_new_mega_menu:hover > a:after {
@@ -6920,6 +7403,7 @@ html {
   
     .d_new_mega_menu.m_sale:hover > a > span {
         color: #ec1f35 /* TopNavRedesign 05/14/2019 Changed by Eve, #fff --> changed to #ec1f35 */
+        border-bottom: 2px #ec1f35 solid; /* Top Bar 09/02/19, Added by Eve */
     }
   
     .d_new_mega_menu.m_sale:hover > a:after {
@@ -6935,15 +7419,15 @@ html {
         display: table;
         overflow: visible;
         opacity: 1;
-        padding: 2em 1em;
+        padding: 2em 2em; /* Top Bar 09/02/19, Changed by Eve */
         font-size: 13px; /* Font changed 08/15/2019 Changed by Eve */
         margin-left: 0;
-        margin-top: 8px; /* Font changed 08/15/2019 Changed by Eve */
+        margin-top: 90px; /* Top Bar 09/02/19, Changed by Eve */
         line-height: 28px; /* Font changed 08/15/2019 Added by Eve */
         letter-spacing: 1px;
-        box-shadow: 0 0 0 0;
-        -webkit-box-shadow: 0 0 0 0;
-        -moz-box-shadow: 0 0 0 0
+        box-shadow: 0 3px 3px 0px #00000011; /* Top Bar 09/02/19, Changed by Eve */
+        /*-webkit-box-shadow: 0 0 0 0; */ /* Top Bar 09/02/19, Removed by Eve */
+        /*-moz-box-shadow: 0 0 0 0 */ /* Top Bar 09/02/19, Removed by Eve */
     }
   
         .d_new_mega_sub ul {
@@ -6962,7 +7446,8 @@ html {
             }
   
         .d_new_mega_sub a:hover {
-            color: #0E73D0
+            color: #0E73D0;
+            text-decoration: underline; /* Top Bar 09/02/19, Added by Eve */
         }
   
         .d_new_mega_sub table {
@@ -7046,7 +7531,7 @@ html {
     align-items: center;
     justify-content: center;
     background-color: rgba(0,0,0,.5);
-    z-index: 1000000000000;
+    z-index: 99999999;    /* Top Bar 09/02/19, Changed by Eve */
     opacity: 0;
     display: none;
     transition: opacity .2s;
@@ -8319,14 +8804,46 @@ html {
   /* ==================================== */
   /*  Tab design 1004 2018 Eunice round.  */
   /*===================================== */
-  
+     /* Top Bar 09/02/19, Added by Eve */
+  .tab_logo>div {
+      opacity:0.4;
+  }
+  /* Top Bar 09/02/19, Added by Eve */
+  .tab_logo .active{
+      opacity: 1
+  }
+  /* Top Bar 09/02/19, Added by Eve */
+  .tab_logo>div:hover {
+      opacity: 1;
+      cursor: pointer
+  }
   /* Tabbed Styles */
   .tabbed {
     width: 100%;
+    height: 34px!important; /* Top Bar 09/02/19, Added by Eve */
     min-width: 300px;
     margin: 0 auto;
-    overflow: hidden;
+    /*overflow: hidden;*/ /* Top Bar 09/02/19, Removed by Eve */
     transition: border 250ms ease;
+    background: #f9f9f9; /* Top Bar 09/02/19, Added by Eve */
+  }
+  /* Top Bar 09/02/19, Added by Eve */
+  .tabbed .owl-nav>.owl-prev_trans {
+    top: 0;
+    padding-top: 0;
+    margin-left: 0px;
+    background-color: #f9f9f9;
+    opacity: 1;
+    cursor: pointer;
+  }
+  /* Top Bar 09/02/19, Added by Eve */
+  .tabbed .owl-nav>.owl-next_trans {
+    top: 0;
+    padding-top: 0;
+    margin-right: 0px;
+    background-color: #f9f9f9;
+    opacity: 1;
+    cursor: pointer;
   }
   .tabbed ul {
     margin: 0px;
@@ -8431,11 +8948,6 @@ html {
   
   
   
-  
-  
-  
-  
-  
   /* ============================================================= */
   /*  search suggestions text dropdown highlight 0927 2018 Eunice  */
   /* ============================================================= */
@@ -8455,6 +8967,7 @@ html {
   }
 
 
+
 /*   06/19/2019 added by Eve / For Donde widget   */
 .donde-background {
     background-color: white !important;
@@ -8463,10 +8976,291 @@ html {
     background-color: white !important;
 }
 
-   
+/*   09/20/2019 added by Eve / For Afterpay widget   */
+.afterpay-paragraph{
+    vertical-align: baseline;
+    padding-bottom: 10px;
+    line-height: 15px!important;
+}
+.afterpay-text1{
+    font-size: 13px;
+    color: #797979;
+    padding-bottom: 10px;
+    padding-right: 5px;
+}
+.afterpay-logo{
+    width: 80px;
+    padding-right: 5px;
+}  
   
-  
-  
-  
-  
+
+/* ============================================================= */
+/*  PDP image zoom 09/30/2019 Added by Eve  */
+/* ============================================================= */
+@keyframes drift-fadeZoomIn {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+ 
+@keyframes drift-fadeZoomOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  15% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+ 
+@keyframes drift-loader-rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-180deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+ 
+@keyframes drift-loader-before {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.2) translateX(6px);
+  }
+  25% {
+    transform: scale(1.3) translateX(8px);
+  }
+  40% {
+    transform: scale(1.2) translateX(6px);
+  }
+  50% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.8) translateX(6px);
+  }
+  75% {
+    transform: scale(0.7) translateX(8px);
+  }
+  90% {
+    transform: scale(0.8) translateX(6px);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+ 
+@keyframes drift-loader-after {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.2) translateX(-6px);
+  }
+  25% {
+    transform: scale(1.3) translateX(-8px);
+  }
+  40% {
+    transform: scale(1.2) translateX(-6px);
+  }
+  50% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.8) translateX(-6px);
+  }
+  75% {
+    transform: scale(0.7) translateX(-8px);
+  }
+  90% {
+    transform: scale(0.8) translateX(-6px);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+ 
+@-webkit-keyframes drift-fadeZoomIn {
+  0% {
+    -webkit-transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+ 
+@-webkit-keyframes drift-fadeZoomOut {
+  0% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  15% {
+    -webkit-transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+    opacity: 0;
+  }
+}
+ 
+@-webkit-keyframes drift-loader-rotate {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+ 
+@-webkit-keyframes drift-loader-before {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(1.2) translateX(6px);
+  }
+  25% {
+    -webkit-transform: scale(1.3) translateX(8px);
+  }
+  40% {
+    -webkit-transform: scale(1.2) translateX(6px);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(0.8) translateX(6px);
+  }
+  75% {
+    -webkit-transform: scale(0.7) translateX(8px);
+  }
+  90% {
+    -webkit-transform: scale(0.8) translateX(6px);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+ 
+@-webkit-keyframes drift-loader-after {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(1.2) translateX(-6px);
+  }
+  25% {
+    -webkit-transform: scale(1.3) translateX(-8px);
+  }
+  40% {
+    -webkit-transform: scale(1.2) translateX(-6px);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(0.8) translateX(-6px);
+  }
+  75% {
+    -webkit-transform: scale(0.7) translateX(-8px);
+  }
+  90% {
+    -webkit-transform: scale(0.8) translateX(-6px);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+ 
+.drift-zoom-pane {
+  background: rgba(0, 0, 0, 0.5);
+  /* This is required because of a bug that causes border-radius to not work with child elements in certain cases. */
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+ 
+.drift-zoom-pane.drift-opening {
+  animation: drift-fadeZoomIn 180ms ease-out;
+  -webkit-animation: drift-fadeZoomIn 180ms ease-out;
+}
+ 
+.drift-zoom-pane.drift-closing {
+  animation: drift-fadeZoomOut 210ms ease-in;
+  -webkit-animation: drift-fadeZoomOut 210ms ease-in;
+}
+ 
+.drift-zoom-pane.drift-inline {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+ 
+.drift-loading .drift-zoom-pane-loader {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 66px;
+  height: 20px;
+  animation: drift-loader-rotate 1800ms infinite linear;
+  -webkit-animation: drift-loader-rotate 1800ms infinite linear;
+}
+ 
+.drift-zoom-pane-loader:before,
+.drift-zoom-pane-loader:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+}
+ 
+.drift-zoom-pane-loader:before {
+  left: 0;
+  animation: drift-loader-before 1800ms infinite linear;
+  -webkit-animation: drift-loader-before 1800ms infinite linear;
+}
+ 
+.drift-zoom-pane-loader:after {
+  right: 0;
+  animation: drift-loader-after 1800ms infinite linear;
+  -webkit-animation: drift-loader-after 1800ms infinite linear;
+  animation-delay: -900ms;
+  -webkit-animation-delay: -900ms;
+}
+ 
+.drift-bounding-box {
+  background-color: rgba(0, 0, 0, 0.15);
+  z-index:999999999;
+}
+
   
