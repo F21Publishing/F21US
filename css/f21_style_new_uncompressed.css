@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 10/24/2019 - Version 1
+  * Forever21 Common v1.1.1 10/29/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve Chen
 */
@@ -2070,6 +2070,14 @@ html {
     height: 27px;
     margin: 0 3px;
     background-size: auto !important
+  }
+  
+  /* Larger Quick Add Clicking Area 10/29/2019 Added by Eve */
+  span[class^="qa_"] {
+    width: 47px;
+    height: 47px;
+    margin: 0 0px;
+    background-size: auto!important;
   }
   
   .nav_secondary .show_desktop, .d_search_container {
