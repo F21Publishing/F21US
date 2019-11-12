@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 10/31/2019 - Version 1
+  * Forever21 Common v1.1.1 11/07/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve Chen
 */
@@ -5291,6 +5291,17 @@ html {
         font-size: 12px;
         z-index: 9999;
      }
+      /* 11/07/19, Added by Eve */
+      .pro_tip.applied {
+          visibility: visible;
+          background: #ddf7ed;
+          color: #00c57d!important;
+          }
+        .pro_tip.noapplied {
+            visibility: visible;
+            background: #ffeaeaed;
+            color: #e64444!important;
+        }
     /* Quick ATC 10/15/2019 Added by Eve */
     .swatch.small li span {
         min-width: 30px;
