@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 10/29/2019 - Version 1
+  * Forever21 Common v1.1.1 10/31/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve Chen
 */
@@ -2839,18 +2839,17 @@ html {
   }
   
   /* Quick ATC 10/15/2019 Added by Eve */
-  .p_item .top_new_wishlist,.top_new_wishlist.active{
+  .p_item .qa_wishlist,.qa_wishlist.active{
     display: block;
     position: absolute;
-    bottom: 5px;
-    left: 10px;
+    bottom: 0px;
     z-index: 99;
   }
   /* Quick ATC 10/15/2019 Added by Eve */
-  .p_item .top_new_cart{
+  .p_item .qa_cart{
       display: block;
       position: absolute;
-      bottom: 5px;
+      bottom: 0px;
       right: 0px;
       z-index: 99;
   }
@@ -9355,4 +9354,30 @@ html {
       visibility: visible;
       
   }
-      
+
+/* Abandon Cart Reminder for Salesforce 10/31/2019 Added by Eve */
+.cart_reminder {
+    position: absolute;
+    background: #fff;
+    right: 0;
+    text-align: left;
+    width: 355px;
+    font-size: 13px;
+    padding: 20px 20px 20px 25px;
+    top: 47px;
+    z-index: 9999999;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    -ms-transition: all .15s ease-in-out;
+    -o-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.15);
+}
+  .cart_reminder>.icon_close{
+      position: absolute;
+      left: 10px;
+      top: 40px;
+      width: 10px!important;
+  }
