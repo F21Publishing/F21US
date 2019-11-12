@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 08/15/2019 - Version 1
+  * Forever21 Common v1.1.1 09/02/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve Chen
 */
@@ -6427,7 +6427,6 @@ html {
     .new_search label {
         padding: 10px
     }
-  
     /* Top Bar 09/02/19, Removed by Eve */
     /*.search_suggestion {
         width: 100%;
