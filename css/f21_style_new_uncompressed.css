@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 09/30/2019 - Version 1
+  * Forever21 Common v1.1.1 10/15/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve Chen
 */
@@ -1465,6 +1465,11 @@ html {
     color: #fae400
   }
   
+  /* Quick ATC 10/15/2019 Added by Eve */
+  .t_green{
+      color: #00c57d
+  }
+
   .t_red {
     color: #ec1f35; /* Top Bar 09/02/19, Changed by Eve */
   }
@@ -2772,7 +2777,7 @@ html {
         height: 21px;
         float: right;
         margin-top: 2px;
-        opacity: .4
+        /* opacity: .4; *//* Quick ATC 10/15/2019 Removed by Eve */
     }
   
     .pi_wrapper .icon_wishlist.active {
@@ -2825,6 +2830,23 @@ html {
     border: 1px solid #eee
   }
   
+  /* Quick ATC 10/15/2019 Added by Eve */
+  .p_item .top_new_wishlist,.top_new_wishlist.active{
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    z-index: 99;
+  }
+  /* Quick ATC 10/15/2019 Added by Eve */
+  .p_item .top_new_cart{
+      display: block;
+      position: absolute;
+      bottom: 5px;
+      right: 0px;
+      z-index: 99;
+  }
+
   .p_price {
     font-weight: bold;
     padding: 0 0 5px 0;
@@ -2942,7 +2964,7 @@ html {
     .swatch li {
         display: inline-block;
         vertical-align: top;
-        margin: 0 5px 5px 0
+        margin: 0px 10px 5px 0; /* Quick ATC 10/15/2019 Changed by Eve */
     }
   
         .swatch li:last-child {
@@ -2951,7 +2973,7 @@ html {
   
         .swatch li img {
             vertical-align: top;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd; /* Quick ATC 10/15/2019 Changed by Eve */
             padding: 2px
         }
   
@@ -2963,7 +2985,19 @@ html {
             cursor: pointer;
             position: relative
         }
-  
+    /* Quick ATC 10/15/2019 Added by Eve */
+    .swatch.small li {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 0px 5px 0;
+    }  
+        /* Quick ATC 10/15/2019 Added by Eve */
+        .swatch.small li img{
+            vertical-align: top;
+            border: 1px solid #f9f9f9;
+            padding: 0px;
+        }
+
     .swatch.round li span, .round img, .swatch.round .color li span.oos:before {
         border-radius: 50%;
         -webkit-border-radius: 50%;
@@ -2979,11 +3013,11 @@ html {
     }
   
     .swatch .size li span {
-        border: 2px solid #ddd;
+        border: 2px solid #eee; /* Quick ATC 10/15/2019 Changed by Eve */
         text-align: center;
         height: auto;
         width: auto;
-        padding: 7px 6px;
+        padding: 6px 6px; /* Quick ATC 10/15/2019 Changed by Eve */
         font-size: 80%
     }
   
@@ -2994,11 +3028,12 @@ html {
         }
   
   .size li span.oos, .size li span.oos:hover {
-    background: #ddd;
+    background: #eee; /* Quick ATC 10/15/2019 Changed by Eve */
     color: initial;
-    border: 2px solid #ddd;
+    border: 2px solid #eee; /* Quick ATC 10/15/2019 Changed by Eve */
     text-decoration: line-through;
-    cursor: not-allowed
+    cursor: not-allowed;
+    color: #999999; /* Quick ATC 10/15/2019 Added by Eve */
   }
   
   .swatch .color li span.oos:before, .drop_c.open dd span.oos:before {
@@ -3036,7 +3071,7 @@ html {
   }
   
   .inactive /*, .inactive span */ {
-    opacity: 0.4;
+    opacity: .3;/* Quick ATC 10/15/2019 Changed by Eve */
     cursor: not-allowed
   }
   
@@ -3627,6 +3662,11 @@ html {
         border: 2px solid #111
     }
   
+    /* Quick ATC 10/15/2019 Added by Eve */
+    button.outline_thin{
+        border: 1px solid #111111;
+    }
+
     button.outline_gray {
         background: #fff;
         border: 2px solid #aaa
@@ -3641,7 +3681,6 @@ html {
         background: #fff;
         border: 2px solid #ef5f96
     }
-  
   
   /* ============================== */
   /* Dropdown Code                  */
@@ -5245,6 +5284,11 @@ html {
         font-size: 12px;
         z-index: 9999;
      }
+    /* Quick ATC 10/15/2019 Added by Eve */
+    .swatch.small li span {
+        min-width: 30px;
+        height: 25%;
+    }
    }
   
   /* ============================== */
@@ -9262,4 +9306,23 @@ html {
   z-index:999999999;
 }
 
-  
+/* Quick ATC 10/15/2019 Added by Eve */
+.fixed_bottom>div {
+    position: fixed;
+    -webkit-box-shadow: 0 -1px 4px 0 rgba(0,0,0,.1);
+    background: #fff;
+    display: inline-block;
+    bottom: 0;
+    z-index: 3141591;
+}
+/* Quick ATC 10/15/2019 Added by Eve */
+.quick_add{
+    opacity: 0;
+    visibility: hidden;    
+}
+  .quick_add.open{
+      opacity: 1;
+      visibility: visible;
+      
+  }
+      
