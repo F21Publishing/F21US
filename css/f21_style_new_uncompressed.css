@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 12/09/2019 - Version 1
+  * Forever21 Common v1.1.1 12/18/2019 - Version 1
   * Copyright Forever21
   * Created by Namhee & Eve Chen
 */
@@ -2392,7 +2392,7 @@ html {
   .expand_p > span:after, .mega_menu > span:after, .left_slide .expand_p > span:after {
     content: "+";
     right: 5px; /* Top Bar 09/02/19, Changed by Eve */
-    top: 33%; /* Top Bar 09/02/19, Changed by Eve */
+    top: 39%; /* Swim Mix & match  12/18/2019 Changed By Eve */
     position: absolute;
     float: right;
     font-weight: normal;
@@ -2756,7 +2756,7 @@ html {
   .tooltip {
     color: #f2001e;
     font-size: .8em;
-    padding: 3px 0 0 10px;
+    padding: 0;  /* 12/18/2019 Changed By Eve */
     text-align: left;
     display: block;
     float: left;
@@ -9443,4 +9443,87 @@ div[id$="_frndby_container"] > img {
 }
 div[id$="_frndby_unit"] > iframe { 
   padding: unset; 
+}
+
+/* Swim Mix & match  12/18/2019 Added By Eve */
+.swim.category li img {
+    display: inline-block;
+    width: 90px;
+    padding: 16px;
+    /* margin: 16px; */
+    cursor: pointer;
+    position: relative;
+    opacity: .3;
+}
+.swim li {
+    display: inline-block;
+    vertical-align: top;
+}
+    .swim li:last-child {
+        margin: 0 0 0 0;
+    }
+    .swim li img {
+        display: inline-block;
+        width: 36px;
+        cursor: pointer;
+        position: relative;
+    }    
+.swim span.selected img {
+    opacity: 1.0;
+}
+.swim.round li span {
+    width: 46px;
+    height: 46px;
+    position: relative;
+    vertical-align: top;
+    border: 1px solid #eee;
+    padding: 4px;
+    margin: 0 10px 10px 0px;
+    opacity: 1;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+    .swim.round li:last-child span{
+         padding: 15px 0px 0px 0px;
+         font-weight: bold; 
+    }
+
+.swim_flat{
+    position: relative;
+    width: 270px;
+    height: 270px;
+}
+.swim.expand_p:hover {
+    opacity: 0.8
+}
+.swim .qa_wishlist,.qa_wishlist.active {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    z-index: 99;
+}
+.swim .qa_gallery {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    z-index: 99;
+}
+.swim_menu li {
+    padding: 0 0 10px;
+    display: inline-block;
+    width: 32%;
+}
+    .swim_menu li.active {
+        z-index: 999;
+        color: #111;
+        position: relative;
+        font-weight: 700;
+        border-bottom: 3px #111 solid;
+    }
+.swim_tabbed {
+    display: none;
 }
