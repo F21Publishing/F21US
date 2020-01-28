@@ -1,7 +1,7 @@
 /*
-  * Forever21 Common v1.1.1 12/18/2019 - Version 1
+  * Forever21 Common v1.1.1 01/28/2020 - Version 1
   * Copyright Forever21
-  * Created by Namhee & Eve Chen
+  * Created by Namhee
 */
 
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -4278,7 +4278,7 @@ html {
     padding: 14px 20px 12px 8px !important
   }
   
-  .checkout button, .set_item button {
+  .set_item button { /*checkout button*/
     width: 100%;
     padding: 1em
   }
@@ -5012,6 +5012,9 @@ html {
         left: -90%
     }
   
+    .scrollToTop { /* 20200128 */
+        visibility: hidden;
+    }
     /*
     .r_container.open {
         position: absolute
