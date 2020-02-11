@@ -1,0 +1,2418 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+	<head>
+		<!--[if lt IE 9]>
+	    <div class="ie_warning"><div>Forever21.com is not optimized for Internet Explorer 8. <br/>Use another browser or upgrade here: <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank" class="t_pink underline">http://windows.microsoft.com/en-us/internet-explorer/download-ie</a></div></div>
+		<![endif]-->
+		<title>Forever 21</title>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=9">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    	<meta name="author" content="Forever21">
+	    <meta name="apple-mobile-web-app-title" content="Forever 21">
+		<meta name="Description" content="Forever21.com offers the most current fashions for women and men.  Shop Forever21.com and find the best selection of fashion tops, dresses, denim, shoes, accessories, jewelery, lingerie, 21 special items, and more!">
+		<meta name="Keywords" content="clothes, clothing, apparel, casual tops, dressy tops, basics, skirts, dress, dresses, sale, fashion, cheap, tees, tank tops, graphics, shirts, pants, jeans, shorts, sweaters, outerwear, jackets, tops, bottoms, skirts, shoes, halter, tube top, denim, jewelery, accessories, rings, necklaces, underwear, mens, womens, woman, junior fashion, xxi, forlove, gadzooks, womens apparel, intimate, handbags, sunglasses, hats, scarves, hair goods, earrings">
+		<link rel="shortcut icon" href="http://www.forever21.com/images/en/common/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon-precomposed" href="http:http://www.forever21.com/images/en/common/apple-touch-icon-144x144-precomposed.png">
+		<link rel="stylesheet" type="text/css" href="css/f21_style_new_uncompressed.css">
+		<link rel="stylesheet" type="text/css" href="css/f21_US.css">
+		<link rel="stylesheet" type="text/css" href="css/font.css">
+		<link rel="stylesheet" type="text/css" href="css/esw.min.css">
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/f21_js.js"></script>
+		<script type="text/javascript" src="js/owl.carousel.js"></script>
+		<script type="text/javascript" src="js/jquery.tiny-layer.js"></script>
+		<script type="text/javascript" src="js/jquery.flex-modal.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/chat.css">
+	</head>
+			<!-- chat S adding-->
+		
+	<style type='text/css'>
+
+	</style>
+	
+	<script type='text/javascript'>
+	(function() {
+		document.getElementById('closeInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.rejectInvite();    window.location = '/apex/F21AutomaticInvitation2'; };
+		document.getElementById('rejectInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.rejectInvite();
+																	
+			window.location = '/apex/F21AutomaticInvitation2';   }; // use this API call to reject invitations
+		
+		document.getElementById('acceptInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.acceptInvite(); }; // use this API call to start chat from invitations
+		document.addEventListener('keyup', function(event) { if (event.keyCode == 27) { embedded_svc.inviteAPI.inviteButton.rejectInvite(); }})
+	var ordervalue=300;
+		embedded_svc.inviteAPI.inviteButton.setCustomVariable('ordervalue', ordervalue);
+	})();
+	</script>
+	<!-- End of Invitations -->
+	
+	<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+	<script type='text/javascript'>
+		var initESW = function(gslbBaseURL) {
+			
+			embedded_svc.settings.displayHelpButton =true;
+			embedded_svc.settings.language = 'English'; //For example, enter 'en' or 'en-US'
+			//  embedded_svc.settings.avatarImgURL ="https://forever21callcenter--f21scdevpr--c.visualforce.com/resource/1577554703000/AskAStylistButton?";
+			embedded_svc.settings.smallCompanyLogoImgURL="https://forever21callcenter--f21scdevpr--c.visualforce.com/resource/1577554703000/AskAStylistButton?";
+			embedded_svc.settings.defaultMinimizedText =' '; //(Defaults to Chat with an Expert)
+			embedded_svc.settings.disabledMinimizedText ='Offline'; //(Defaults to Agent Offline)
+			embedded_svc.settings.autoOpenPostChat = true;
+			
+			
+			//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+			//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+			
+			// Settings for Chat
+			//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+			//};
+			
+			embedded_svc.settings.prepopulatedPrechatFields = { FirstName: '{!$User.FirstName}',
+									LastName: '{!$User.LastName}',
+									Email: '{!$User.Email}',
+								Phone: '{!$User.Phone}'
+																};
+			//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+			//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+			embedded_svc.settings.offlineSupportMinimizedText = 'Chat'; 
+			
+			embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+			embedded_svc.settings.entryFeature = 'LiveAgent';
+		embedded_svc.init(
+			'https://forever21callcenter--f21scdevpr.my.salesforce.com',
+			'https://f21scdevpr-customer.cs78.force.com/',
+			gslbBaseURL,
+			'00D1k0000009cxf',
+			'F21AutomaticInvitation2',
+			{
+				baseLiveAgentContentURL: 'https://c.la2-c1cs-iad.salesforceliveagent.com/content',
+				deploymentId: '5721k00000000de',
+				buttonId: '5731k00000000iF',
+				baseLiveAgentURL: 'https://d.la2-c1cs-iad.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1k0000004CH7EAM_16ff5716d9f',
+				isOfflineSupportEnabled: false
+			}
+		);
+	};
+	
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://forever21callcenter--f21scdevpr.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+	</script>
+	<!-- chat E adding -->
+	<body>
+		<style> 
+			.m1_wrapper .owl-carousel .owl-stage, .owl-carousel .owl-item {
+				-ms-touch-action: auto;
+				touch-action: auto;
+			}
+		</style>
+
+		<!-- chat S adding-->
+		<div class="embeddedServiceHelpButton" style="display: block;">
+			<div class="helpButton" style="width: 147px;">
+				<button class="uiButton helpButtonEnabled" href="javascript:void(0)">
+					<span class="embeddedServiceIcon" aria-hidden="true" data-icon="" style="display: inline-block;"></span>
+					<span class="helpButtonLabel" id="helpButtonSpan" aria-live="polite" aria-atomic="true"><span class="assistiveText">Live chat:</span><span class="message"> </span></span>
+				</button>
+			</div>
+		</div>
+		<!-- Start of Invitations -->
+		<div class="embeddedServiceInvitation" id="snapins_invite" inert="true" aria-live="assertive" role="dialog" aria-atomic="true"  style="position: fixed;left: 100%;top: 100%;z-index: 10000;visibility: visible;margin-left: -330px;margin-top: -217px;">
+			<div class="embeddedServiceInvitationHeader" aria-labelledby="snapins_titletext" aria-describedby="snapins_bodytext">
+				<span class="embeddedServiceTitleText" id="snapins_titletext">Need help?</span>
+				<button type="button" id="closeInvite" class="embeddedServiceCloseIcon" aria-label="Exit invitation">&times;</button>
+			</div>
+			<div class="embeddedServiceInvitationBody">
+				<p id="snapins_bodytext">For any query or assistance CHAT with us!!!</p>
+			</div>
+			<div class="embeddedServiceInvitationFooter" aria-describedby="snapins_bodytext">
+				<button type="button" class="embeddedServiceActionButton" id="rejectInvite">Close</button>
+				<button type="button" class="embeddedServiceActionButton" id="acceptInvite">Start Chat</button>
+			</div>
+		</div>
+		<!-- chat E adding -->
+		<span class="scrollToTop t_bold" style="display: inline-block;"></span>
+		<!-- Cookie S -->
+		<div class="cookie bg_black t_white" style="display:none;">
+			<div class="icon_close underline"><a href="javascript:fnClosePop_CookieNotice()">X</a></div>
+			<p class="t_white t_bold pb_10">Cookie（クッキー）の使用</p>
+			<p>FOREVER 21はお客さまの利便性向上と当サイトのサービス向上のため、Cookieを使用しています。閲覧を続ける場合、お客様はCookieの使用を承認されたものと見なされます。Cookieの詳細については、 <a data-modal-target="#privacy" class="underline">こちら</a>をご覧ください。</p>
+		</div>
+		<!-- Cookie E -->
+		<!-- Mobile Left S -->
+		<button class="slider_close hide" cobrowse="viewonly"></button>
+		<div class="l_container">
+			<div class="container clearfix bg_white t_futura_light show">
+				<!-- Mega Menu S -->
+				<nav id="NavParent" class="left_slide parent_wrapper show">
+					<!-- Pre Header S -->
+					<div class="nav_primary">
+						<div class="col_s_10_of_10 mobile_myaccount">
+							<!-- Sign In S -->
+							<div class="col_ss_10_of_10 col_s_5_of_10 br_gray pa_10 txl bb_gray">
+								<span id="ddlSignin" class="m_expand_p">
+									<span class="top_new_account_black fc vm ma_0"></span>
+									<span class="p_relative"><span id="m_left_userarea" class="pl_5 m_left arrow_down max_string">Hello, <b>Sign In</b></span></span>
+								</span>
+							</div>
+							<!-- Sign In E -->
+							<!-- Country Selection US S -->
+							<div class="col_ss_10_of_10 col_s_5_of_10 txl pa_10 bb_gray">
+									<span id="ddlCountryTitle_single" class="m_expand_p">
+										<a href="#">
+											<span class="flag_us vm fc"></span>
+											<span class="p_relative"><span class="pl_5 m_left arrow_down">United States</span></span>
+										</a>
+									</span>
+							</div>
+							<!-- Country Selection US S -->
+						</div>
+						<!-- My Account Dropdown S -->
+						<div id="ddlMyAccount" class="col_s_10_of_10 bg_white m_expand_c bt_gray t_futura_light">
+							<div class="col_s_10_of_10">
+								<ul>
+									<li><a class="block" href="/us/shop/account/profile">My Profile</a></li>
+									<li><a class="block" href="/us/shop/account/orderhistory">My Orders</a></li>
+									<li><a class="block" href="/us/shop/account/addressbook">Address Book</a></li>
+									<li><a class="block" href="/us/shop/account/wallet">Wallet</a></li>
+									<li><a class="block" href="javascript:fnLogOut();">Sign Out</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- My Account Dropdown E -->
+						<!-- Country US Dropdown S -->
+						<div id="ddlCountryList" class="col_s_10_of_10 bg_white m_expand_c bt_gray t_futura_light">
+							<div class="col_s_10_of_10">
+								<ul>
+									<li><a href="#"><span class="flag_ca vm fc"></span><span class="pl_5">Canada</span></a></li>
+									<li><a href="#"><span class="flag_mx vm fc"></span><span class="pl_5">Mexico</span></a></li>
+									<li><a href="#"><span class="flag_eu vm fc"></span><span class="pl_5">Europe</span></a></li>
+									<li><a href="#"><span class="flag_uk vm fc"></span><span class="pl_5">United Kingdom</span></a></li>
+									<li><a href="#"><span class="flag_jp vm fc"></span><span class="pl_5">Japan</span></a></li>
+									<li><a href="#"><span class="flag_kr vm fc"></span><span class="pl_5">Korea</span></a></li>
+									<li><a href="#"><span class="flag_cn vm fc"></span><span class="pl_5">China</span></a></li>
+									<li><a href="#"><span class="flag_au vm fc"></span><span class="pl_5">Australia</span></a></li>
+									<li><a href="#"><span class="flag_nz vm fc"></span><span class="pl_5">New Zealand</span></a></li>
+									<li><a href="#"><span class="flag_hk vm fc"></span><span class="pl_5">Asia Pacific</span></a></li>
+									<li><a href="#"><span class="flag_in vm fc"></span><span class="pl_5">India</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Country US Dropdown E -->
+					</div>
+					<!-- Pre Header E -->
+					<!-- First Menu S -->
+					<div class="ws_100 clearfix">
+						<div class="mega_menu active first_menu t_bold"><span id="Parent_app-main" data-child="NavChild_app-main">WOMEN</span></div>
+						<div class="mega_menu active first_menu t_bold"><span id="Parent_acc" data-child="NavChild_acc">ACCESSORIES</span></div>
+						<div class="mega_menu active first_menu t_bold"><span id="Parent_plus_size-main" data-child="NavChild_plus_size-main">PLUS + CURVE</span></div>
+						<div class="mega_menu active first_menu t_bold"><span id="Parent_mens-main" data-child="NavChild_mens-main">MEN</span></div>
+						<div class="mega_menu active first_menu t_bold"><span id="Parent_girls_main" data-child="NavChild_girls_main">GIRLS</span></div>
+						<div class="mega_menu active first_menu t_bold"><span id="Parent_sale" data-child="NavChild_sale">SALE</span></div>
+					</div>
+					<!-- First Menu S -->
+					<!-- Second Menu S -->
+					<div class="ws_100 clearfix">
+						<div class="mega_menu second_menu no_sub">
+							<span>
+								<div class="clearfix">
+									<span class="t_bold fl">News &amp; Event</span><!-- 20180828-->
+									<span class="underline fr"><a href="news_room.html"> + もっと見る </a></span>
+								</div>
+								<div class="pt_10">- <a href="news_room.html">台風20号の影響による店舗の営業時間変更のお知らせ</a></div>
+								<div>- <a href="news_room.html">FOREVER 21公式アプリ リニューアルメンテナンスにともなうサービス一時停止のご案内</a></div>
+							</span>
+							<!--
+							<span>
+							<span class="t_bold">News &amp; Event</span>
+							<a href="/shop/info/newsroom"><span class="underline" style="float:right"> + もっと見る </span></a>
+                            <span>- <a href="/shop/info/newsroom/965">台風20号の影響による店舗の営業時間変更のお知らせ</a></span>
+                            <span>- <a href="/shop/info/newsroom/963">FOREVER 21公式アプリ リニューアルメンテナンスにともなうサービス一時停止のご案内</a></span>
+                    		</span>
+							-->
+						</div>
+						<div class="mega_menu second_menu active">
+							<span>Help</span>
+							<div class="mega_sub bg_light_gray">
+								<div class="col_s_10_of_10">
+									<ul>
+										<li><a class="block" href="faq.html">ご利用ガイド</a></li>
+										<li><a class="block" href="qna.html">総合Q&amp;A</a></li>
+										<li><a class="block" href="shipping_info.html">配送・返品について</a></li>
+										<li><a class="block" href="contactus.html">お問い合わせ</a></li>
+										<li><a class="block" href="size_guide_jp.html">サイズガイド</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="mega_menu second_menu">
+							<span>Company info</span>
+							<div class="mega_sub bg_light_gray">
+								<div class="col_s_10_of_10">
+									<ul>
+										<li><a class="block" href="aboutus.html">会社概要</a></li>
+										<li><a class="block" href="careers.html">採用情報</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="mega_menu second_menu no_sub">
+							<span><a class="block" href="find_store.html">Find a Store</a></span>
+						</div>
+					</div>
+					<!-- Second Menu E -->
+				</nav>
+				<!-- Mega Menu S -->
+				<!-- Mega Submenu S -->
+				<nav class="left_slide child_wrapper hide">
+					<div class="ws_100 clearfix">
+						<div class="ws_100 clearfix pa_20 go_back txc"><h3>WOMEN</h3></div>
+						<div id="menuCarousel_app-main"></div>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY CATEGORY</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">New In</a></li>
+									<li><a href="#" class="block">Best Sellers</a></li>
+									<li><a href="#" class="block">Back In Stock</a></li>
+									<li><a href="#" class="block">Dresses</a></li>
+									<li><a href="#" class="block">Sets</a></li>
+									<li><a href="#" class="block">Jumpsuits + Rompers</a></li>
+									<li><a href="#" class="block">Skirts</a></li>
+									<li><a href="#" class="block">Tops</a></li>
+									<li><a href="#" class="block">Swimwear</a></li>
+									<li><a href="#" class="block">Graphic Tees</a></li>
+									<li><a href="#" class="block">Hoodies + Sweatshirts</a></li>
+									<li><a href="#" class="block">Sweaters + Cardigans</a></li>
+									<li><a href="#" class="block">Jackets + Outerwear</a></li>
+									<li><a href="#" class="block">Pants + Shorts</a></li>
+									<li><a href="#" class="block">Denim</a></li>
+									<li><a href="#" class="block">Intimates + Sleepwear</a></li>
+									<li><a href="#" class="block">Activewear</a></li>
+									<li><a href="#" class="block">Shoes</a></li>
+									<li><a href="#" class="block">Accessories</a></li>
+									<li><a href="#" class="block">Gift Cards</a></li>
+									<li><a href="#" class="block">Style Deals</a></li>
+									<li><a href="#" class="block">The Basics Shop</a></li>
+									<li><a href="#" class="block">Coming Soon</a></li>
+									<li><a href="#" class="block">The Outlet</a></li>
+									<li><a href="#" class="block">Sale</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP WHAT'S HOT</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix bb_gray fix_img_big">
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180427/whatshot_brands.png"></span><p class="pt_5">Brands</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180720/WhatsHot-Women-DENIMSHOP-THUMB.png"></span><p class="pt_5">Denim</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180710/Women_BTS.png"></span><p class="pt_5">BTS Preview</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180714/WhatsHot-Women-workwear.png"></span><p class="pt_5">Business Casual</p></a></div>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY OCCASION</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix fix_img_small">
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Vacation</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180427/Occasion_Women_vacation.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Formal</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180427/Occasion_Women_prom.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Going Out</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180427/Occasion_Women_goingout.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Wedding</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180427/Occasion_Women_WEDDING.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Contemporary</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180710/Occasion_Women_contemporary.png"></span></a></div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</nav>
+				<nav class="left_slide child_wrapper hide">
+					<div class="ws_100 clearfix">
+						<div class="ws_100 clearfix pa_20 go_back txc"><h3>ACCESSORIES</h3></div>
+						<div id="menuCarousel_acc"></div>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY CATEGORY</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">New In</a></li>
+									<li><a href="#" class="block">Back In Stock</a></li>
+									<li><a href="#" class="block">Jewelry</a></li>
+									<li><a href="#" class="block">Shoes</a></li>
+									<li><a href="#" class="block">Bags + Backpacks</a></li>
+									<li><a href="#" class="block">Caps + Hats</a></li>
+									<li><a href="#" class="block">Belts</a></li>
+									<li><a href="#" class="block">Socks + Tights</a></li>
+									<li><a href="#" class="block">Scarves + Gloves</a></li>
+									<li><a href="#" class="block">Sunglasses + Readers</a></li>
+									<li><a href="#" class="block">Hair Accessories</a></li>
+									<li><a href="#" class="block">Beauty</a></li>
+									<li><a href="#" class="block">Home + Tech</a></li>
+									<li><a href="#" class="block">Gift Cards</a></li>
+									<li><a href="#" class="block">Style Deals</a></li>
+									<li><a href="#" class="block">Coming Soon</a></li>
+									<li><a href="#" class="block">Sale</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP WHAT'S HOT</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix bb_gray fix_img_big">
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/acc/20180427/whatshot_bestsellers.png"></span><p class="pt_5">Best Sellers</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/acc/20180427/whatshot_styledeals.png"></span><p class="pt_5">Style Deals</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/acc/20180427/whatshot_trendingnow.png"></span><p class="pt_5">Festival Gear</p></a></div>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY FEATURE</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix fix_img_small">
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Vacation</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/acc/20180427/occasion_vacation.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Hair Accessories</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/acc/20180427/occasion_hairaccessories.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">500 Under $5</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/acc/20180427/occasion_500under5.png"></span></a></div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</nav>
+				<nav class="left_slide child_wrapper hide">
+					<div class="ws_100 clearfix">
+						<div class="ws_100 clearfix pa_20 go_back txc"><h3>PLUS + CURVE</h3></div>
+						<div id="menuCarousel_plus_size-main"></div>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY CATEGORY</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">New In</a></li>
+									<li><a href="#" class="block">Back In Stock</a></li>
+									<li><a href="#" class="block">Dresses</a></li>
+									<li><a href="#" class="block">Sets</a></li>
+									<li><a href="#" class="block">Jumpsuits + Rompers</a></li>
+									<li><a href="#" class="block">Skirts</a></li>
+									<li><a href="#" class="block">Tops</a></li>
+									<li><a href="#" class="block">Graphic Tees</a></li>
+									<li><a href="#" class="block">Hoodies + Sweatshirts</a></li>
+									<li><a href="#" class="block">Sweaters + Cardigans</a></li>
+									<li><a href="#" class="block">Jackets + Outerwear</a></li>
+									<li><a href="#" class="block">Pants + Shorts</a></li>
+									<li><a href="#" class="block">Denim</a></li>
+									<li><a href="#" class="block">Intimates + Sleepwear</a></li>
+									<li><a href="#" class="block">Activewear</a></li>
+									<li><a href="#" class="block">Swimwear</a></li>
+									<li><a href="#" class="block">Gift Cards</a></li>
+									<li><a href="#" class="block">Style Deals</a></li>
+									<li><a href="#" class="block">Coming Soon</a></li>
+									<li><a href="#" class="block">Sale</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP WHAT'S HOT</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix bb_gray fix_img_big">
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/whatshot_bestsellers.png"></span><p class="pt_5">Best Sellers</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/whatshot_brands.png"></span><p class="pt_5">Brands</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180720/WhatsHot-Plus-DENIMSHOP-THUMB.png"></span><p class="pt_5">Denim</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/whatshot_comtemporary.png"></span><p class="pt_5">Contemporary</p></a></div>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY OCCASION</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix fix_img_small">
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Vacation </span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/occasion_swim.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Everyday</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/occasion_festival.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Going Out</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/occasion_goingout.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Wedding</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/occasion_wedding.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Gifts</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/occasion_gifts.png"></span></a></div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</nav>
+				<nav class="left_slide child_wrapper hide">
+					<div class="ws_100 clearfix">
+						<div class="ws_100 clearfix pa_20 go_back txc"><h3>MEN</h3></div>
+						<div id="menuCarousel_mens-main"></div>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY CATEGORY</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">New In</a></li>
+									<li><a href="#" class="block">Back In Stock</a></li>
+									<li><a href="#" class="block">Tees + Tanks</a></li>
+									<li><a href="#" class="block">Shirts</a></li>
+									<li><a href="#" class="block">Polos</a></li>
+									<li><a href="#" class="block">Tops</a></li>
+									<li><a href="#" class="block">Graphic Tees</a></li>
+									<li><a href="#" class="block">Hoodies + Sweatshirts</a></li>
+									<li><a href="#" class="block">Sweaters</a></li>
+									<li><a href="#" class="block">Jackets + Coats</a></li>
+									<li><a href="#" class="block">Pants</a></li>
+									<li><a href="#" class="block">Shorts</a></li>
+									<li><a href="#" class="block">Jeans</a></li>
+									<li><a href="#" class="block">Swimwear</a></li>
+									<li><a href="#" class="block">Accessories</a></li>
+									<li><a href="#" class="block">Shoes</a></li>
+									<li><a href="#" class="block">Socks + Underwear</a></li>
+									<li><a href="#" class="block">Style Deals</a></li>
+									<li><a href="#" class="block">Coming Soon</a></li>
+									<li><a href="#" class="block">Gift Card</a></li>
+									<li><a href="#" class="block">Sale</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP WHAT'S HOT</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix bb_gray fix_img_big">
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180427/whatshot_bestsellers.png"></span><p class="pt_5">Best Sellers</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180517/whatshot-brands.png"></span><p class="pt_5">Brands</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180720/WhatsHot-Men-DENIMSHOP-THUMB.png"></span><p class="pt_5">Denim</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180517/whatshot-dealsunder10.png"></span><p class="pt_5">Deals Under $10</p></a></div>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY OCCASION</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix fix_img_small">
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="/us/shop/catalog/category/21men/promo-mens-resort-woven-knit-tops-chino-joggers"><span class="fl hp_midtitle pa_10 t_bold">Vacation</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180427/occasion_vacation.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="/us/shop/catalog/category/21men/promo-mens-basic-tees-shirts-pants"><span class="fl hp_midtitle pa_10 t_bold">Basic</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180427/occasion_basic.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="/us/shop/catalog/category/21men/promo-mens-workwear"><span class="fl hp_midtitle pa_10 t_bold">Workwear</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180427/occasion_workwear.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="/us/shop/catalog/category/21men/promo-mens-sport-athletic"><span class="fl hp_midtitle pa_10 t_bold">Sport</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180427/occasion_sport.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="/us/shop/catalog/category/21men/mens-accessories"><span class="fl hp_midtitle pa_10 t_bold">Gifts</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180427/occasion_gifts.png"></span></a></div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</nav>
+				<nav class="left_slide child_wrapper hide">
+					<div class="ws_100 clearfix">
+						<div class="ws_100 clearfix pa_20 go_back txc"><h3>GIRLS</h3></div>
+						<div id="menuCarousel_girls_main"></div>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY CATEGORY</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">New Arrivals</a></li>
+									<li><a href="#" class="block">Dresses</a></li>
+									<li><a href="#" class="block">Tops</a></li>
+									<li><a href="#" class="block">Bodysuits</a></li>
+									<li><a href="#" class="block">Graphic Tees</a></li>
+									<li><a href="#" class="block">Sweaters</a></li>
+									<li><a href="#" class="block">Sweatshirts + Hoodies</a></li>
+									<li><a href="#" class="block">Jackets + Outerwear</a></li>
+									<li><a href="#" class="block">Pants + Shorts</a></li>
+									<li><a href="#" class="block">Jeans</a></li>
+									<li><a href="#" class="block">Swimwear</a></li>
+									<li><a href="#" class="block">Sleepwear</a></li>
+									<li><a href="#" class="block">Shoes</a></li>
+									<li><a href="#" class="block">Accessories</a></li>
+									<li><a href="#" class="block">Sale</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP WHAT'S HOT</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">GIRLS UNIFORM</a></li>
+									<li><a href="#" class="block">DRESSES UNDER $20</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</nav>
+				<nav class="left_slide child_wrapper hide">
+					<div class="ws_100 clearfix">
+						<div class="ws_100 clearfix pa_20 go_back txc"><h3>SALE</h3></div>
+						<div id="menuCarousel_sale"></div>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY CATEGORY</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">New To Sale</a></li>
+									<li><a href="#" class="block">Women</a></li>
+									<li><a href="#" class="block">Plus</a></li>
+									<li><a href="#" class="block">Men</a></li>
+									<li><a href="#" class="block">Girls</a></li>
+									<li><a href="#" class="block">Accessories</a></li>
+									<li><a href="#" class="block">Shoes</a></li>
+									<li><a href="#" class="block">Beauty</a></li>
+									<li><a href="#" class="block">Home + Tech</a></li>
+									<li><a href="#" class="block">Swimwear</a></li>
+									<li><a href="#" class="block">Activewear</a></li>
+									<li><a href="#" class="block">Intimates + Sleepwear</a></li>
+									<li><a href="#" class="block">Under $5</a></li>
+									<li><a href="#" class="block">Under $10</a></li>
+									<li><a href="#" class="block">Under $15</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP WHAT'S HOT</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">New to Sale</a></li>
+									<li><a href="#" class="block">Last Chance</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</nav>
+				<!-- Mega Submenu E -->
+			</div>
+		</div>
+		<div class="m_menu_cover hide"></div>
+		<!-- Mobile Left E -->					
+		<!-- My Account Slider S -->
+		<div id="myaccount">
+			<div class="r_container bt_gray">
+				<span class="icon_close"></span>
+				<div class="quick col_s_9_of_10 col_m_10_of_12 col_l_13_of_16 fc">
+					<div class="container row pt_20">
+						<div class="ttl_header t_bold pb_10">マイページ</div>
+						<!-- Before Sign In S -->
+						<ul class="lh_normal ws_100 row" id="myaccount_guest" style="display: none;">
+							<li class="pt_10 pb_10 bb_gray"><a href="/shop/account/signin" class="block">ログイン</a></li>
+							<li class="pt_10 pb_10 bb_gray"><a href="/shop/account/signin" class="block">会員登録</a></li>
+						</ul>
+						<!-- Before Sign In E -->
+						<!-- After Sign In S -->
+						<div class="ws_100 row table pt_10 pb_20 bb_gray" id="myaccount_img">
+							<div class="ws_20"><span class="my_pic"><img src="/shop/_common/images/profile_simley.png" alt="Profile Image"></span></div>
+							<div class="ws_80 pl_10 pt_5 vt"><span class="hp_midtitle">こんにちは、</span><span class="hp_midtitle"><label id="ma_slider_username">柳在泳様柳在泳様柳在泳様</label></span><br></div>
+						</div>
+						<ul class="lh_normal ws_100 row" id="myaccount_user">
+							<li class="pt_10 pb_10 bb_gray"><a href="/shop/account/profile" class="block">会員情報</a></li>
+							<li class="pt_10 pb_10 bb_gray"><a href="/shop/account/orderhistory" class="block">注文履歴<span class="txr fr t_small t_gray">Check your order</span></a></li>
+							<li class="pt_10 pb_10 bb_gray"><a href="/shop/account/addressbook" class="block">お届け先<span class="txr fr t_small t_gray">Check your order</span></a></li>
+							<li class="pt_10 pb_10 bb_gray"><a href="/shop/account/pointhistory" class="block">ポイント</a></li>
+							<li class="pt_10 pb_10 bb_gray"><a href="/shop/info/qna" class="block">総合Q&amp;A</a></li>
+							<li class="pt_10 pb_10 bb_gray"><a href="/shop/account/removeaccount" class="block">退会</a></li>
+							<li class="pt_10 pb_10 bb_gray"><span class="cursor block" onclick="fnLogOut(); return false;">ログアウト</span></li>
+						</ul>
+						<!-- After Sign In E -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- My Accout Slider E -->
+		<!-- Email Signup Popup Start -->
+		<div class="signup_wrapper show_desktop" style="display:none">
+			<div class="fc txc">
+				<div class="signup_slider">
+					<a href="#"><span class="icon_close"></span></a>
+						<div class="wm_80 fc txc">
+							<p class="t_large t_trade">OH, HEYYY! GET <span class="t_pink">10%OFF</span></p>
+							<form>
+								<fieldset class="f_form m_f_form">
+									<div class="input_label">
+										<label>EMAIL ADDRESS</label>
+										<button class="bg_black ws_20 round_nl">Join</button>
+										<input type="email" class="ws_80 round_nr" name="email address">
+									</div>
+								</fieldset>
+								<p class="t_res pt_10">By clicking join, I accept the <a href="#" class="underline">Privacy Policy</a> and <a href="#" class="underline">Terms & Conditions</a>. You may unsubscribe at any time.</p>
+							</form>
+							<p class="pb_10 t_res t_normal">Sign up for exclusive updates, new arrivals, events, contests, and more!</p>
+						</div>
+				</div>
+			</div>
+		</div>
+		<!-- Email Signup Popup End -->
+		<div class="c_container">
+			<div class="mobile_overlay"></div>
+			<header class="homepage"><!-- header_fixed -->
+				<!-- slbling Tabs F21 S -->
+				<div class="tabbed rounded bg_light_gray" style="display:none">
+					<ul>
+						<li><a href="#" rel="nofollow"><div class="tab_rr_logo hide_text">RileyRose</div></a></li>
+						<li class="active"><a href="/us/shop" rel="nofollow"><div class="tab_logo_white hide_text">Forever21</div></a></li>
+					</ul>	
+				</div>
+				<!-- slbling Tabs F21 E -->
+				<!-- Top Bar S CK -->
+				<div class="row container tabbed fc vm">
+					<!-- F21 / RR Tabs S -->
+					<div class="hide_tablecell_mobile hide_tablecell_tablet col_s_10_of_10 col_m_4_of_12 col_l_5_of_16 table sameline pl_10 pt_10 vm ">
+						
+					</div>
+					<!-- F21 / RR Tabs E -->
+					<!-- Country / Help S -->
+					<div class="hide_tablecell_mobile hide_tablecell_tablet col_l_3_of_16 table sameline fr vm">
+						<!-- Country Selector S -->
+						<div class="table sameline fr">
+							<div class="vm hide_tablecell_mobile show_tablecell_tablet top_bar hover_p" style="visibility: visible;">
+								<span class="pl_10 pt_10">
+									<span class="top_new_flag_us" style="background-image: url(&quot;//gepi.global-e.com/content/images/flags/us.png&quot;); background-position: left center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: cover !important; width: 22px; height: 14px;"></span>
+									<span class="t_small pl_5 pb_5 pr_5 vm">United States</span>
+								</span>
+							</div>
+						</div>
+						<!-- Country Selector E -->
+						<!-- here -->
+						<!-- Help Menu S -->
+						<div class="table sameline fr">
+							<div class="vm hide_tablecell_mobile show_tablecell_tablet top_bar hover_p">
+								<span class="pl_10 pt_5">
+									<span class="icon_help vm"></span>
+									<span class="t_small pl_5 pt_5 pr_5 vm">Help</span>
+								</span>
+								<div class="help_hover hover_c t_black t_small">
+									<!-- Country List S -->
+									<div class="ls_1px">
+										<dl>
+											<dd class="pa_5"><a href="/us/shop/account/trackorder" role="link" id="order status" tabindex="0">Track Order</a></dd>
+											<dd class="pa_5"><a href="/us/shop/info/shippinginfo" role="link" id="shipping info" tabindex="0">Shipping Info</a></dd>
+											<dd class="pa_5"><a href="/us/shop/info/returnsinfo" role="link" id="online returns" tabindex="0">Online Returns &amp; Exchanges</a></dd>
+											<dd class="pa_5"><a href="/us/shop/info/storereturnsinfo" role="link" id="store returns" tabindex="0">Store Return &amp; Exchange</a></dd>
+											<dd class="pa_5"><a href="/us/shop/info/faq" role="link" id="faq" tabindex="0">FAQ</a></dd>
+											<dd class="pa_5"><a href="/us/shop/info/contactus" role="link" id="contact us" tabindex="0">Contact Us</a></dd>
+										</dl>
+									</div>
+									<!-- Country List E -->
+								</div>
+							</div>
+						</div>
+						<!-- Help Menu E -->
+					</div>
+					<!-- Country / Help E -->
+					<!-- Top Scrolling Banner S -->
+					<div class="col_s_10_of_10 col_m_8_of_12 col_l_8_of_16 vm table sameline p_relative ">
+						<span class="fc sameline col_s_10_of_10 col_m_9_of_12 col_l_13_of_16 p_relative clearfix vm">
+							<div id="tspbanner" class="owl-carousel owl-loaded"><div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2726px, 0px, 0px); transition: all 0s ease 0s; width: 5464px;"><div class="owl-item pr_20 cloned" style="width: 681.688px;"><div class="fc vm txc" promo="" style="left:-1em;">
+								<div class="txc t_small fc vm pt_5">
+									<a style="cursor:pointer;" href="/us/shop/catalog/category/f21/promo-40">
+										<i class="fa fa-heart" style="font-size:11px"></i>
+										<span class="pr_10 pl_5 pt_5">40% OFF SELECT DRESSES &amp; V-DAY GIFTS</span>
+									</a>
+								</div>
+							</div></div><div class="owl-item pr_20 cloned" style="width: 681.688px;"><div class="fc vm txc" promo="" style="left:-1em;">
+							<div class="txc t_small fc vm pt_5">
+								
+								<div id="GlobaleFreeShippingBanner_Standard">
+								
+									<a style="cursor:pointer;" href="/us/shop/catalog/category/f21/women-new-arrivals">
+										<i class="fa fa-truck" style="font-size:11px"></i>
+										<span class="pr_10 pl_5 pt_5">FREE STANDARD SHIPPING ($50+)</span>
+									</a>
+									
+								
+								</div>
+					</div>
+				</div></div><div class="owl-item pr_20" style="width: 681.688px;"><div class="fc vm txc" promo="" style="left:-1em;">
+					<div class="txc t_small fc vm pt_5">
+						
+							<a style="cursor:pointer;" href="/us/shop/event">
+								<i class="" style="font-size:11px"></i>
+								<span class="pr_10 pl_5 pt_5">REVEAL YOUR MYSTERY DEAL</span>
+							</a>
+							
+						
+					</div>
+				</div></div><div class="owl-item pr_20" style="width: 681.688px;"><div class="fc vm txc" promo="" style="left:-1em;">
+					<div class="txc t_small fc vm pt_5">
+						
+							<a style="cursor:pointer;" href="/us/shop/catalog/category/f21/sale">
+								<i class="fa fa-tags" style="font-size:11px"></i>
+								<span class="pr_10 pl_5 pt_5">EXTRA 30% OFF SALE with code ILUV30</span>
+							</a>
+							
+						
+					</div>
+				</div></div><div class="owl-item pr_20 active" style="width: 681.688px;"><div class="fc vm txc" promo="" style="left:-1em;">
+					<div class="txc t_small fc vm pt_5">
+						
+							<a style="cursor:pointer;" href="/us/shop/catalog/category/f21/promo-40">
+								<i class="fa fa-heart" style="font-size:11px"></i>
+								<span class="pr_10 pl_5 pt_5">40% OFF SELECT DRESSES &amp; V-DAY GIFTS</span>
+							</a>
+							
+						
+					</div>
+				</div></div><div class="owl-item pr_20" style="width: 681.688px;"><div class="fc vm txc" promo="" style="left:-1em;">
+					<div class="txc t_small fc vm pt_5">
+						
+						<div id="GlobaleFreeShippingBanner_Standard">
+						
+							<a style="cursor:pointer;" href="/us/shop/catalog/category/f21/women-new-arrivals">
+								<i class="fa fa-truck" style="font-size:11px"></i>
+								<span class="pr_10 pl_5 pt_5">FREE STANDARD SHIPPING ($50+)</span>
+							</a>
+							
+						
+						</div>
+						
+					</div>
+				</div></div><div class="owl-item pr_20 cloned" style="width: 681.688px;"><div class="fc vm txc" promo="" style="left:-1em;">
+					<div class="txc t_small fc vm pt_5">
+						
+							<a style="cursor:pointer;" href="/us/shop/event">
+								<i class="" style="font-size:11px"></i>
+								<span class="pr_10 pl_5 pt_5">REVEAL YOUR MYSTERY DEAL</span>
+							</a>
+							
+						
+					</div>
+				</div></div><div class="owl-item pr_20 cloned" style="width: 681.688px;"><div class="fc vm txc" promo="" style="left:-1em;">
+					<div class="txc t_small fc vm pt_5">
+						
+							<a style="cursor:pointer;" href="/us/shop/catalog/category/f21/sale">
+								<i class="fa fa-tags" style="font-size:11px"></i>
+								<span class="pr_10 pl_5 pt_5">EXTRA 30% OFF SALE with code ILUV30</span>
+							</a>
+							
+						
+					</div>
+				</div></div></div></div><div class="owl-nav"><div class="owl-prev_trans"></div><div class="owl-next_trans"></div></div><div class="owl-dots disabled"></div></div>
+						</span>
+						<span id="seeAllOffers" class="sameline col_m_3_of_12 col_l_3_of_16 t_small pt_10 p_relative clearfix vm hide_mobile fr top_bar">
+							<a id="allOffersLink">All Special Offers (10)</a>
+						</span>
+					</div>
+					<!-- Top Scrolling Banner S -->
+				</div>
+				<!-- Top Bar E CK -->
+				<!-- Pre Header Start -->
+				<div class="bg_white container row">
+					<div class="container row fc wmx_1400">
+						<div class="container row fc wmx_1400 pr_10 pl_10">
+							<!-- Pre Header S -->
+							<div class="table sameline col_s_10_of_10 col_m_12_of_12 col_l_16_of_16 pt_15 pb_10">
+								<!-- Hamburger Menu S -->
+								<div class="vm p_relative show_tablecell_mobile show_tablecell_tablet pl_10">
+									<span class="top_new_menu"></span>
+								</div>
+								<!-- Hamburger Menu E -->
+								<div class="hide_tablecell_mobile hide_tablecell_tablet col_l_4_of_16 vm"></div>
+								<!-- Logo S -->
+								<div class="col_s_6_of_8 col_m_6_of_12 col_l_8_of_16 fc vm">
+									<div class="fc clearfix">
+										<a href="/us/shop" onclick="setShowHP();">
+												<span class="logo"></span>
+										</a>
+									</div>
+								</div>
+								<!-- Logo E -->
+								<!-- Features Right S -->
+								<div class="col_s_2_of_8 col_m_3_of_12 col_l_4_of_16 fr vm">
+									<div class="table sameline fr">
+										<!-- Search Icon Mobile S -->
+										<div class="show_tablecell_mobile show_tablecell_tablet vm p_relative pr_5">
+											<span class="icon_search fr vm" onclick="javascript:openSearch(true, false); return false;"></span>
+										</div>
+										<!-- Search Icon Mobile E -->
+										<!-- My Account S -->
+										<div class="vm p_relative">
+											<span class="top_new_account show_desktop" style="cursor: pointer;"></span>
+										</div>
+										<!-- My Account E -->
+										<!-- Wishlist S -->
+										<div class="vm p_relative">
+											<a href="/us/shop/account/wishlist" class="hide_text">
+												My Wishlist
+												<span class="new_top top_count t_black WishlistCountHeader">2</span>
+												<span class="top_new_wishlist"></span>
+											</a>
+										</div>
+										<!-- Wishlist E -->
+										<!-- Shopping Bag S -->
+										<div class="vm p_relative">
+											<a href="/us/shop/checkout/basket" class="hide_text">
+												My Cart
+												<span class="new_top top_count t_black BasketCountHeader">2</span>
+												<span class="top_new_cart"></span>
+											</a>
+											<!-- Cart Item Added S -->
+											<div id="CartPopupArea"></div>
+											<div id="SetCartPopupArea">
+												<div id="SetCartPopup" class="cart_hover show_desktop t_black" style="display:none;"></div>
+											</div>
+											<!-- Cart Item Added E -->
+										</div>
+										<!-- Shopping Bag E -->
+									</div>
+								</div><div class="THX_IP cart_reminder t_black" one-asset-response="none" style="">
+				
+					<span class="icon_close vm" one-asset-response="negative" onclick="$('.cart_reminder').hide();"></span>
+				
+					<div class="vm">
+				
+						<div class="col_s_3_of_10 col_m_3_of_12 col_l_4_of_16 fr vm pt_10">
+				
+							<span class=" bg_black pa_10 t_bold t_white t_small txc fr cursor" id="btn_checkout_pop" onclick="fnDirectUserForIntent();" one-asset-response="positive">VISIT CART</span>
+				
+						</div>
+				
+						<div class="col_s_7_of_10 col_m_9_of_12 col_l_11_of_16 table sameline fc vm">
+				
+							<p class="col_m_12_of_12 pl_5 p_name t_bold ttl_header t_source">GOING, GOING...ALMOST GONE!</p>
+				
+						   <div class="col_m_12_of_12 pl_5 pt_5 t_source">
+				  <span class="t_gray">
+				
+									<span class="t_pink t_bold">1 item(s)</span>
+				
+									in your cart selling fast. Shop now before someone else does!
+				
+								</span>
+				
+						   </div>
+				
+						</div>
+				
+					</div>
+				
+				</div>
+								<!-- Features Right E -->
+							</div>
+							<!-- Pre Header E -->
+							<!-- Menu and Search S -->
+							<div class="p_relative hide_tablecell_mobile hide_tablecell_tablet col_l_3_of_16 vm"></div>
+							<!-- Search S -->
+							<div class="p_relative table sameline fr hide_tablecell_mobile hide_tablecell_tablet col_l_3_of_16">
+								<span class="d_new_mega_search fr">
+									<a onclick="javascript:openSearch(true, false); return false;" cobrowse="viewonly" class="ae-button" data-ae-blurbtype="button" data-ae-form-field="true">
+										<span class="bb_m_gray sameline pb_5">
+											<span class="icon_search fr vm"></span>
+											<span class="pr_5 vm pt_5">Search Products</span>
+										</span>
+									</a>
+								</span>
+							</div>
+							<!-- Search E -->
+							<!-- Product Menu S -->
+							<div class="table sameline fc">
+								<div class="full t_source hide_tablecell_mobile hide_tablecell_tablet table sameline fc">
+									<div class="d_new_mega_menu hover_p "><a href="/us/shop/catalog/category/f21/women-main"><span class="ls_1px">WOMEN + ACC</span></a><div class="d_new_mega_sub hover_c auto"><div class="ws_100 table fc wmx_1400"><div class="pa_20 pt_0 vt wmx_500"><div class="t_source_bold t_black table"><div class="vt pl_20 pr_20"><p class="pb_5"><a href="/us/shop/catalog/category/f21/promo-best-sellers-app">Best Sellers</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/backinstock-women">Back in Stock</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/promo-basics">Basics Shop</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/collabs">F21 x Collections</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/promo-extended-sizes">Extended Sizes</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/giftcard/">Gift Cards</a></p>
+										<p class="pb_5"><a href="/us/shop/info/specialoffers">Special Offers</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/the-outlet">The Outlet</a></p>
+										<p class="pb_5"><a href="/us/shop/shopthegram?brand=women">#F21xMe</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/sale_women">Sale</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/branded-shop-women">Web Exclusives</a></p>
+										</div></div></div>
+										<div class="pa_20 pt_0 vt bl_m_gray wmx_800"><div class="pl_20 pr_20 sameline t_black table"><div class="vt ws_60"><p class="pb_10 t_source_bold t_bold ttl_header">Clothing</p><p><a href="/us/shop/catalog/category/f21/women-new-arrivals">New Arrivals</a></p>
+										<p><a href="/us/shop/catalog/category/f21/top_blouses">Tops</a></p>
+										<p><a href="/us/shop/catalog/category/f21/dress">Dresses</a></p>
+										<p><a href="/us/shop/catalog/category/f21/bottoms">Bottoms</a></p>
+										<p><a href="/us/shop/catalog/category/f21/outerwear_coats-and-jackets">Jackets &amp; Outerwear</a></p>
+										<p><a href="/us/shop/catalog/category/f21/sweater">Sweaters &amp; Cardigans</a></p>
+										<p><a href="/us/shop/catalog/category/f21/bottom_jeans">Denim &amp; Jeans</a></p>
+										<p><a href="/us/shop/catalog/category/f21/lingerie">Lingerie &amp; Sleepwear</a></p>
+										<p><a href="/us/shop/catalog/category/f21/activewear">Activewear</a></p>
+										<p><a href="/us/shop/catalog/category/f21/swimwear_all">Swimwear</a></p>
+										<p><a href="/us/shop/catalog/category/f21/rompers-jumpsuits">Rompers &amp; Jumpsuits</a></p>
+										<p><a href="/us/shop/catalog/category/f21/top_graphic-tops">Graphic Tees</a></p>
+										<p><a href="/us/shop/catalog/category/f21/top_bodysuits-bustiers">Bodysuits</a></p>
+										<p><a href="/us/shop/catalog/category/f21/sets">Two Piece Sets</a></p>
+										<p><a href="/us/shop/catalog/category/f21/app-main">View All</a></p>
+										</div>
+										<div class="vt ws_60"><p class="pb_10 t_source_bold t_bold ttl_header">Shoes &amp; Accessories</p><p><a href="/us/shop/catalog/category/f21/women-new-arrivals-accessories">New Arrivals</a></p>
+										<p><a href="/us/shop/catalog/category/f21/shoes">Shoes</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_jewelry">Jewelry</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_handbags">Bags &amp; Backpacks</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_hair">Hair Accessories</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_hat">Caps &amp; Hats</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_scarf-gloves">Scarves &amp; Gloves</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_legwear">Socks &amp; Tights</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_belts">Belts</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_glasses">Sunglasses &amp; Readers</a></p>
+										<p><a href="/us/shop/catalog/category/f21/home-and-gift">Home &amp; Tech</a></p>
+										</div>
+										</div></div>
+										<div class="pa_20 pt_0 vt bl_m_gray wmx_500 clearfix table"><div class="pl_20 ws_100 t_black"><div class="vt pb_20"><p class="pb_10 t_source_bold t_bold ttl_header">Shop By Occasion</p><p><a href="/us/shop/catalog/category/f21/promo-work-wear">Wear to Work</a></p>
+										<p><a href="/us/shop/catalog/category/f21/promo-occasion-shop-lbd">Little Black Dress</a></p>
+										<p><a href="/us/shop/catalog/category/f21/promo-occasion-shop-wedding">Wedding</a></p>
+										<p><a href="/us/shop/catalog/category/f21/promo-occasion-shop-vacation">Vacation</a></p>
+										</div>
+										<div class="vt pb_20"><p class="pb_10 t_source_bold t_bold ttl_header">Shop By Girl</p><p><a href="/us/shop/catalog/category/f21/promo-shop-by-girl-boho">The Boho Girl</a></p>
+										<p><a href="/us/shop/catalog/category/f21/promo-shop-by-girl-edgy">The Edgy Girl</a></p>
+										<p><a href="/us/shop/catalog/category/f21/promo-shop-by-girl-feminine">The Femme Girl</a></p>
+										<p><a href="/us/shop/catalog/category/f21/promo-shop-by-girl-sexy">The Sexy Girl</a></p>
+										<p><a href="/us/shop/catalog/category/f21/contemporary-main">Contemporary</a></p>
+										</div>
+										</div></div>
+										<div class="fl"><div id="tmCarousel-women-main" class="owl-carousel wmx_200 top-menu-carousel owl-loaded owl-drag">
+										
+										
+										<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-600px, 0px, 0px); transition: all 0.25s ease 0s; width: 1410px;"><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/f21/dress"><img src="https://www.forever21.com/images/f21/us/nav/women/20200101/1231_WGA_Dresses.jpg" alt="Dresses" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Dresses</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/f21/dress">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/f21/sale_women"><img src="https://www.forever21.com/images/f21/us/nav/women/20200102/1231_WGA_Sale.jpg" alt="Sale" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Sale</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/f21/sale_women">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/f21/women-new-arrivals"><img src="https://www.forever21.com/images/f21/us/nav/women/20200101/1231_WGA_new.jpg" alt="New Arrivals" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">New Arrivals</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/f21/women-new-arrivals">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item active" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/f21/dress"><img src="https://www.forever21.com/images/f21/us/nav/women/20200101/1231_WGA_Dresses.jpg" alt="Dresses" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Dresses</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/f21/dress">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/f21/sale_women"><img src="https://www.forever21.com/images/f21/us/nav/women/20200102/1231_WGA_Sale.jpg" alt="Sale" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Sale</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/f21/sale_women">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/f21/women-new-arrivals"><img src="https://www.forever21.com/images/f21/us/nav/women/20200101/1231_WGA_new.jpg" alt="New Arrivals" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">New Arrivals</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/f21/women-new-arrivals">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/f21/dress"><img src="https://www.forever21.com/images/f21/us/nav/women/20200101/1231_WGA_Dresses.jpg" alt="Dresses" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Dresses</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/f21/dress">Shop The Look</p></td></tr></tbody></table></div></div></div></div><div class="owl-nav"><div class="owl-prev">prev</div><div class="owl-next">next</div></div><div class="owl-dots disabled"></div></div></div><script>$("#tmCarousel-women-main").owlCarousel({loop: true, items: 1, dots: false,nav: true, autoplay: true, autoplayTimeout: 5000 });</script>
+										</div></div></div>
+										<div class="d_new_mega_menu hover_p "><a href="/us/shop/catalog/category/21men/mens-main"><span class="ls_1px">MEN</span></a><div class="d_new_mega_sub hover_c auto"><div class="ws_100 table fc wmx_1400"><div class="pa_20 pt_0 vt wmx_500"><div class="t_source_bold t_black table"><div class="vt pl_20 pr_20"><p class="pb_5"><a href="/us/shop/catalog/category/21men/mens-top-picks">Best Sellers</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/21men/backinstock-men">Back In Stock</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/21men/promo-mens-basic-tees-shirts-pants">Basics Shop</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/collabs">F21 x Collections</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/21men/promo-mens-extended-sizing-tops">Extended Sizes</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/giftcard/">Gift Cards</a></p>
+										<p class="pb_5"><a href="/us/shop/info/specialoffers">Special Offers</a></p>
+										<p class="pb_5"><a href="/us/shop/shopthegram?brand=men">#Forever21Men</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/21men/mens-sale">Sale</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/21men/branded-shop-men">Web Exclusives</a></p>
+										</div></div></div>
+										<div class="pa_20 pt_0 vt bl_m_gray wmx_800"><div class="pl_20 pr_20 sameline t_black table"><div class="vt ws_60"><p class="pb_10 t_source_bold t_bold ttl_header">Clothing</p><p><a href="/us/shop/catalog/category/f21/mens-new-arrivals">New Arrivals</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-sweatshirts-hoodies">Hoodies &amp; Sweatshirts</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-jackets-and-coats">Jackets &amp; Outerwear</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-bottom-denim">Denim &amp; Jeans</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-tees-tanks-graphic">Graphic Tees</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-tops">Tops</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-bottom">Bottoms</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-sweaters">Sweaters &amp; Cardigans</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-shirts">Shirts</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-bottom-shorts">Shorts</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-bottom-swim">Swimwear</a></p>
+										</div>
+										<div class="vt ws_60"><p class="pb_10 t_source_bold t_bold ttl_header">Shoes &amp; Accessories</p><p><a href="/us/shop/catalog/category/f21/mens-accessories">New Arrivals</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-shoes">Shoes</a></p>
+										<p><a href="/us/shop/catalog/category/f21/mens-accessories-hats">Hats &amp; Beanies</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-accessories-jewelry-watches">Jewelry</a></p>
+										<p><a href="/us/shop/catalog/category/f21/mens-accessories-bags">Bags &amp; Backpacks</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-underwear-socks">Socks &amp; Underwear</a></p>
+										<p><a href="/us/shop/catalog/category/f21/mens-accessories-sunglasses">Sunglasses &amp; Readers</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-accessories-gifts">Home &amp; Tech</a></p>
+										</div>
+										</div></div>
+										<div class="pa_20 pt_0 vt bl_m_gray wmx_500 clearfix table"><div class="pl_20 ws_100 t_black"><div class="vt pb_20"><p class="pb_10 t_source_bold t_bold ttl_header">Shop By Occasion</p><p><a href="/us/shop/catalog/category/21men/promo-mens-beach-vibes">Vacation</a></p>
+										<p><a href="/us/shop/catalog/category/21men/promo-mens-basic-tees-shirts-pants">Basic</a></p>
+										<p><a href="/us/shop/catalog/category/21men/promo-mens-sport-athletic">Sport</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-accessories">Gifts</a></p>
+										</div>
+										</div></div>
+										<div class="fl"><div id="tmCarousel-mens-main" class="owl-carousel wmx_200 top-menu-carousel owl-loaded owl-drag">
+										
+										
+										
+										<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-800px, 0px, 0px); transition: all 0.25s ease 0s; width: 1610px;"><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/21men/mens-bottom-denim"><img src="https://www.forever21.com/images/f21/us/nav/men/20200101/1231_men_denim.jpg" alt="Denim" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Denim</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/21men/mens-bottom-denim">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/21men/mens-jackets-and-coats"><img src="https://www.forever21.com/images/f21/us/nav/men/20200101/1231_men_jackets.jpg" alt="Jackets" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Jackets</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/21men/mens-jackets-and-coats">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/21men/mens-tees-tanks-graphic"><img src="https://www.forever21.com/images/f21/us/nav/men/20200101/1231_men_graphics.jpg" alt="Graphics" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Graphics</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/21men/mens-tees-tanks-graphic">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/21men/mens-shirts"><img src="https://www.forever21.com/images/f21/us/nav/men/20200101/1231_men_shirts.jpg" alt="Shirts" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Shirts</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/21men/mens-shirts">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item active" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/21men/mens-bottom-denim"><img src="https://www.forever21.com/images/f21/us/nav/men/20200101/1231_men_denim.jpg" alt="Denim" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Denim</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/21men/mens-bottom-denim">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/21men/mens-jackets-and-coats"><img src="https://www.forever21.com/images/f21/us/nav/men/20200101/1231_men_jackets.jpg" alt="Jackets" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Jackets</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/21men/mens-jackets-and-coats">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/21men/mens-tees-tanks-graphic"><img src="https://www.forever21.com/images/f21/us/nav/men/20200101/1231_men_graphics.jpg" alt="Graphics" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Graphics</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/21men/mens-tees-tanks-graphic">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/21men/mens-shirts"><img src="https://www.forever21.com/images/f21/us/nav/men/20200101/1231_men_shirts.jpg" alt="Shirts" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Shirts</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/21men/mens-shirts">Shop The Look</p></td></tr></tbody></table></div></div></div></div><div class="owl-nav"><div class="owl-prev">prev</div><div class="owl-next">next</div></div><div class="owl-dots disabled"></div></div></div><script>$("#tmCarousel-mens-main").owlCarousel({loop: true, items: 1, dots: false,nav: true, autoplay: true, autoplayTimeout: 5000 });</script>
+										</div></div></div>
+										<div class="d_new_mega_menu hover_p "><a href="/us/shop/catalog/category/plus/plus_size-main"><span class="ls_1px">PLUS + CURVE</span></a><div class="d_new_mega_sub hover_c auto"><div class="ws_100 table fc wmx_1400"><div class="pa_20 pt_0 vt wmx_500"><div class="t_source_bold t_black table"><div class="vt pl_20 pr_20"><p class="pb_5"><a href="/us/shop/catalog/category/plus/plus_size-best-sellers">Best Sellers</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/plus/backinstock-plus">Back In Stock</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/plus/promo-plus-size-basics">Basics Shop</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/collabs">F21 x Collections</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/promo-extended-sizes">Extended Sizes</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/giftcard/">Gift Cards</a></p>
+										<p class="pb_5"><a href="/us/shop/info/specialoffers">Special Offers</a></p>
+										<p class="pb_5"><a href="/us/shop/shopthegram?brand=plus">#Forever21Plus</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/plus/plus_size-sale">Sale</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/plus/branded-shop-plus-clothing">Web Exclusives</a></p>
+										</div></div></div>
+										<div class="pa_20 pt_0 vt bl_m_gray wmx_800"><div class="pl_20 pr_20 sameline t_black table"><div class="vt ws_60"><p class="pb_10 t_source_bold t_bold ttl_header">Clothing</p><p><a href="/us/shop/catalog/category/plus/plus-size-new-arrivals">New Arrivals</a></p>
+										<p><a href="/us/shop/catalog/category/plus/plus_size-dresses">Dresses</a></p>
+										<p><a href="/us/shop/catalog/category/plus/plus_size-tops">Tops</a></p>
+										<p><a href="/us/shop/catalog/category/plus/plus_size-bottom">Bottoms</a></p>
+										<p><a href="/us/shop/catalog/category/plus/plus_size-outerwear">Jackets &amp; Outerwear</a></p>
+										<p><a href="/us/shop/catalog/category/plus/plus_size-bottom-denim">Denim &amp; Jeans</a></p>
+										<p><a href="/us/shop/catalog/category/plus/plus_size-sweater">Sweaters &amp; Cardigans</a></p>
+										<p><a href="/us/shop/catalog/category/plus/plus_size-sets">Two Piece Sets</a></p>
+										<p><a href="/us/shop/catalog/category/plus/plus_size-rompers-jumpsuits">Rompers &amp; Jumpsuits</a></p>
+										<p><a href="/us/shop/catalog/category/plus/plus_size-intimates">Lingerie &amp; Sleepwear</a></p>
+										<p><a href="/us/shop/catalog/category/plus/plus_size-swimwear">Swimwear</a></p>
+										<p><a href="/us/shop/catalog/category/plus/plus_size-activewear">Activewear</a></p>
+										</div>
+										<div class="vt ws_60"><p class="pb_10 t_source_bold t_bold ttl_header">Shoes &amp; Accessories</p><p><a href="/us/shop/catalog/category/f21/women-new-arrivals-accessories">New Arrivals</a></p>
+										<p><a href="/us/shop/catalog/category/f21/shoes">Shoes</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_jewelry">Jewelry</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_handbags">Bags &amp; Backpacks</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_hair">Hair Accessories</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_hat">Caps &amp; Hats</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_scarf-gloves">Scarves &amp; Gloves</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_legwear">Socks &amp; Tights</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_belts">Belts</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_glasses">Sunglasses &amp; Readers</a></p>
+										<p><a href="/us/shop/catalog/category/f21/home-and-gift">Home &amp; Tech</a></p>
+										</div>
+										</div></div>
+										<div class="pa_20 pt_0 vt bl_m_gray wmx_500 clearfix table"><div class="pl_20 ws_100 t_black"><div class="vt pb_20"><p class="pb_10 t_source_bold t_bold ttl_header">Shop By Occasion</p><p><a href="/us/shop/catalog/category/plus/promo-plus-size-vacation">Vacation</a></p>
+										<p><a href="/us/shop/catalog/category/plus/promo-plus-size-basics">Everyday</a></p>
+										<p><a href="/us/shop/catalog/category/plus/promo-plus-size-going-out">Going Out</a></p>
+										<p><a href="/us/shop/catalog/category/plus/promo-plus-size-wedding">Wedding</a></p>
+										<p><a href="/us/shop/catalog/category/plus/promo-plus-size-workwear">Work Wear</a></p>
+										</div>
+										</div></div>
+										<div class="fl"><div id="tmCarousel-plus_size-main" class="owl-carousel wmx_200 top-menu-carousel owl-loaded owl-drag">
+										
+										
+										<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-800px, 0px, 0px); transition: all 0.25s ease 0s; width: 1410px;"><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/plus/plus_size-dresses"><img src="https://www.forever21.com/images/f21/us/nav/plus/20200101/1231_plus_dresses.jpg" alt="Dresses" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Dresses</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/plus/plus_size-dresses">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/plus/plus_size-sale"><img src="https://www.forever21.com/images/f21/us/nav/plus/20200110/1231_plus_sale.jpg" alt="Sale" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Sale</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/plus/plus_size-sale">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/plus/plus-size-new-arrivals"><img src="https://www.forever21.com/images/f21/us/nav/plus/20200101/1231_plus_new.jpg" alt="New Arrivals" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">New Arrivals</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/plus/plus-size-new-arrivals">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/plus/plus_size-dresses"><img src="https://www.forever21.com/images/f21/us/nav/plus/20200101/1231_plus_dresses.jpg" alt="Dresses" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Dresses</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/plus/plus_size-dresses">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item active" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/plus/plus_size-sale"><img src="https://www.forever21.com/images/f21/us/nav/plus/20200110/1231_plus_sale.jpg" alt="Sale" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Sale</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/plus/plus_size-sale">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/plus/plus-size-new-arrivals"><img src="https://www.forever21.com/images/f21/us/nav/plus/20200101/1231_plus_new.jpg" alt="New Arrivals" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">New Arrivals</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/plus/plus-size-new-arrivals">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/plus/plus_size-dresses"><img src="https://www.forever21.com/images/f21/us/nav/plus/20200101/1231_plus_dresses.jpg" alt="Dresses" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Dresses</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/plus/plus_size-dresses">Shop The Look</p></td></tr></tbody></table></div></div></div></div><div class="owl-nav"><div class="owl-prev">prev</div><div class="owl-next">next</div></div><div class="owl-dots disabled"></div></div></div><script>$("#tmCarousel-plus_size-main").owlCarousel({loop: true, items: 1, dots: false,nav: true, autoplay: true, autoplayTimeout: 5000 });</script>
+										</div></div></div>
+										<div class="d_new_mega_menu hover_p "><a href="/us/shop/catalog/category/girls/girls_main"><span class="ls_1px">GIRLS</span></a><div class="d_new_mega_sub hover_c auto"><div class="ws_100 table fc wmx_1400"><div class="pa_20 pt_0 vt wmx_500"><div class="t_source_bold t_black table"><div class="vt pl_20 pr_20"><p class="pb_5"><a href="/us/shop/catalog/category/girls/girls-new-arrivals">New Arrivals</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/girls/backinstock-kids">Back In Stock</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/girls/promo-girls-basics">Basics Shop</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/girls/girls_best-sellers">Best Sellers</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/girls/girls_sale">Sale</a></p>
+										<p class="pb_5"><a href="/us/shop/info/specialoffers">Special Offers</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/21_items-kids">Style Deals</a></p>
+										</div></div></div>
+										<div class="pa_20 pt_0 vt bl_m_gray wmx_800"><div class="pl_20 pr_20 sameline t_black table"><div class="vt ws_60"><p class="pb_10 t_source_bold t_bold ttl_header">Clothing</p><p><a href="/us/shop/catalog/category/girls/girls_tops-graphic">Graphic Tees</a></p>
+										<p><a href="/us/shop/catalog/category/girls/girls_bottom-denim">Denim &amp; Jeans</a></p>
+										<p><a href="/us/shop/catalog/category/girls/girls_bottom">Bottoms</a></p>
+										<p><a href="/us/shop/catalog/category/girls/girls_dresses-rompers">Dresses</a></p>
+										<p><a href="/us/shop/catalog/category/girls/girls_outerwear">Jackets &amp; Outerwear</a></p>
+										<p><a href="/us/shop/catalog/category/girls/girls-sleepwear">Sleepwear</a></p>
+										<p><a href="/us/shop/catalog/category/girls/girls_tops-sweaters">Sweaters</a></p>
+										<p><a href="/us/shop/catalog/category/girls/girls_tops-sweatshirts">Sweatshirts + Hoodies</a></p>
+										<p><a href="/us/shop/catalog/category/girls/girls-swimwear">Swimwear</a></p>
+										<p><a href="/us/shop/catalog/category/girls/girls_tops">Tops</a></p>
+										</div>
+										<div class="vt ws_60"><p class="pb_10 t_source_bold t_bold ttl_header">Shoes &amp; Accessories</p><p><a href="/us/shop/catalog/category/girls/girls_accessories">Accessories</a></p>
+										<p><a href="/us/shop/catalog/category/girls/girls_shoes">Shoes</a></p>
+										</div>
+										</div></div>
+										<div class="fl"><div id="tmCarousel-girls_main" class="owl-carousel wmx_200 top-menu-carousel owl-loaded owl-drag">
+										
+										
+										
+										<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-800px, 0px, 0px); transition: all 0.25s ease 0s; width: 1610px;"><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/girls/girls_tops-graphic"><img src="https://www.forever21.com/images/f21/us/nav/girls/20200101/1231_girls_graphics.jpg" alt="Graphics" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Graphics</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/girls/girls_tops-graphic">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/girls/girls_tops-sweaters"><img src="https://www.forever21.com/images/f21/us/nav/girls/20200101/1231_girls_sweaters.jpg" alt="Sweaters" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Sweaters</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/girls/girls_tops-sweaters">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/girls/girls_tops"><img src="https://www.forever21.com/images/f21/us/nav/girls/20190930/1231_girls_tops.jpg" alt="Tops" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Tops</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/girls/girls_tops">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/girls/girls_bottom"><img src="https://www.forever21.com/images/f21/us/nav/girls/20200101/1231_Girls_bottoms.jpg" alt="Bottoms" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Bottoms</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/girls/girls_bottom">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item active" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/girls/girls_tops-graphic"><img src="https://www.forever21.com/images/f21/us/nav/girls/20200101/1231_girls_graphics.jpg" alt="Graphics" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Graphics</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/girls/girls_tops-graphic">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/girls/girls_tops-sweaters"><img src="https://www.forever21.com/images/f21/us/nav/girls/20200101/1231_girls_sweaters.jpg" alt="Sweaters" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Sweaters</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/girls/girls_tops-sweaters">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/girls/girls_tops"><img src="https://www.forever21.com/images/f21/us/nav/girls/20190930/1231_girls_tops.jpg" alt="Tops" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Tops</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/girls/girls_tops">Shop The Look</p></td></tr></tbody></table></div></div><div class="owl-item cloned" style="width: 200px;"><div><div class="txc fc wmx_200 pb_10"><a href="/us/shop/catalog/category/girls/girls_bottom"><img src="https://www.forever21.com/images/f21/us/nav/girls/20200101/1231_Girls_bottoms.jpg" alt="Bottoms" data-aesra-score="linkImgTextAlt:1;" class="ae-img"></a></div><table class="txc fc ws_100"><tbody><tr><td class="ws_70"><p class="t_bold t_black ttl_header pb_5">Bottoms</p><p class="t_black hp_subtitle" href="/us/shop/catalog/category/girls/girls_bottom">Shop The Look</p></td></tr></tbody></table></div></div></div></div><div class="owl-nav"><div class="owl-prev">prev</div><div class="owl-next">next</div></div><div class="owl-dots disabled"></div></div></div><script>$("#tmCarousel-girls_main").owlCarousel({loop: true, items: 1, dots: false,nav: true, autoplay: true, autoplayTimeout: 5000 });</script>
+										</div></div></div>
+										<div class="d_new_mega_menu hover_p "><a href="/us/shop/catalog/category/beauty/beauty-main"><span class="ls_1px">BEAUTY BY <img src="/us/shop/_common/images/rr.png" style="width:80px; height:13px;"></span></a><div class="d_new_mega_sub hover_c auto"><div class="ws_100 table fc wmx_1400"><div class="pa_20 pt_0 vt wmx_500"><div class="t_source_bold t_black table"><div class="vt pl_20 pr_20"><p class="pb_5"><a href="/us/shop/catalog/category/f21/acc_beauty">View All</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/beauty-new-arrivals">New Arrivals</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/acc_beauty-best-sellers">Best Sellers</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/acc_beauty-gift-shop">Gift Shop</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/brandedshop/beauty">Brands A-Z</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/sale_beauty">Sale</a></p>
+										<p class="pb_5"><a href="/us/shop/info/specialoffers">Special Offers</a></p>
+										</div></div></div>
+										<div class="pa_20 pt_0 vt bl_m_gray wmx_800"><div class="pl_20 pr_20 sameline t_black table col_l_16_of_16"><div class="vt col_l_4_of_16"><p class="pb_10 t_source_bold t_bold ttl_header">Makeup</p><p><a href="/us/shop/catalog/category/f21/acc_beauty-makeup">View All</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-makeup-eyes">Eyes</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-makeup-face">Face</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-makeup-lips">Lips</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-acc">Tools &amp; Accessories</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-nails">Nails</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-makeup-minis">Minis</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-makeup-sets">Gift Sets &amp; Kits</a></p>
+										</div>
+										<div class="vt col_l_4_of_16"><p class="pb_10 t_source_bold t_bold ttl_header">Skincare</p><p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-care">View All</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-care-masks">Masks</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-care-moisturizer-cream">Moisturizers</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-care-treatments">Treatments &amp; Serums</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-care-cleanser">Cleansers, Toners &amp; Exfoliators</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-care-eyecare">Eyecare</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-care-sun-care">Suncare</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-fragrance-bath">Bath &amp; Body</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-care-tools">Skincare Tools</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-care-minis">Minis</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-care-sets">Gift Sets &amp; Kits</a></p>
+										</div>
+										<div class="vt col_l_4_of_16"><p class="pb_10 t_source_bold t_bold ttl_header">Hair</p><p><a href="/us/shop/catalog/category/f21/acc_beauty-hair">View All</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-hair-shampoo-conditioner">Shampoo &amp; Conditioner</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-hair-treatment">Treatment &amp; Styling</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-hair-tools">Tools &amp; Accessories</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-hair-sets">Gift Sets &amp; Kits</a></p>
+										</div>
+										<div class="vt col_l_4_of_16"><p class="pb_10 t_source_bold t_bold ttl_header">Shop by Skin Concern</p><p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-concern">View All</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-concern-acne">Acne</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-concern-lines-wrinkles">Fine Lines &amp; Wrinkles</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-concern-dark-spots">Dark Spots &amp; Uneven Tone</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-concern-dryness">Dryness</a></p>
+										<p><a href="/us/shop/catalog/category/f21/acc_beauty-skin-concern-oiliness">Oiliness</a></p>
+										</div>
+										</div></div>
+										</div></div></div>
+										<div class="d_new_mega_menu hover_p m_sale "><a href="/us/shop/catalog/category/f21/sale-main"><span class="ls_1px">SALE</span></a><div class="d_new_mega_sub hover_c auto"><div class="ws_100 table fc wmx_1400"><div class="pa_20 pt_0 vt wmx_500"><div class="t_source_bold t_black table"><div class="vt pl_20 pr_20"><p class="pb_5"><a href="/us/shop/catalog/category/f21/sale">All Sale</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/sale-newly-added">Just Added</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/sale-under-5">Under $5</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/sale-under-10">Under $10</a></p>
+										<p class="pb_5"><a href="/us/shop/catalog/category/f21/sale-under-15">Under $15</a></p>
+										</div></div></div>
+										<div class="pa_20 pt_0 vt bl_m_gray wmx_800"><div class="pl_20 pr_20 sameline t_black table col_l_16_of_16"><div class="vt col_l_4_of_16"><p class="pb_10 t_source_bold t_bold ttl_header">Women Sale</p><p><a href="/us/shop/catalog/category/f21/sale_women">All Women Sale</a></p>
+										<p><a href="/us/shop/catalog/category/f21/sale_acc">Accessories</a></p>
+										<p><a href="/us/shop/catalog/category/f21/sale_bottoms">Bottoms</a></p>
+										<p><a href="/us/shop/catalog/category/f21/sale_dresses">Dresses</a></p>
+										<p><a href="/us/shop/catalog/category/f21/sale_shoes">Shoes</a></p>
+										<p><a href="/us/shop/catalog/category/f21/sale_tops">Tops</a></p>
+										</div>
+										<div class="vt col_l_4_of_16"><p class="pb_10 t_source_bold t_bold ttl_header">Plus Sale</p><p><a href="/us/shop/catalog/category/plus/plus_size-sale">All Plus Sale</a></p>
+										<p><a href="/us/shop/catalog/category/f21/sale_acc">Accessories</a></p>
+										<p><a href="/us/shop/catalog/category/plus/plus_size-sale-bottoms">Bottoms</a></p>
+										<p><a href="/us/shop/catalog/category/plus/plus_size-sale-dresses">Dresses</a></p>
+										<p><a href="/us/shop/catalog/category/f21/sale_shoes">Shoes</a></p>
+										<p><a href="/us/shop/catalog/category/plus/plus_size-sale-tops">Tops</a></p>
+										</div>
+										<div class="vt col_l_4_of_16"><p class="pb_10 t_source_bold t_bold ttl_header">Men Sale</p><p><a href="/us/shop/catalog/category/21men/mens-sale">All Men Sale</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-sale-accessories">Accessories</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-sale-bottoms">Bottoms</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-sale-jackets">Jackets</a></p>
+										<p><a href="/us/shop/catalog/category/21men/mens-sale-tops">Tops</a></p>
+										</div>
+										<div class="vt col_l_4_of_16"><p class="pb_10 t_source_bold t_bold ttl_header">Girls Sale</p><p><a href="/us/shop/catalog/category/girls/girls_sale">All Girls Sale</a></p>
+										</div>
+										</div></div>
+										</div></div></div>
+				
+								</div>
+							</div>
+							<!-- Product Menu E -->
+						</div>
+					</div>
+					<div class="mainsearch search_exp fc">
+						<span class="ws_100 fc">
+							<div class="pb_10 bb_m_gray t_gray fc">
+								<span class="icon_search fl vm"></span>
+								<button class="search_close ae-button fr" type="button" data-ae-blurbtype="button" data-ae-form-field="true" onclick="javascript: closeSearch(); return;" cobrowse="viewonly"></button>
+								<label class="pl_10 t_mid_gray p_absolute p_high" id="search_placeholder">Product name, style or color</label>
+								<input id="ihKeyword" tabindex="2" type="text" name="q" autocomplete="off" onfocus="fnSearchKeyFocusOn(event)" onfocusout="fnSearchKeyFocusOutDesktop(event)" data-ae-blurbtype="input" data-ae-form-field="true">
+				
+							</div>
+							<div class="ws_100 pa_20 table fc">
+								<!-- Search Default S -->
+								<div class="clearfix table" style="display:none;">
+									<!-- Recent Searches S -->
+									<div id="recentSearches" class="vt col_s_10_of_10 col_m_6_of_12 col_l_6_of_16 m_pt_15"></div>
+									<!-- Recent Searches E -->
+								</div>
+								<!-- Search Default E -->
+								<!-- Search Suggestion S -->
+								<div class="clearfix table search_suggestion mainsearchsugg" style="display:none"></div>
+								<!-- Search Suggestion E -->
+							</div>
+						</span>
+					</div>
+					<div style="display:none;width:100%;height:100%;position:fixed;" id="offMenu" class="show_desktop"></div>
+				</div>		
+				<!-- Pre Header End -->
+			</header>
+
+			<main role="main">
+				<div id="main" class="container wmx_1200 fc txc">
+
+					<div id="homepageSecondBanner" class="clearfix gtm_promo" data-promo-id="SHIPPING_HOMEPAGEBAR_HOMEPAGEBAR" data-promo-name="HOMEPAGE BAR" data-promo-creative-name="HOMEPAGEBAR" data-promo-position="HOMEPAGE BAR_BOTTOM">
+						<!-- Desktop S  
+						<div class="show_desktop show_tablet">
+							<div class="col_s_10_of_10 col_m_6_of_12 col_l_8_of_16">
+								<a href="#"><div style="background-color:#d9d9d9;color:#000;font-size:105%;text-align:center;padding:8px 0;">
+									<div class="show_desktop" style="padding:4px 0;"></div>
+										￥5,000以上（税込） 送料無料！
+									<div class="show_desktop" style="padding:4px 0"></div>
+								</div></a>
+							</div>
+							<div class="col_s_10_of_10 col_m_6_of_12 col_l_8_of_16">
+								<a href="#"><div style="background-color:#a6a6a6;color:#000;font-size:105%;text-align:center;padding:8px 0;">
+									<div class="show_desktop" style="padding:4px 0;"></div>
+										MID-SEASON SALE! END: 10:24(WED)9:59am
+									<div class="show_desktop" style="padding:4px 0"></div>
+								</div></a>
+							</div>
+						</div>
+						 Desktop E  
+						Mobile S  
+						<div class="container txc show_mobile">
+							<div class="col_m_12_of_12 col_l_16_of_16">
+								<table class="ws_100 fc">
+									<tbody>
+										<tr>
+											<td  class="col_s_10_of_10 col_m_6_of_12 col_l_8_of_16" style="height:43px;background-color:#d9d9d9;color:#000;font-size:110%;text-align:center;padding:12px 0;">
+												<span >￥5,000以上（税込） 送料無料！</span>
+											</td>
+										</tr>
+										<tr>
+											<td  class="col_s_10_of_10 col_m_6_of_12 col_l_8_of_16"  style="height:43px;background-color:#a6a6a6;color:#000;font-size:110%;text-align:center;">
+												<span>MID-SEASON SALE! END: 10:24(WED)9:59am</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						 Mobile S  -->
+						<div class="ws_100 clearfix table sameline">
+							<div class="ws_100 wm_50 txc pa_15 t_trade t_white ls_2px show_mobile gtm_promo" style="background-color:rgb(90,115,142);" data-promo-id="PROMO-HOMEPAGEBAR" data-promo-name="PROMO-HOMEPAGE BAR" data-promo-creative-name="20190110_HOMEPAGEBAR" data-promo-position="GLOBAL BAR_TOP LEFT" data-ek-seen="1">
+								<a href="#">
+									<span class="hp_midtitle block">BOGO FREE ON ALL SALE ITEMS WITH CODE</span>
+									<span class="t_mid">SHOP NOW&nbsp;</span></a>
+								<a class="t_small underline homepage_disclaimer_2" data-modal-target="#homepage_disclaimer_1">*SEE DETAILS</a>
+							</div>
+							<div class="ws_100 wm_50 txc pa_15 t_trade t_white ls_2px show_desktop gtm_promo" style="background-color:rgb(59, 83,125);" data-promo-id="PROMO-HOMEPAGEBAR-SHIP21" data-promo-name="PROMO-HOMEPAGEBAR-SHIP21" data-promo-creative-name="20190117_HOMEPAGEBAR_SHIP21" data-promo-position="GLOBAL BAR_TOP RIGHT" data-ek-seen="1">
+								<a href="#">
+									<span class="hp_midtitle block">FREE SHIPPING ON ORDERS $21+ </span>
+									<span class="t_mid">SHOP NOW&nbsp;</span></a>
+								<a class="t_small underline" data-modal-target="#homepage_disclaimer_2">*SEE DETAILS</a>
+							</div>
+						</div>
+						<!-- JP_BAR_promo1_disclaimer S -->
+						<a href="#" data-modal-target="#homepage_disclaimer_s" style="background-color:#c50129 ;color:#ffffff;font-size:105%;text-align:center;padding:10px 0;cursor:pointer"  class="show_mobile" alt="promo banner">
+    						クーポンコード適用でコート＆セーターが送料無料
+						</a>
+						<a href="#">
+						<img data-modal-target="#homepage_disclaimer_s" src="./images/DeskTop_P4.jpg" class="show_tablet" alt="promo banner">
+						</a>
+						<a href="#">
+						<img data-modal-target="#homepage_disclaimer_s" src="./images/DeskTop_P4.jpg" class="show_desktop" alt="promo banner">
+						</a>
+						<!-- JP_BAR_promo1_disclaimer E -->
+						<!-- JP Pop UP S -->
+						<article id="homepage_disclaimer_s" class="flex-modal-hide">
+							<div class="fc col_s_9_of_10 col_m_8_of_12 col_l_7_of_16 wmx_500">
+								<button class="quick_close" type="button" cobrowse="viewonly"></button>
+								<div class="container row pa_20">
+									<p class="p_content pa_10">
+										<p align="left"><b>【クーポン適用方法】</b><br>
+											<br>
+											<br>STEP1. 商品名の下に「クーポン適用で送料無料」の表記がある商品をカートに入れる <a href="https://www.forever21.co.jp/shop/catalog/category/f21/8N13FS" target="_blank"><font color="ac0f1c"><b>→対象商品はこちら</b></font></a>
+											<br>
+											<br>STEP2．ショッピングカートより「注文内容確認」へ進む！
+											<br>STEP3．「クーポンコード」にクーポンコード「<font color="004dff"><b>8N13FS</b></font>」を入力し、適用！
+											<br>STEP4．送料無料になっていることをご確認の上、決済！ 
+											<br>       ※対象商品と一緒にご購入で、店内全品送料無料
+											<br>
+											<br>
+											<br>
+											<b>【キャンペーン規約（必ずお読み下さい）】</b>
+											<br>
+											<br>●このキャンペーンはFOREVER 21ジャパン公式オンラインショップにて、11月13日(火)午前10時から11月21日(水)午前9時59分まで期間限定で実施しております。 他の店舗、他国オンラインショップでは対象外となります。 
+											<br>●クーポン適用で、対象商品をご購入頂いた場合、送料無料でお届けいたします。（代引き、後払い手数料はお客様ご負担となります）
+											<br>　※お届け先が沖縄県の場合は、送料500円をご請求いたします。
+											<br>●対象ページにある「クーポン適用で送料無料」の表記の付いた商品が送料無料の対象になります。表記のない商品につきましては対象外となります。
+											<br>●決済前に必ずクーポンを適用してください。決済完了後のクーポン適用はできかねますので、決済の前に必ずよくお確かめください。
+											<br>●本クーポンは、ご利用期限内に何度でもご利用いただけます。
+											<br>●本クーポンはその他クーポン、割引プロモーションなどと併用はできません。
+											<br>●このクーポンをご利用されたお客様は、本キャンペーン規約にご同意いただいたものとみなします。 
+											<br>●このキャンペーンは告知なく変更・中止する場合がございますので、あらかじめご了承下さい。
+											<br>  
+											<br>FOREVER21ジャパンオンラインショップ
+										</p>
+									</p>
+								</div>
+							</div>
+						</article>
+						<!-- JP Pop UP E -->
+						<!--
+						<div id="homepage_disclaimer_s" class="flex-modal-hide">
+							<div class="fc col_s_9_of_10 col_m_8_of_12 col_l_7_of_16 wmx_500">
+								<button class="quick_close" type="button" cobrowse="viewonly"></button>
+								<div class="container row pa_20">
+									<p class="p_content pa_10"> ★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★
+										お買上げ金額にかかわらず☆送・料・無・料☆
+										通常￥480 ⇒ 送料￥0！
+										10月5日(金)午前10時00分～10月10日(水)午前9時59分
+										★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★
+									</p>
+								</div>
+							</div>
+						</div>  -->
+					</div>
+					<div id="homepageBannerLocation">
+						<!-- M1 Carousel S -->
+						<div class="m1_wrapper">
+							<div id="m1" class="owl-carousel" style="display:block">
+								<!-- Banner Start -->
+								<div>
+									<a href="http://www.forever21.com">
+										<img src="http://www.forever21.co.jp/shop/_common/images/ja/20180914/mobile/0914m_m2.jpg" alt="DENIM EDITION" class="show_mobile"> 
+										<img src="http://www.forever21.co.jp/shop/_common/images/ja/20180914/mobile/0914m_m2.jpg" alt="DENIM EDITION" class="show_tablet"> 
+										<img src="http://www.forever21.co.jp/shop/_common/images/ja/20180914/desktop/0914d_m2.jpg?01" alt="DENIM EDITION" class="show_desktop">
+									</a>
+								</div>
+								<div>
+									<a href="#">
+										<img src="http://www.forever21.co.jp/shop/_common/images/ja/20180821/mobile/M_M1.jpg" alt="FALL COLLECTION" class="show_mobile">
+										<img src="http://www.forever21.co.jp/shop/_common/images/ja/20180821/mobile/M_M1.jpg" alt="FALL COLLECTION" class="show_tablet">
+										<img src="http://www.forever21.co.jp/shop/_common/images/ja/20180821/desktop/D_M1.jpg" alt="FALL COLLECTION" class="show_desktop">
+									</a>
+								</div>
+								<div>
+									<a href="#">
+										<img src="https://www.forever21.com/images/f21/jp/ja/web/20181012/MobileM11.gif?1" alt="CLASSHIC HEROINE" class="show_mobile"> 
+										<img src="https://www.forever21.com/images/f21/jp/ja/web/20181012/DeskTopM11.gif?1" alt="CLASSHIC HEROINE" class="show_tablet"> 
+										<img src="https://www.forever21.com/images/f21/jp/ja/web/20181012/DeskTopM11.gif?1" alt="CLASSHIC HEROINE" class="show_desktop">
+									</a>
+								</div>
+							</div>
+						</div>
+						<script type="text/javascript">	
+						 // set autoplay time
+						 var slideTime = 4000;
+							if ($('#m1,#m1_c').attr('data-slide-time') != undefined)
+								slideTime = $('#m1,#m1_c').attr('data-slide-time');
+
+							//for video carousel
+							$("#m1,#m1_c").on('initialized.owl.carousel', function () {
+								if ($('.owl-item').find('#video1')[0] != undefined)
+									$('.owl-item').find('#video1')[0].play();
+							});
+
+							var loopStatus;
+
+							if ($('#m1') && $('#m1')[0].childElementCount == 1) {
+								loopStatus = false;
+							}
+							else {
+								loopStatus = true;
+							}			
+							$("#m1").owlCarousel({
+								loop: loopStatus,
+								items: 1,
+								video: true,
+								autoplay: true,
+								mouseDrag: true,
+        						touchDrag: false,
+								autoplayTimeout: slideTime,
+								responsive: {
+									0: {
+										nav: false,
+										dots: true,
+										mouseDrag: false,
+            							touchDrag: true
+									},
+									767: {
+										nav: false,
+										dots: true,
+										mouseDrag: false,
+            							touchDrag: true
+									},
+									1000: {
+										nav: true,
+										dots: false,
+										mouseDrag: false,
+            							touchDrag: true
+									}
+								}
+							});
+						</script>
+						<!-- M1 Carousel E -->
+					</div>
+					<!-- Kicker S -->
+				
+					<div class="row_container">
+						<!-- 4 Column Start -->
+						<div class="col_s_10_of_10 col_m_6_of_12 row_2">
+							<div><a href="#"><img src="https://www.forever21.com/images/f21/jp/ja/web/20190117/desktop_c02.jpg?1"></a></div>
+							<div><a href="#"><img src="https://www.forever21.com/images/f21/jp/ja/web/20190109/desktop_c_0110_01.jpg?1"></a></div>
+						</div>
+						<div class="col_s_10_of_10 col_m_6_of_12 row_2">
+							<div><a href="#"><img src="https://www.forever21.com/images/f21/jp/ja/web/20190109/desktop_c_0104_01.jpg?1"></a></div>
+							<div><a href="#"><img src="https://www.forever21.com/images/f21/jp/ja/web/20190117/desktop_c01.jpg?1"></a></div>
+						</div>
+						<!-- 4 Column End -->
+						<!-- 3 Column Start 
+						<div class="container row_3">
+							<div><a href="#"><img src="http://www.forever21.com/images/en/20170123/c1.jpg"></a></div>
+							<div><a href="#"><img src="http://www.forever21.com/images/en/20170123/c1.jpg"></a></div>
+							<div><a href="#"><img src="http://www.forever21.com/images/en/20170123/c1.jpg"></a></div>
+						</div>
+							3 Column End -->
+					</div>
+					<!-- Kicker E -->
+
+					<!-- NewArrivals S -->
+					<div class="homepage_carousel row container pt_10">
+						<div class="divided_line hp_midtitle txc t_dark"><span>New Arrivals</span></div>
+						<div class="col_s_10_of_10 col_m_11_of_12 col_l_14_of_16 fc">
+							<div class="row_container pa_0 owl-carousel" id="CarouselArea2" >
+								<!-- Item S -->
+								<div class="pi_container">
+									<div class="pi_wrapper">
+										<a href="detail.html">
+											<img src="https://www.forever21.com/images/default_330/00303988-01.jpg" alt="Bart Graphic Hoodie">
+											<p class="p_price pt_10">
+												$27.90
+											</p>
+											<p class="p_name">Bart Graphic Hoodie</p>
+										</a>
+									</div>
+								</div>
+								<!-- Item E -->
+								<!-- Item S -->
+								<div class="pi_container">
+									<div class="pi_wrapper">
+										<a href="detail.html">
+											<img src="https://www.forever21.com/images/default_330/00283726-01.jpg">
+											<p class="p_price pt_10">
+													$27.90
+											</p>
+											<p class="p_name">Bart Graphic Hoodie</p>
+										</a>
+									</div>
+								</div>
+								<!-- Item E -->
+								<!-- Item S -->
+								<div class="pi_container">
+										<div class="pi_wrapper">
+											<a href="detail.html">
+												<img src="https://www.forever21.com/images/default_330/00287584-03.jpg">
+											<p class="p_price pt_10">
+													$27.90
+											</p>
+											<p class="p_name">Bart Graphic Hoodie</p>
+										</a>
+									</div>
+								</div>
+								<!-- Item E -->
+								<!-- Item S -->
+								<div class="pi_container">
+									<div class="pi_wrapper">
+										<a href="detail.html">
+											<img src="https://www.forever21.com/images/default_330/00282047-04.jpg">
+											<p class="p_price pt_10">
+													$27.90
+											</p>
+											<p class="p_name">Bart Graphic Hoodie</p>
+										</a>
+									</div>
+								</div>
+								<!-- Item E -->
+								<!-- Item S -->
+								<div class="pi_container">
+									<div class="pi_wrapper">
+										<a href="detail.html">
+											<img src="https://www.forever21.com/images/default_330/00292053-03.jpg">
+											<p class="p_price pt_10">
+													$27.90
+											</p>
+											<p class="p_name">Bart Graphic Hoodie</p>
+										</a>
+									</div>
+								</div>
+								<!-- Item E -->
+								<!-- Item S -->
+								<div class="pi_container">
+									<div class="pi_wrapper">
+										<a href="#">
+											<img src="https://www.forever21.com/images/default_330/00293919-01.jpg">
+											<p class="p_price pt_10">
+													$27.90
+											</p>
+											<p class="p_name">Bart Graphic Hoodie</p>
+										</a>
+									</div>
+								</div>
+								<!-- Item E -->
+								<!-- Item S -->
+								<div class="pi_container">
+									<div class="pi_wrapper">
+										<a href="#">
+											<img src="https://www.forever21.com/images/default_330/00283726-01.jpg">
+											<p class="p_price pt_10">
+													$27.90
+											</p>
+											<p class="p_name">Bart Graphic Hoodie</p>
+										</a>
+									</div>
+								</div>
+								<!-- Item E -->
+								<!-- Item S -->
+								<div class="pi_container">
+									<div class="pi_wrapper">
+										<a href="#">
+											<img src="https://www.forever21.com/images/default_330/00303988-01.jpg" alt="Bart Graphic Hoodie">
+											<p class="p_price pt_10">
+												$27.90
+											</p>
+											<p class="p_name">Bart Graphic Hoodie</p>
+										</a>
+									</div>
+								</div>
+								<!-- Item E -->
+								<!-- Item S -->
+								<div class="pi_container">
+									<div class="pi_wrapper">
+										<a href="#">
+											<img src="https://www.forever21.com/images/default_330/00285084-03.jpg">
+											<p class="p_price pt_10">
+													$27.90
+											</p>
+											<p class="p_name">Bart Graphic Hoodie</p>
+										</a>
+									</div>
+								</div>
+								<!-- Item E -->
+								<!-- Item S -->
+								<div class="pi_container">
+										<div class="pi_wrapper">
+											<a href="#">
+												<img src="https://www.forever21.com/images/default_330/00287584-03.jpg">
+											<p class="p_price pt_10">
+													$27.90
+											</p>
+											<p class="p_name">Bart Graphic Hoodie</p>
+										</a>
+									</div>
+								</div>
+								<!-- Item E -->
+								<!-- Item S -->
+								<div class="pi_container">
+									<div class="pi_wrapper">
+										<a href="#">
+											<img src="https://www.forever21.com/images/default_330/00282047-04.jpg">
+											<p class="p_price pt_10">
+													$27.90
+											</p>
+											<p class="p_name">Bart Graphic Hoodie</p>
+										</a>
+									</div>
+								</div>
+								<!-- Item E -->
+								<!-- Item S -->
+								<div class="pi_container">
+									<div class="pi_wrapper">
+										<a href="#">
+											<img src="https://www.forever21.com/images/default_330/00292053-03.jpg">
+											<p class="p_price pt_10">
+													$27.90
+											</p>
+											<p class="p_name">Bart Graphic Hoodie</p>
+										</a>
+									</div>
+								</div>
+								<!-- Item E -->
+								<!-- Item S -->
+								<div class="pi_container">
+									<div class="pi_wrapper">
+										<a href="#">
+											<img src="https://www.forever21.com/images/default_330/00293919-01.jpg">
+											<p class="p_price pt_10">
+													$27.90
+											</p>
+											<p class="p_name">Bart Graphic Hoodie</p>
+										</a>
+									</div>
+								</div>
+								<!-- Item E -->
+								<!-- Item S -->
+								<div class="pi_container">
+									<div class="pi_wrapper">
+										<a href="#">
+											<img src="https://www.forever21.com/images/default_330/00314072-01.jpg">
+											<p class="p_price pt_10">
+													$27.90
+											</p>
+											<p class="p_name">Bart Graphic Hoodie</p>
+										</a>
+									</div>
+								</div>
+								<!-- Item E -->
+							</div>
+							<p class="txr pr_10 pb_20 show_desktop"><a href="/us/shop/catalog/category/f21/women-new-arrivals">View More +</a></p>
+						</div>
+					</div>
+					<script type="text/javascript">	
+					$(function () {			
+						$('#CarouselArea2').owlCarousel({
+							loop:true,
+							navigation: true,
+							pagination: true,
+							//items:6,
+							 /* v2 에서만 동작 */
+							responsive: {
+								0:{
+									items:3,
+									slideBy: 3,
+									nav: false,
+									dots: false
+								},
+								600:{
+									items:3,
+									slideBy: 3,
+									nav: true,
+									dots: false
+								},
+								1200:{
+									items:6,
+									slideBy: 6,
+									nav: true,
+									dots: false
+								}
+							}
+						})
+					});
+					</script>
+					<!-- NewArrivals E -->
+					<!-- F21XMe S -->
+					<div class="row container pt_20 pb_20 bg_light_gray mb_10">
+						<div class="col_s_10_of_10 col_m_11_of_12 col_l_14_of_16 fc table sameline bottom pa_5">
+							<div class="col_m_3_of_12 show_desktop hp_midtitle">Got Style? Show us</div>
+							<div class="col_s_10_of_10 col_m_6_of_12">
+								<p class="hp_title txc t_bold pb_10">Shop the 'Gram</p>
+								<p class="txc">
+									Upload your favorite F21 outfit on Instagram with <br>
+									#F21xME for a chance to be featured!<br>
+									<a data-modal-target="#f21xmeTerms"><span data-modal-target="#f21xmeTerms" class="underline t_small t_gray pt_5">Terms and Conditions</span></a>
+								</p>
+							</div>
+							<div class="col_m_3_of_12 show_desktop txr">Follow us on Instagram<br><span class="col_m_8_of_12 col_l_8_of_16"><img src="/us/shop/_common/images/en/f21xme/f21xme_3.png"></span></div>
+						</div>
+						<div class="col_s_10_of_10 col_m_11_of_12 col_l_14_of_16 fc">
+							<div class="container row">
+								<!-- F21xMe Grid S -->
+								<div id="F21xMEGrid" class="container row pt_20 f21xme">
+									<!-- Feed S -->
+									<div class="col_s_5_of_10 col_m_3_of_12 col_l_3_of_16 pa_5">
+										<a href="#">
+											<div class="p_relative">
+												<div class="txc cover">
+													<div class="ws_100 table sameline middle">
+														<div>
+															<span class="fs_instagram"></span>
+															<p class="pt_20 clearfix">
+																<span class="b_black pa_10 t_small t_bold round_5">SHOP IT</span>
+															</p>
+														</div>
+													</div>
+												</div>
+												<img src="https://d28m5bx785ox17.cloudfront.net/v1/img/nfComMrXLRrLtfxwPELD-irlWNf50u-LEOmQTIM02vs=/sc/300x300">
+											</div>
+										</a>
+										<button id="btnModalTarget" data-modal-target="#f21xme" style="display:none;"></button>
+									</div>
+									<!-- Feed E -->
+									<!-- Feed S -->
+									<div class="col_s_5_of_10 col_m_3_of_12 col_l_3_of_16 pa_5">
+										<a href="#">
+											<div class="p_relative">
+												<div class="txc cover">
+													<div class="ws_100 table sameline middle">
+														<div>
+															<span class="fs_instagram"></span>
+															<p class="pt_20 clearfix">
+																<span class="b_black pa_10 t_small t_bold round_5">SHOP IT</span>
+															</p>
+														</div>
+													</div>
+												</div>
+												<img src="https://d28m5bx785ox17.cloudfront.net/v1/img/mDXsR3GwIc5TQQ97g9ntr9gIftAQZwWRdlmwPYKu0MM=/sc/300x300">
+											</div>
+										</a>
+										<button id="btnModalTarget" data-modal-target="#f21xme" style="display:none;"></button>
+									</div>
+									<!-- Feed E -->
+									<!-- Feed S -->
+									<div class="col_s_5_of_10 col_m_3_of_12 col_l_3_of_16 pa_5">
+										<a href="#">
+											<div class="p_relative">
+												<div class="txc cover">
+													<div class="ws_100 table sameline middle">
+														<div>
+															<span class="fs_instagram"></span>
+															<p class="pt_20 clearfix">
+																<span class="b_black pa_10 t_small t_bold round_5">SHOP IT</span>
+															</p>
+														</div>
+													</div>
+												</div>
+												<img src="https://d28m5bx785ox17.cloudfront.net/v1/img/-eInJTveW7r3dqwdTGbTGxpyTZkMFKl5cOX_AY9I8ug=/sc/300x300">
+											</div>
+										</a>
+										<button id="btnModalTarget" data-modal-target="#f21xme" style="display:none;"></button>
+									</div>
+									<!-- Feed E -->
+									<!-- Feed S -->
+									<div class="col_s_5_of_10 col_m_3_of_12 col_l_3_of_16 pa_5">
+										<a href="#">
+											<div class="p_relative">
+												<div class="txc cover">
+													<div class="ws_100 table sameline middle">
+														<div>
+															<span class="fs_instagram"></span>
+															<p class="pt_20 clearfix">
+																<span class="b_black pa_10 t_small t_bold round_5">SHOP IT</span>
+															</p>
+														</div>
+													</div>
+												</div>
+												<img src="https://d28m5bx785ox17.cloudfront.net/v1/img/UPoZ6Kt5r2PrkLiP6zUtkgQvxWrGwqKwJGmkhN56ihM=/sc/300x300">
+											</div>
+										</a>
+										<button id="btnModalTarget" data-modal-target="#f21xme" style="display:none;"></button>
+									</div>
+									<!-- Feed E -->
+									<!-- Feed S -->
+									<div class="col_s_5_of_10 col_m_3_of_12 col_l_3_of_16 pa_5">
+										<a href="#">
+											<div class="p_relative">
+												<div class="txc cover">
+													<div class="ws_100 table sameline middle">
+														<div>
+															<span class="fs_instagram"></span>
+															<p class="pt_20 clearfix">
+																<span class="b_black pa_10 t_small t_bold round_5">SHOP IT</span>
+															</p>
+														</div>
+													</div>
+												</div>
+												<img src="https://d28m5bx785ox17.cloudfront.net/v1/img/XMjCEo8r38DWwo48__QWeMqaOmV6-iqKJO-vacWaRAc=/sc/300x300?spatialTags=0.555511:0.419844">
+											</div>
+										</a>
+										<button id="btnModalTarget" data-modal-target="#f21xme" style="display:none;"></button>
+									</div>
+									<!-- Feed E -->
+									<!-- Feed S -->
+									<div class="col_s_5_of_10 col_m_3_of_12 col_l_3_of_16 pa_5">
+										<a href="#">
+											<div class="p_relative">
+												<div class="txc cover">
+													<div class="ws_100 table sameline middle">
+														<div>
+															<span class="fs_instagram"></span>
+															<p class="pt_20 clearfix">
+																<span class="b_black pa_10 t_small t_bold round_5">SHOP IT</span>
+															</p>
+														</div>
+													</div>
+												</div>
+												<img src="https://d28m5bx785ox17.cloudfront.net/v1/img/r6us3UwG5bzixOGC7XFS1-443hLkBwGarh4Amnikf8g=/sc/300x300?spatialTags=0.496875:0.328125,0.474363:0.522326">
+											</div>
+										</a>
+										<button id="btnModalTarget" data-modal-target="#f21xme" style="display:none;"></button>
+									</div>
+									<!-- Feed E -->
+									<!-- Feed S -->
+									<div class="col_s_5_of_10 col_m_3_of_12 col_l_3_of_16 pa_5">
+										<a href="#">
+											<div class="p_relative">
+												<div class="txc cover">
+													<div class="ws_100 table sameline middle">
+														<div>
+															<span class="fs_instagram"></span>
+															<p class="pt_20 clearfix">
+																<span class="b_black pa_10 t_small t_bold round_5">SHOP IT</span>
+															</p>
+														</div>
+													</div>
+												</div>
+												<img src="https://d28m5bx785ox17.cloudfront.net/v1/img/9G3KjK-wZCkek15P5wNR8Vl4DkBLOfa4poKV__d_iXo=/sc/300x300">
+											</div>
+										</a>
+										<button data-modal-target="#f21xme" style="display:none;"></button>
+									</div>
+									<!-- Feed E -->
+									<!-- Feed S -->
+									<div class="col_s_5_of_10 col_m_3_of_12 col_l_3_of_16 pa_5">
+										<a href="#">
+											<div class="p_relative">
+												<div class="txc cover">
+													<div class="ws_100 table sameline middle">
+														<div>
+															<span class="fs_instagram"></span>
+															<p class="pt_20 clearfix">
+																<span class="b_black pa_10 t_small t_bold round_5">SHOP IT</span>
+															</p>
+														</div>
+													</div>
+												</div>
+												<img src="https://d28m5bx785ox17.cloudfront.net/v1/img/K2lNkz_GCb0_8m6KOluf8LJerAVufCm-g-f93WkPqd0=/sc/300x300">
+											</div>
+										</a>
+										<button id="btnModalTarget" data-modal-target="#f21xme" style="display:none;"></button>
+									</div>
+									<!-- Feed E -->
+									<!-- Feed S -->
+									<div class="col_s_5_of_10 col_m_3_of_12 col_l_3_of_16 pa_5">
+										<a href="#">
+											<div class="p_relative">
+												<div class="txc cover">
+													<div class="ws_100 table sameline middle">
+														<div>
+															<span class="fs_instagram"></span>
+															<p class="pt_20 clearfix">
+																<span class="b_black pa_10 t_small t_bold round_5">SHOP IT</span>
+															</p>
+														</div>
+													</div>
+												</div>
+												<img src="https://d28m5bx785ox17.cloudfront.net/v1/img/CIh3zTiR2ic8DMpYUp7g5rxnStA-t0OJD4sppCYHNsY=/sc/300x300">
+											</div>
+										</a>
+										<button id="btnModalTarget" data-modal-target="#f21xme" style="display:none;"></button>
+									</div>
+									<!-- Feed E -->
+									<!-- Feed S -->
+									<div class="col_s_5_of_10 col_m_3_of_12 col_l_3_of_16 pa_5">
+										<a href="#">
+											<div class="p_relative">
+												<div class="txc cover">
+													<div class="ws_100 table sameline middle">
+														<div>
+															<span class="fs_instagram"></span>
+															<p class="pt_20 clearfix">
+																<span class="b_black pa_10 t_small t_bold round_5">SHOP IT</span>
+															</p>
+														</div>
+													</div>
+												</div>
+												<img src="https://d28m5bx785ox17.cloudfront.net/v1/img/ZW3f73f3fiqlHe3XdHI2WaTsj4Nhf-pOwD7QJwbo3YY=/sc/300x300">
+											</div>
+										</a>
+										<button id="btnModalTarget" data-modal-target="#f21xme" style="display:none;"></button>
+									</div>
+									<!-- Feed E -->
+								</div>
+								<!-- F21xMe Grid E -->
+								<p class="ws_100 row txc pt_10"><a href="#"><span class="inline bg_black pa_10 t_small t_white">+ View More +</span></a></p>
+							</div>
+						</div>
+					</div>
+					<!-- F21XMe E-->
+					<!-- Forever Connected S -->
+					<div class="row container pt_20 pb_20 bg_light_gray mb_10">
+						<p class="hp_title txc t_bold pb_10">Forever Connected</p>
+						<div id="Forever21Connected" class="col_s_10_of_10 col_m_11_of_12 col_l_14_of_16 fc">
+							<div class="ws_100 wm_50 fl row_2 txc pb_10">
+								<!-- Connect S -->
+								<div class="txl">
+									<a href="#"><p><img src="https://www.forever21.com/us/shop/_common/images/en/20180305/f21_footer_k1.jpg"></p>
+										<div>
+											<p class="hp_midtitle pt_10 pb_10">Style Crush</p>
+											<p>We're completely obessed with @darlinginthecity and her must-have wardrobe. </p>
+										</div>
+									</a>
+								</div>
+								<!-- Connect E -->
+								<!-- Connect S -->
+								<div class="txl">
+									<a href="#" target="_blank"><p><img src="https://www.forever21.com/us/shop/_common/images/en/20180305/f21_footer_k2.jpg"></p
+										><div>
+											<p class="hp_midtitle pt_10 pb_10">Forever Social</p>
+											<p>Come join the fam @forever21. Tag your posts with #F21xME for a chance to be featured!</p>
+										</div>
+									</a>
+								</div>
+								<!-- Connect E -->
+							</div>
+							<div class="ws_100 wm_50 fr row_2 txc pb_10">
+								<!-- Connect S -->
+								<div class="txl"><a href="#" target="_blank">
+									<p><img src="https://www.forever21.com/us/shop/_common/images/en/20180305/f21_footer_k3.jpg"></p>
+									<div><p class="hp_midtitle pt_10 pb_10">Spring Collection</p>
+										<p>It's here and you gotta have it. It’s the IT pant of the season!</p>
+									</div>
+								</a>
+							</div>
+							<!-- Connect E -->
+							<!-- Connect S -->
+							<div class="txl">
+								<a href="#"><p><img src="https://www.forever21.com/us/shop/_common/images/en/20180720/f21_footer_k4.jpg"></p>
+									<div>
+										<p class="hp_midtitle pt_10 pb_10">Want 20% off?</p>
+										<p>Save 20% on your first regular price purchase with your new Forever 21 Credit Card!</p>
+									</div>
+								</a>
+							</div>
+							<!-- Connect E -->
+						</div>
+					</div>
+					</div>
+					<!-- Forever Connected E -->
+					<!-- Sign up Email S -->
+					<div class="container wmx_1200 fc txc" style="display:none"><!-- 20190704 div로 한번더 감싸고 css 추가-->
+						<div id="welcome_signup_area" class="signup_wrapper wmx_1200 fc welcomepopupold" data-gtm-vis-recent-on-screen-7091197_953="3295" data-gtm-vis-first-on-screen-7091197_953="3295" data-gtm-vis-total-visible-time-7091197_953="100" data-gtm-vis-has-fired-7091197_953="1">
+							<div class="fc txc">
+								<div class="signup_slider ws_100" style=""><span class="icon_close"></span><!-- 20190712-->
+									<div class="ws_100 row txcl signup"  style="display: none;"><!--   style="display: block;" 보이기 위해 style 넣은거니 빼주시면 됩니다. -->
+										<div class="col_s_10_of_10 col_m_6_of_12 col_l_8_of_16">
+											<span class="hp_midtitle t_trade">メルマガ登録で<span class="t_pink">10％OFF</span>クーポン</span><!-- 20190704 -->
+											<p class="pb_10 t_gray t_small">最新トレンドやキャンペーンをいち早くお届け！</p>
+										</div>
+										<div class="col_s_10_of_10 col_m_5_of_12 col_l_7_of_16">
+											<form>
+												<fieldset class="f_form m_f_form">
+													<div class="input_label"><label for="input_email">メールアドレス</label><input type="email" class="round_nr" name="email address" id="input_email" tabindex="3">
+														<button class="bg_black round_nl" onclick="fnVaildEmailCheck(); return false;" cobrowse="viewonly">Join</button>
+														<div class="tooltip signup_layer" style="display: none;"></div>
+													</div>
+												</fieldset>
+												<p class="t_res no_text"><!-- 20190704 -->
+													By clicking join, <span class="underline"><a data-modal-target="#privacy" href="#!" role="link" id="privacy policy" tabindex="0">Privacy Policy</a></span> I am requesting that Forever 21 send me promotional offers to this email address. I understand that my information will be subject to this <span class="underline"><a data-modal-target="#terms" href="#!" role="link" id="terms and conditions" tabindex="0">Terms</a></span> .</p>
+											</form>
+										</div>
+									</div>
+									<!-- Thank you S -->
+									<div id="welcome_thankyou_area" class="ws_100 row txc thank" style="display: block;">
+										<div class="col_s_10_of_10">
+											<!-- 20190705 S -->
+											<p class="hp_title t_trade">Thank you!</p>
+											<p class="hp_midtitle t_bold  pb_10">メルマガ登録ありがとうございます。</p>
+											<!-- 20190705 E -->
+											<p class="t_gray t_small">	ご登録頂きましたメールアドレスに<span class="t_pink">クーポン</span>をお送りいたしました。</p>
+											<p class="t_gray t_small">※ネットワーク環境に応じてメールの受信が遅延することがあります。</p>
+											<!-- 20190704 E -->
+											<!-- 20190717 S 
+											<p class="hp_title t_trade pb_5">Thank you!</p>
+											<p class="t_gray t_dark">メルマガ登録ありがとうございます。</p>
+											<p class="t_mid t_gray t_dark pb_5">ご登録頂きましたメールアドレスにクーポンをお送りいたしました。</p>
+											<p class="t_mid t_gray t_small">※ネットワーク環境に応じてメールの受信が遅延することがあります。</p>
+												20190717 E -->
+										</div>
+									</div> 
+									<!-- Thank you E -->
+								</div> 
+							</div>
+						</div>
+					</div><!-- 20190704 중앙정렬-->
+					<!-- Sign up Email E -->
+				</div>
+			</main>
+			<footer class="bg_light_gray">
+				<!-- Footer S -->
+				<div class="container row">
+					<!-- Subscribe S -->
+					<div class="col_s_9_of_10 col_m_10_of_16 fc txc">
+						<div class="subscription">
+							<p class="hp_title">Fear of missing out?</p>
+							<p class="show_desktop hp_subtitle pt_10">Be the first to know about the latest deals, style updates &amp; more!</p>
+							<h5 class="hp_subtitle show_mobile pt_10">Sign up and be the first to know!</h5>
+							<div class="col_s_10_10 col_m_8_of_12 col_l_8_of_16 wmx_500 fc pt_10">
+								<form id="form_footer_subscribe" novalidate="novalidate">
+									<fieldset class="f_form m_f_form">
+										<div class="input_label">
+											<label>EMAIL ADDRESS</label>
+											<button type="button" class="bg_black round_nl">JOIN</button>
+											<input type="email" class="round_nr" maxlength="40">
+										</div>
+									</fieldset>
+									<p class="t_res t_gray">By clicking 'JOIN', I am requesting that Forever 21 send me promotional offers to this email address. I understand that my information will be subject to this <span class="underline"><a href="/us/shop/info/privacypolicy" role="link" id="privacy policy" tabindex="0"><span class="t_red underline">NEW</span> Privacy Policy</a></span>. </p>
+								</form>
+							</div>
+						</div>
+					</div>
+					<!-- Subscribe E -->
+					<!-- Footer Navigation S -->
+					<div class="show_desktop">
+						<div class="col_m_12_of_12 fc txc">
+							<ul>
+								
+				
+								<li>
+									<dl>
+										<dt>Company Info</dt>
+										<dd><a href="/us/shop/info/aboutus" role="link" id="about us" tabindex="0">About Us</a></dd>
+										<dd><a href="/us/shop/info/lettertoourcustomers" role="link" id="careers" tabindex="0">Letter To Our Customers</a></dd>
+										<dd><a href="/us/shop/info/careers" role="link" id="careers" tabindex="0">Careers</a></dd>
+										<dd><a href="/us/shop/info/socialresponsibility" role="link" id="social responsibility" tabindex="0">Social Responsibility</a></dd>
+										<dd><a href="https://signup.cj.com/member/signup/publisher/?cid=4529306#/branded?_k=s918rv" role="link" id="affiliate program" tabindex="0" target="_blank">Affiliate Program</a></dd>
+										<dd><a href="/us/shop/info/businesswithus" role="link" id="business with us" tabindex="0">Business With Us</a></dd>
+										<dd><a href="/us/shop/info/presstalent" role="link" id="press talent" tabindex="0">Press &amp; Talent</a></dd>
+										<dd><a href="/us/shop/info/findstore" role="link" id="find a store" tabindex="0">Find a Store</a></dd>
+											<dd><a href="/us/shop/info/sitemap" role="link" id="site map" tabindex="0">Site Map</a></dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>Help</dt>
+										<dd><a href="/us/shop/info/contactus" role="link" id="contact us" tabindex="0">Contact Us</a></dd>
+										<dd><a href="/us/shop/account/trackorder" role="link" id="order status" tabindex="0">Order Status</a></dd>
+										<dd><a href="/us/shop/info/shippinginfo" role="link" id="shipping info" tabindex="0">Shipping Info</a></dd>
+										
+										<dd><a href="/us/shop/info/returnsinfo" role="link" id="online returns" tabindex="0">Online Returns &amp; Exchanges</a></dd>
+										<dd><a href="/us/shop/info/storereturnsinfo" role="link" id="store returns" tabindex="0">Store Return &amp; Exchange</a></dd>
+										<dd><a href="/us/shop/info/sizeguide" role="link" id="size guide" tabindex="0">Size Guide</a></dd>
+										<dd><a href="/us/shop/info/faq" role="link" id="faq" tabindex="0">FAQ</a></dd>
+									</dl>
+								</li>
+								<li class="pr_10">
+									<dl>
+										<dt>Quick Links</dt>
+											<dd><a href="/us/shop/info/specialoffers" role="link" id="special offers" tabindex="0">Special Offers</a></dd>
+										<dd><a href="/us/shop/catalog/giftcard" role="link" id="gift cards" tabindex="0">Gift Cards</a></dd>
+											<dd><a href="https://blog.forever21.com" role="link" id="quicklinks_f21_blog" tabindex="0" target="_blank">Blog</a></dd>
+										<dd><a href="/us/shop/info/privacypolicy" role="link" id="privacy policy" tabindex="0"><span class="t_red">New</span> Privacy Policy</a></dd>
+										
+										<dd><a href="/us/shop/info/privacypolicy#ccpa" role="link" id="california privacy rights" tabindex="0">Your California Privacy Rights</a></dd>
+										<dd><a href="/us/shop/info/socialresponsibility/casupplychains" role="link" id="CA supply chains act" tabindex="0">CA Transparency in Supply Chains Act</a></dd>
+										<dd><a href="/us/shop/info/terms" role="link" id="terms of use" tabindex="0">Terms of Use </a></dd>
+										<dd><a href="/us/shop/info/webaccessibilitystatement" role="link" id="was" tabindex="0">Web Accessibility Statement</a></dd>
+				
+									</dl>
+								</li>
+								<li class="pl_0">
+									<dl>
+										<dt>Forever Rewarded</dt>
+										<dd><a href="/us/shop/info/cardapplication" role="link" id="credit card application" tabindex="0">Apply Now</a></dd>
+										<dd><a href="/us/shop/info/cardbenefit" role="link" id="credit card benefits" tabindex="0">Card Benefits</a></dd>
+										<dd><span>Manage Account</span></dd>
+										<dd class="pl_5 t_gray"><a href="https://d.comenity.net/forever21/" role="link" id="forever 21 credit card" tabindex="0" target="_blank">- Forever 21 Credit Card</a></dd>
+										<dd class="pl_5 t_gray"><a href="https://d.comenity.net/forever21visa/" role="link" id="visa credit card" tabindex="0" target="_blank">- Forever 21 VISA Credit Card</a></dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- Footer Navigation E -->
+					<!-- Footer Social S -->
+					<div class="col_s_10_of_10 social_container">
+						<span><a href="https://www.instagram.com/forever21/" alt="Instagram" role="link" id="instagram" tabindex="0" target="_blank" class="hide_text">Instagram<span class="fs_instagram"></span></a></span>
+						<span><a href="https://www.facebook.com/forever21" alt="Facebook" role="link" id="facebook" tabindex="0" target="_blank" class="hide_text">Facebook<span class="fs_facebook"></span></a></span>
+						<span><a href="https://twitter.com/forever21" alt="Twitter" role="link" id="twitter" tabindex="0" target="_blank" class="hide_text">Twitter<span class="fs_twitter"></span></a></span>
+						<span><a href="https://www.youtube.com/user/forever21inc" alt="YouTube" role="link" id="youtube" tabindex="0" target="_blank" class="hide_text">Youtube<span class="fs_youtube"></span></a></span>
+						<span><a href="https://www.pinterest.com/forever21/" alt="Pinterest" role="link" id="pinterest" tabindex="0" target="_blank" class="hide_text">Pinterest<span class="fs_pinterest"></span></a></span>
+						<!-- App Icon S -->   
+							<span class="show_desktop"><a href="https://go.onelink.me/app/MobileWebiOSAppLink" role="link" id="apple store" tabindex="0" target="_blank" class="hide_text" alt="Open in App Store">App Store<span class="fa_ios"></span></a></span>
+							<span class="show_desktop"><a href="https://go.onelink.me/app/MobileWebAppLinkAndroid" role="link" id="google play" tabindex="0" target="_blank" class="hide_text" alt="Open in Google Play">Google Play<span class="fa_android"></span></a></span>
+							<div class="show_mobile pt_10">
+								<span><a href="https://go.onelink.me/app/MobileWebiOSAppLink" target="_blank" alt="Open in App Store" class="hide_text">App Store<span class="fa_ios"></span></a></span>
+								<span><a href="https://go.onelink.me/app/MobileWebAppLinkAndroid" target="_blank" alt="Open in Google Play" class="hide_text">Google Play<span class="fa_android"></span></a></span>
+							</div>
+						<!-- App Icon E -->
+					</div>
+					<!-- Footer Social S-->
+					<div class="col_s_10_of_10 txc t_res">
+						<p>
+							©
+							<script>document.write((new Date()).getFullYear());</script>2020 Forever21 Inc. All rights reserved.
+						</p>
+					</div>
+					<!-- Footer Social E -->
+				</div>
+				<!-- Footer S -->
+			</footer>
+		</div>
+		
+		<!-- seedetails_popup_contents Pop S -->
+		<div id="homepage_disclaimer_1" class="flex-modal-hide">
+			<div class="fc col_s_10_10 col_m_8_of_12 col_l_7_of_16">
+				<button class="quick_close" type="button"></button>
+				<div class="pa_20">
+					<p class="p_content">Free standard shipping is valid on online purchases of USD50 or more in the same order. Free shipping is valid online only at Forever21 Global store. Taxes, and prior purchases do not qualify toward the minimum purchase requirement. Free shipping is applied at checkout for purchases over USD50. Nothing stated herein will affect customers’ legal rights. Forever 21 reserves the right to modify shipping fee at any time without notice.</p>
+				</div>
+			</div>
+		</div>
+		<!-- seedetails_popup_contents Pop E -->
+		<script>
+		$(function() {
+			
+			//-- homepage_disclaimer_1 flexModal 대상 창 탑재. 
+			
+            $.flexModal.add('#homepage_disclaimer_1', function( api ) {
+            	
+				$(this).on('open.flexModal', function() {
+                    //console.log('열리면서 호출!!!');
+					$(".c_container").css("position","fixed");
+                });
+                
+                $(this).on('afterOpen.flexModal', function() {
+                    //console.log('열리고난후 호출!!');
+                });
+                $(this).on('close.flexModal', function() {
+                    //console.log('닫히면서 호출!!');
+					$(".c_container").css("position","");
+                });
+                $(this).on('afterClose.flexModal', function() {
+                    //console.log('닫힌후 호출!!');
+                });
+                
+            });
+
+			//var flex_class = $('.flex-modal-item').attr('class');
+				//alert(flex_class);
+				//$("")
+				//$(".c_container").css("position","fixed");
+        	//$('html').addClass('noscroll');
+		
+		});
+		</script>
+
+		<!-- privacypolicy_popup_contents Pop S -->
+		<div id="privacypolicy_popup_contents" class="flex-modal-hide long">
+			<div class="fc col_s_10_10 col_m_6_of_12 col_l_8_of_16">
+			<button class="quick_close" type="button"></button>
+			<div class="ws_100 txl pt_10 r_content">
+				<div id="" class="container row pa_10 hb"><div class="p_title"><strong>Privacy Policy</strong></div>
+					<!-- Content Container S -->
+					<div class="ws_100 txl pt_10 r_content">
+						<span class="t_small pb_10">(Effective Date: May 23, 2017)</span>
+						<p class="pb_20">This Privacy Policy (this “<span class="t_bold">Privacy Policy</span>”) tells you how Forever 21 Asia E-Commerce Ltd, 36/F Tower Two Times Square, 1 Matheson Street, Causeway Bay, Hong Kong, Forever 21 Commercial (Shanghai), Ltd., No. 233 E. Nanjing Road, 1 – 4 Floors, Huangpu District, Shanghai, China, and Forever 21, Inc., 3880 N. Mission Rd. Los Angeles, CA 90031 (collectively, “<span class="t_bold">Forever 21</span>“, “<span class="t_bold">us</span>” or “<span class="t_bold">we</span>“) collects, uses and shares information we collect on our website <a href="http://www.forever21.com/gl/shop" class="underline">www.forever21.com/gl/shop</a> (the “<span class="t_bold">Site</span>”) and all other internet properties operated by Forever 21 that link to this Privacy Policy (collectively, the “<span class="t_bold">Sites</span>“). This Privacy Policy also applies to our fashion marketing and sales activities, including sales through our store locations in Australia, China, Hong Kong, Japan, Korea, Singapore, and Taiwan, under our brands Forever 21, Fashion 21, XXI, XXI Forever, Love &amp; Beauty, Life in Progress, 21 Men, and F21 Red. For information about our privacy practices for Forever 21 mobile applications, please download the Forever 21 app to view the Privacy Policy.</p>
+						<p class="pb_20">We understand the importance that our customers place on privacy and have designed this Privacy Policy to describe our information-gathering and dissemination practices. You agree to this Privacy Policy when you: 1) access or use any Site; and/or 2) agree to receive e-mail from us. If you do not agree to this Privacy Policy, please do not use this Site.</p>
+						<p class="pb_20">Please note that we reserve the right to review and update this Privacy Policy from time to time. If we make any material changes to the Privacy Policy, we will notify you by means of a general notice on the Sites prior to the change taking effect and/or take any other action as required under applicable law. If you use a Site after the updated Privacy Policy becomes effective, you will be deemed to have agreed to the amended Privacy Policy.</p>
+					
+						<p class="t_bold">This Privacy Policy addresses the following:</p>
+						<ol class="pa_15">
+							<li>Information that we collect about you.</li>
+							<li>Cookies and other tracking technology that we use.</li>
+							<li>What we do with the information that we collect.</li>
+							<li>With whom we share the information we collect.</li>
+							<li>Our opt-out policy.</li>
+							<li>Our policy on correcting and updating Personal Information, making a complaint about our handling of your Personal Information, and deactivation of your account.</li>
+							<li>Miscellaneous.</li>
+						</ol>
+						<!-- Shipping S -->
+						<div>
+							<!-- Information that we collect S -->
+							<div class="t_bold pb_10"><span>INFORMATION THAT WE COLLECT ABOUT YOU</span></div>
+							<div class="bg_light_gray">
+								<div class="container row pb_20">
+									<p><span class="t_bold">Information Provided by You Upon Registration.</span> When you register for an account on a Site, we may collect the following information that allows us to identify you (from this data and other information which we have or are likely to have access) (“<span class="t_bold">Personal Information</span>“):</p>
+									<ol class="pa_15">
+										<li>Name</li>
+										<li>E-mail address</li>
+										<li>ZIP/Postal Code</li>
+										<li>Home Phone</li>
+										<li>Mobile Phone</li>
+										<li>Credit card number</li>
+										<li>Billing address</li>
+										<li>User Name</li>
+									</ol>
+					
+									<p><span class="t_bold">Information Provided When You Contact Us.</span> We may collect Personal Information that you voluntarily provide to us when you contact us with a question or comment about our products and services.  We generally collect one or more of the following types of Personal Information when you contact us with a question or comment or request information from us about our products and services:</p>
+									<ol class="pa_15">
+										<li>Name</li>
+										<li>E-mail address</li>
+										<li>Phone Number</li>
+										<li>Purchase Order</li>
+									</ol>
+					
+									<p class="pb_20">Providing your Personal Information is voluntary. However, if you do not provide us with the Personal Information described above, we may not be able to provide you with our services or respond to your questions or comments.</p>
+					
+									<p><span class="t_bold">Information Provided When You Shop at Our Stores.</span> When you shop at one of our stores, we may collect Personal Information that you voluntarily provide to us before or after you make a purchase in connection with marketing activities such as signing up to our newsletter. During your purchase, we may collect the following information that allows us to process your transaction: </p>
+									<ol class="pa_15">
+										<li>Name</li>
+										<li>E-mail address</li>
+										<li>Phone Number</li>
+										<li>Purchase Order</li>
+										<li>Credit card number</li>
+									</ol>
+					
+									<p class="pb_20">Providing your Personal Information is voluntary. However, if you do not provide us with the Personal Information described above, we may not be able to provide you with our services or respond to your questions or comments.</p>
+					
+									<p class="pb_20"><span class="t_bold">Information Provided When You Apply for a Job with Us.</span> When you apply for a job with us, we collect your name, address, phone number, email address, previous work experience, references and other personal information about your background and experience.</p>
+					
+									<p class="pb_20"><span class="t_bold">Passively Collected Information.</span> When you access our Sites, we automatically collect your computer or device’s internet protocol (IP) address and other technical information about your computer or device and website usage, such as your browser type and version, time zone setting, and operating system and platform.  We may also collect information about you through social media sites you use to access our Site depending the permissions you have given for access to your information. We also use cookies on our Sites; for more information, please see the “Cookies and Other Tracking Technologies” section below.</p>
+					
+									<p><span class="t_bold">Information Collected From Our Partners.</span> We may partner with our third party resellers to receive information about you, such as name and contact information. This helps us to fulfill your service requests and/or to provide you with services that may be of interest to you.  If required by local law, we require all third party resellers to comply with written consent regulations that guarantee you have given permission for us to obtain your information.</p>
+								</div>
+							</div>
+							<!-- Information that we collect E -->
+							<!-- Cookies & Other Tracking S -->
+							<div class="t_bold pb_10"><span>COOKIES AND OTHER TRACKING TECHNOLOGIES THAT WE USE</span></div>
+							<div class="bg_light_gray">
+								<div class="container row pb_20">
+									<p class="pb_10">We and our service providers use cookies, beacons, embedded scripts and local shared objects in connection with the Sites.</p>
+									<ul class="circle">
+										<li><span class="t_bold">Cookies</span> are small text files that are stored on your computer or device when you visit our websites. Cookies allow a website to recognize a particular device or browser. The use of cookies is a standard practice among websites to collect information about visitors’ activities while using the website.</li>
+										<li><span class="t_bold">Beacons</span> are small graphical images (also known as “pixel tags” or “clear GIFs”) that may be included on our Sites and typically work in conjunction with cookies to identify our users and user behavior.</li>
+										<li>An <span class="t_bold">embedded script</span> is programming code that is designed to collect information about your interactions with the Site, such as the links you click on. The code is temporarily downloaded onto your computer or device from our web server or a third-party service provider, is active only while you are connected to the Site, and is deactivated or deleted thereafter.</li>
+										<li class="pb_20"><span class="t_bold">Local Shared Objects.</span> Local shared objects (or Flash cookies) are pieces of data that websites which use Adobe Flash may store on a user’s computer or device. Third parties with whom we partner to provide certain features on our Sites or to display advertising based upon your web browsing activity use local shared objects. Various browsers may offer their own management tools for removing local shared objects. In addition, you may manage Flash cookies by <a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html" class="underline" target="_blank">clicking here.</a></li>
+									</ul>
+					
+									<p class="pb_20">The above technologies are used in analyzing trends, administering the Sites, services and products, tracking users’ movements around the Sites and to gather demographic information about our user base as a whole. We may receive reports based on the use of these technologies by these companies on an individual as well as aggregated basis.</p>
+					
+									<p class="pb_20">We use cookies to remember users’ settings, market products and services to users, and for authentication purposes. To manage the cookies that are placed on your computer, you may configure your internet browser to refuse, accept or delete cookies from our Sites at any time.  Some of the cookies we use may be more persistent in nature. These persistent cookies may not be deleted when other cookies are deleted. Please check your browser and browser settings to determine where these types of cookies are stored and whether and how they may be deleted. The help portion of the toolbar on most browsers will tell you how to prevent your browser from accepting new cookies, how to have the browser notify you when you receive a new cookie, or how to disable most cookies altogether.  Please note that if cookies are disabled or removed, not all features of our Sites will operate as intended.</p>
+					
+									<p class="pb_20"><span class="t_bold">Third-Party Advertising Services:</span> We partner with third parties that may use technologies such as cookies (and local stored objects as described above) to gather information about your activities on the Sites and elsewhere on the Internet in order to provide you with relevant advertising based upon your browsing activities and interests. This type of advertising is sometimes called interest-based advertising.  No personally-identifiable information is collected or used in this process. If you wish to not have this information collected and used for interest-based advertising, you may opt-out by <a href="http://preferences-mgr.truste.com/?pid=truste01&amp;aid=preference_manager01&amp;type=public" class="underline" target="_blank">clicking here</a> for partners that participate in the TRUSTe opt-out tool (or if located in the European Union <a href="http://www.youronlinechoices.eu" class="underline" target="_blank">click here</a>).  If you wish to opt-out from this type of advertising for companies that participate in the Network Advertising Initiative, please <a href="http://www.networkadvertising.org/choices/#completed" class="underline" target="_blank">click here</a>. If you wish to opt-out from this type of advertising for companies that participate in the Digital Advertising Alliance (“DAA”), you can do so <a href="http://www.aboutads.info/choices/" class="underline" target="_blank">here</a>. Please note that this does not opt you out of being served ads. You will continue to receive generic ads.  Forever 21 adheres to the DAA’s Self-Regulatory Principles. </p>
+					
+									<p class="pb_20"><span class="t_bold">Third-Party Analytics:</span> We may also use service providers, such as Google Analytics, that may use cookies or other technologies to collect information about your online activities across this and other sites over time for non-advertising purposes such as those described above.  To learn more about how Google Analytics collects and processes data and the choices Google may offer to control these activities, you may visit <a href="http://www.google.com/intl/en/policies/privacy/partners/" class="underline" target="_blank">http://www.google.com/intl/en/policies/privacy/partners/.</a></p>
+									<ul class="circle">
+										<li>Google Analytics - To help facilitate the delivery of relevant content, we use Google Analytics and have implemented the following Google Advertising Features: Remarketing, Impression Reporting, and Demographics and Interest Reporting. We use Google Analytics cookies and other Google advertising cookies. You can opt out of the Google Analytics Advertising Features we use by indicating your preference using the interest-based opt-out link <a href="http://www.networkadvertising.org/choices/" class="underline">here</a>. Google also provides a complete privacy policy, and instructions on opting out of Google Analytics <a href="https://tools.google.com/dlpage/gaoptout/" class="underline">here</a>. Note that Google’s opt-out mechanism is specific to Google activities and does not affect the activities of other ad networks or analytics providers that we may use.</li>
+									</ul>
+								</div>
+							</div>
+							<!-- Cookies & Other Tracking E -->
+							<!-- What we do with the information S -->
+							<div class="t_bold pb_10"><span>WHAT WE DO WITH THE INFORMATION WE COLLECT</span></div>
+							<div class="bg_light_gray">
+								<div class="container row pb_20">
+									<p class="pb_10">We may use Personal Information that we collect in the following ways:</p>
+									<ul class="circle pb_20">
+										<li><span class="t_bold">Information Provided by You Upon Registration and Making a Purchase Online or at Our Stores.</span> We may use this Personal Information to administer your access to a Site, verify your identity, and provide our products or services to you.</li>
+										<li><span class="t_bold">Information Provided When You Contact Us.</span> We may use this Personal Information to understand and respond to your question or comment.</li>
+										<li>An <span class="t_bold">General Uses.</span> We may also use your Personal Information to improve and personalize your experience with us, and, with your consent where necessary, send you information about us and keep you informed of our other products and services that may be of interest to you.</li>
+										<li><span class="t_bold">Passively Collected Information.</span> We use passively collected information to monitor and maintain the performance of our Sites, analyze trends, usage and activities in connection with our services, validate users and ensure their technological compatibility with users, and optimize our marketing efforts.</li>
+										<li><span class="t_bold">Aggregate data.</span> We may use your Personal Information to create aggregate data which does not include any Personal Information and which cannot be used to identify you. For example, aggregate data may include data that describes the general demographics, usage or other characteristics of a Site’s users. We reserve the right to transfer and/or sell aggregate or group data about a Site’s users for lawful purposes.</li>
+										<li><span class="t_bold">Direct Marketing.</span> We intend to use your name and contact information to contact you by email and/or post about our fashion merchandise and services. Your consent is required before we do so. If you no longer want us to use your Personal Information for marketing purposes, please contact <a href="mailto:f21globalstore-en@forever21inc.com" class="underline">f21globalstore-en@forever21inc.com.</a></li>
+									</ul>
+					
+									<p class="pb_20">Lastly, we support Do Not Track browser settings and do not currently participate in any "Do Not Track" frameworks that would allow us to respond to signals or other mechanisms from you regarding the collection of your personal information or non-personal information.</p>
+					
+									<p><span class="t_bold">International Transfers of Personal Information.</span> The Personal Information that we collect from you may be transferred to, and stored at a destination outside your country, including China, the U.S., and Hong Kong SAR.  It may also be processed by staff operating outside your country, who work for us or for one of our suppliers. Such staff may be engaged in, among other things, the provision of support services. By submitting your Personal Information, you agree to this transfer, storing or processing. This transfer, storage and processing will allow us to process your orders or offer you additional services from Forever 21, all to which you have expressed interest in receiving. These companies are authorized to hold and to use your Personal Information only as necessary to provide these services to us. We will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy. If you are from the EEA or other regions with laws governing data collection and use that may differ from U.S. law, please note that you are transferring your personal information to Hong Kong, China, or the U.S. which do not have the same data protection laws as the EEA and may provide more limited recourse mechanisms, including dissimilar or, at times, weaker data protection rights. With knowledge of these risks, by providing your personal information you consent to: (i) the use of your personal information for the uses identified above in accordance with this Privacy Policy; and (ii) the transfer of your personal information outside your country, including to China, the U.S., and Hong Kong SAR as indicated above. Your consent to the transfer of your Personal Information is voluntary. However, if you do not consent to the transfer described above, we may not be able to provide you with our services or respond to your questions or comments.</p>
+								</div>
+							</div>
+							<!-- What we do with the information E -->
+							<!-- With whom we share S -->
+							<div class="t_bold pb_10"><span>WITH WHOM WE SHARE THE INFORMATION WE COLLECT</span></div>
+							<div class="bg_light_gray">
+								<div class="container row pb_20">
+									<p class="pb_10">We may share your Personal Information with third parties located within or outside your country as described in this Privacy Policy or otherwise with your permission.  We reserve the right to transfer and/or sell other data, including aggregate or de-identified data derived from Personal Information, for lawful purposes in our discretion.</p>
+									<ul class="circle pb_10">
+										<li>We may share Personal Information with affiliated businesses.</li>
+										<li><span class="t_bold">Service Providers.</span> We, like many businesses, sometimes hire other companies (“<span class="t_bold">Service Providers</span>“) to perform certain business-related functions, being the following: order processing, mailing information, maintaining databases, and hosting services. The Service Providers we work with are GlobalPay, Rackspace, Google Analytics, Hanjin Express, Sagawa Express, FedEx, and Oracle. When we employ a Service Provider to perform a function of this nature, we provide it with the information that it needs to perform its specific function, which may include Personal Information and other information that you provide to us via a Site. These companies are authorized to hold and to use your Personal Information only as necessary to provide these services to us.</li>
+										<li><span class="t_bold">Third Parties for Marketing Purposes.</span> We intend to, with your consent where necessary,  share your name and contact information [and any other information] with Service Providers, etc. to enable them to market  our merchandise and services to you. By providing your Personal Information, you consent to this sharing of your Personal Information to third parties for marketing purposes. If you no longer want us to provide your Personal Information to the above third parties for marketing purposes, please contact <a href="mailto:f21globalstore-en@forever21inc.com" class="underline">f21globalstore-en@forever21inc.com.</a></li>
+										<li><span class="t_bold">Legal Requirements.</span> We may disclose Personal Information if required or permitted to do so by law or in the good faith belief that such action is necessary to (a) comply with a subpoena or similar legal obligation, (b) protect and defend our rights or property, (c) act in urgent circumstances to protect the personal safety of users of any Site or the public, (d) protect against legal liability, or (e) or as otherwise required or permitted by law, to the extent allowed by the laws of the relevant jurisdictions.</li>
+										<li><span class="t_bold">Business Transfers.</span> As we develop our business, we might sell or buy businesses or assets. In the event of a corporate sale, merger, reorganization, dissolution, total or partial sale of assets in bankruptcy or similar event, Personal Information may be part of the transferred assets.</li>
+										<li>Some of our pages utilize framing techniques to serve content to you from our partners while preserving the look and feel of our Sites. When you interact with content from our partners displayed on our Site, please be aware that you are providing your Personal Information to these third parties and it will be governed by their respective privacy policies.</li>
+										<li>We may disclose your Personal Information to parties located outside of the country in which you are resident, including China, the U.S., and Hong Kong SAR We will take all reasonable steps to ensure that the offshore recipients do not breach any applicable laws and regulations on privacy.</li>
+									</ul>
+									<p>Your consent to the transfers of your Personal Information to our affiliated businesses and Service Providers is voluntary. However, if you do not consent to the transfer(s) described above, we may not be able to provide you with our services or respond to your questions or comments.</p>
+								</div>
+							</div>
+							<!-- With whom we share E -->
+							<!-- Our opt-out policy S -->
+							<div class="t_bold pb_10"><span>OUR OPT-OUT POLICY</span></div>
+							<div class="bg_light_gray">
+								<div class="container row pb_20">
+									<p class="pb_20"><span class="t_bold">Sharing with Third Parties for Marketing.</span> As noted above, we may disclose your information to third parties for their direct marketing purposes.  If you would like to opt out of such disclosures, please contact us at <a href="mailto:privacy@forever21.com" class="underline">privacy@forever21.com.</a></p>
+					
+									<p class="pb_20"><span class="t_bold">Email Marketing.</span> As noted above, we may, with your consent where necessary, send you newsletters or marketing communications from time to time.  If you have opted in to receive newsletters or marketing communications from us or to have your email shared with third parties and wish to opt-out, please use the “unsubscribe” mechanism provided in the communication (such as the “unsubscribe” link at the bottom of the marketing email) or send an e-mail to <a href="mailto:privacy@forever21.com" class="underline">privacy@forever21.com</a> along with the information necessary for us to process your request.</p>
+					
+									<p class="pb_20"><span class="t_bold">Direct Mail.</span> To stop receiving direct mail from us, send an e-mail to <a href="mailto:privacy@forever21.com" class="underline">privacy@forever21.com</a> fill out the form here with the words “DIRECT MAIL OPT-OUT” in the subject line.</p>
+					
+									<p><span class="t_bold">Service-Related Announcements.</span> We will also send you service-related email announcements on rare occasions when it is necessary to do so. For instance, if our service is temporarily suspended for maintenance, we might send you an email. You do not have an option to opt out of these emails, which are not promotional in nature.</p>
+								</div>
+							</div>
+							<!-- Our opt-out policy E -->
+							<!-- Our policy on correcting & updating S -->
+							<div class="t_bold pb_10"><span>OUR POLICY ON CORRECTING AND UPDATING PERSONAL INFORMATION AND DEACTIVATING YOUR ACCOUNT</span></div>
+							<div class="bg_light_gray">
+								<div class="container row pb_20">
+									<p class="pb_20">You have the right to request access or correction to your Personal Information. You may request to review, make duplications, supplement, access, correct, update, discontinue the collection, processing or use of, or delete, your Personal Information, or deactivate your account, by our Data Privacy Officer at <a href="mailto:privacy@forever21.com" class="underline">privacy@forever21.com</a> with information necessary for us to process your request. We will respond to your request to access your Personal Information within 30 days. We may need to verify your identity before granting access to Personal Information in our custody or control.  Please see below regarding our retention policy.</p>
+					
+									<p>You may also make a complaint about how your Personal Information is being handled, by contacting us in writing at <a href="mailto:privacy@forever21.com" class="underline">privacy@forever21.com</a>. We will respond to your complaint as soon as reasonably possible, and in any case within 30 days. If you are not satisfied with our response, you may contact your regulator.</p>
+								</div>
+							</div>
+							<!-- Our policy on correcting & updating E -->
+							<!-- Miscellaneous S -->
+							<div class="t_bold pb_10"><span>MISCELLANEOUS</span></div>
+							<div class="bg_light_gray">
+								<div class="container row">
+									<p class="pb_20"><span class="t_bold">Links to Other Websites</span>. The Sites may contain links to third party owned and/or operated websites. We are not responsible for the privacy practices or the content of such websites. We suggest that you contact these third parties directly for information regarding their privacy, security and data collection and distribution policies prior to providing them with any information.</p>
+					
+									<p class="pb_20"><span class="t_bold">Blogs and Public Features of the Sites.</span> Some of our Sites offer publicly accessible blogs, community forums, or public comments sections. You should be aware that any Personal Information you submit there can be read and collected by other users of these forums and could be used to send you unsolicited messages and for other purposes. Our blog and comments section of our Sites are managed by a third party application that may require you to register to post a comment. We do not have access or control of the information posted to the blog. NONE OF THE INFORMATION THAT YOU PROVIDE USING THESE FEATURES IS PROTECTED BY THIS PRIVACY POLICY. WE ARE NOT RESPONSIBLE FOR THE PERSONAL INFORMATION YOU CHOOSE TO SUBMIT IN THESE FORUMS OR THE USE OF THAT INFORMATION BY ANY THIRD PARTY. You will need to contact or log into the third party application if you want the Personal Information that was posted to the comments section removed. To learn how the third party application uses your information, please review their privacy policy.</p>
+					
+									<p class="pb_20"><span class="t_bold">Social Media Widgets.</span> Our Sites may include social media features, such as the Facebook Like button and widgets such as the share this button or interactive mini-programs that run on our Sites. These features may collect your IP address, which pages you are visiting on our Sites, and may set a cookie to enable the feature to function properly. Social media features and widgets are either hosted by a third party or hosted directly on our Sites. Your interactions with these features are governed by the privacy policy of the company providing them.</p>
+					
+									<p class="pb_20"><span class="t_bold">Security and Retention.</span> We take commercially reasonable steps to help protect Personal Information from loss, misuse, unauthorized access, disclosure, alteration and destruction. However, no Internet or e-mail transmission is ever fully secure or error free. In particular, e-mail sent to or from a Site may not be secure, and you should therefore take special care in deciding what information you send to us via e-mail. Please keep this in mind when disclosing any Personal Information to us or to any other party via the Internet. The security of your Personal Information is important to us. When you enter sensitive information (such as a credit card number) on our order forms or login credentials (such as username and password) on our platform login, we encrypt the transmission of that information. Your Personal Information will be stored in China, the U.S., and Hong Kong SAR, and will be subject to laws applicable in that country.  If you have any questions about security on our Sites, you can contact us at privacy@forever21.com. We may retain your information for as long as your account is active or as needed to provide you services, comply with our legal obligations, resolve disputes and enforce our agreements. If we learn of a security systems breach we may attempt to notify you electronically so that you can take appropriate protective steps. By using the Sites or providing personal information to us, you agree that we can communicate with you electronically regarding security, privacy and administrative issues relating to your use of the Sites. We may post a notice on the Sites if a security breach occurs. We may also send an email to you at the email address you have provided to us in these circumstances. Depending on where you live, you may have a legal right to receive notice of a security breach in writing.</p>
+					
+									<p class="pb_20"><span class="t_bold">Children’s Privacy.</span> Visitors under 14 years of age in the Republic of Korea, 20 years of age in the Republic of China (Taiwan) (unless you have parental consent), 18 years of age in the People's Republic of China, (excluding Hong Kong, Macau and Taiwan) or 15 years of age in Australia (unless you have parental consent), or 16 years of age in the Socialist Republic of Vietnam (unless you have parental consent) or 13 years of age in all other countries ("<span class="t_bold">Minimum Age</span>"), are not permitted to use and/or submit their Personal Information at any Site. We do not knowingly solicit or collect information from visitors below the Minimum Age in your country. If you are below the Minimum Age in your country, please do not submit any information to us. In the event that we learn that a person below the Minimum Age in the relevant country has provided us with personal information, we will delete such personal information. We encourage parents and guardians to spend time online with their children and to participate and monitor the interactive activities of their children.</p>
+					
+									<p class="pb_20"><span class="t_bold">Assignment.</span> In the event that all or part of our assets are sold or acquired by another party, or in the event of a merger, you grant us the right to assign the personally identifiable and non-personal information collected via the Sites.</p>
+					
+									<p class="pb_20"><span class="t_bold">Disputes, Agreement to Arbitrate, and Choice of Law.</span> By using the Sites, you and Forever 21 agree that, if there is any controversy, claim, action, or dispute arising out of or related to your use of the Sites, or the breach, enforcement, interpretation, or validity of this Privacy Policy or any part of it ("Dispute"), both parties shall first try in good faith to settle such Dispute by providing written notice to the other party describing the facts and circumstances of the Dispute and allowing the receiving party 30 days in which to respond to or settle the Dispute.</p>
+					
+									<p>Notice shall be sent:</p>
+									<div class="pl_10 pb_20">
+										<ul>
+											<li>(1) to Forever 21 at:</li>
+											<li>Forever 21 Asia E-Commerce Ltd</li>
+											<li>c/o Forever 21, Inc</li>
+											<li>3880 North Mission Road</li>
+											<li>Los Angeles, CA 90031</li>
+										</ul>
+										<p class="pb_10 pt_10">OR</p>
+										<ul>
+											<li>Forever 21 Asia E-Commerce Ltd</li>
+											<li>ATTN: Privacy Policy Dispute</li>
+											<li>36/F Tower Two Times Square</li>
+											<li>1 Matheson Street</li>
+											<li>Causeway Bay, Hong Kong</li>
+											<li class="pt_10">(2) to you at your last-used billing address or the billing and/or shipping address in your online profile.</li>
+										</ul>
+									</div>
+					
+									<p class="pb_20">Both you and Forever 21 agree that this dispute resolution procedure is a condition precedent that must be satisfied before initiating any litigation or filing any claim against the other party. IF ANY DISPUTE CANNOT BE RESOLVED BY THE ABOVE DISPUTE RESOLUTION PROCEDURE, YOU AGREE THAT THE SOLE AND EXCLUSIVE JURISDICTION FOR SUCH DISPUTE WILL BE DECIDED BY BINDING ARBITRATION ON AN INDIVIDUAL BASIS. ARBITRATION ON AN INDIVIDUAL BASIS MEANS THAT YOU WILL NOT HAVE, AND YOU WAIVE, THE RIGHT FOR A JUDGE OR JURY TO DECIDE YOUR CLAIMS, AND THAT YOU MAY NOT PROCEED IN A CLASS, CONSOLIDATED, OR REPRESENTATIVE CAPACITY. Other rights that you and we would have in court will not be available or will be more limited in arbitration, including discovery and appeal rights. All such Disputes shall be exclusively submitted to JAMS (www.jamsadr.com) for binding arbitration under its rules then in effect before one arbitrator to be mutually agreed upon by both parties.</p>
+					
+									<p class="pb_20">The arbitrator, and not any federal, state, or local court or agency, shall have exclusive authority to resolve any dispute arising under or relating to the interpretation, applicability, enforceability, or formation of this Privacy Policy, including any claim that all or any part of this Privacy Policy is void or voidable.</p>
+					
+									<p class="pb_20">This Privacy Policy has been made in, and shall be construed in accordance with, the laws of the State of California, or local law as required by local regulations, without giving effect to any conflict of law principles. The parties acknowledge that this Privacy Policy evidences a transaction involving interstate commerce. Notwithstanding the provision in the preceding paragraph with respect to applicable substantive law, any arbitration conducted pursuant to the terms of this Privacy Policy shall be governed by the Federal Arbitration Act (9 U.S.C. §§ 1-16).</p>
+					
+									<p class="pb_20"><span class="t_bold">Trademark Notice.</span> Forever 21, Fashion 21, XXI, XXI Forever, Love &amp; Beauty, Life in Progress, 21 Men, F21 Red, and its related domains (including, but not limited to, www.forever21.com/gl/shop and www.forever21.com) are tradenames and/or trademarks of Forever 21, Inc. and its affiliates.</p>
+					
+									<p class="pb_20"><span class="t_bold">Contacting Us.</span> Our “contact us” page contains e-mail links that allow you to contact us directly with any questions or comments that you may have. If you have any questions about this Privacy Policy or our privacy practices, please feel free to contact us at <a href="mailto:privacy@forever21.com" class="underline">privacy@forever21.com</a> or at:</p>
+									<div class="pl_10">
+										<ul>
+											<li>Forever 21 Asia E-Commerce Ltd</li>
+											<li>ATTN: Privacy</li>
+											<li>36/F Tower Two Times Square</li>
+											<li>1 Matheson Street</li>
+											<li>Causeway Bay, Hong Kong</li>
+										</ul>
+										<p class="pb_10 pt_10">OR</p>
+										<ul>
+											<li>Forever 21 Commercial (Shanghai) Ltd</li>
+											<li>No. 233 E. Nanjing Road,</li>
+											<li>1-4 Floors, Huangpu District,</li>
+											<li>Shanghai, China</li>
+										</ul>
+										<p class="pb_10 pt_10">OR</p>
+										<ul>
+											<li>Forever 21 Asia E-Commerce Ltd</li>
+											<li>c/o Forever 21, Inc</li>
+											<li>3880 North Mission Road</li>
+											<li>Los Angeles, CA 90031</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- Miscellaneous E -->
+						</div>
+						<!-- Shipping E -->
+					</div>
+					<!-- Content Container E -->
+					</div>
+				</div>
+			</div>   
+		</div>
+		<!-- privacypolicy_popup_contents Pop E -->
+	
+		<script>
+			$(function() {
+				
+				//-- homepage_disclaimer_1 flexModal 대상 창 탑재. 
+				
+				$.flexModal.add('#privacypolicy_popup_contents', function( api ) {
+					
+					$(this).on('open.flexModal', function() {
+						//console.log('열리면서 호출!!!');
+						$(".c_container").css("position","fixed");
+					});
+					
+					$(this).on('afterOpen.flexModal', function() {
+						//console.log('열리고난후 호출!!');
+					});
+					$(this).on('close.flexModal', function() {
+						//console.log('닫히면서 호출!!');
+						$(".c_container").css("position","");
+					});
+					$(this).on('afterClose.flexModal', function() {
+						//console.log('닫힌후 호출!!');
+					});
+					
+				});
+	
+				//var flex_class = $('.flex-modal-item').attr('class');
+					//alert(flex_class);
+					//$("")
+					//$(".c_container").css("position","fixed");
+				//$('html').addClass('noscroll');
+			
+			});
+			</script>
+	</body>
+	<script type="text/javascript">
+
+			$('#CarouselAreaCertona').owlCarousel({
+				//margin: 10,
+				loop: true,
+				responsive: {
+					0: {
+						items: 3,
+						slideBy: 3,
+						nav: false,
+						dots: false
+					},
+					600: {
+						items: 3,
+						slideBy: 3,
+						nav: true,
+						dots: false
+					},
+					1000: {
+						items: 6,
+						slideBy: 6,
+						nav: true,
+						dots: false
+					}
+				}
+			});
+
+							
+		</script>
+</html>

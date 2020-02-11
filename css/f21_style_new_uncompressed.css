@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 01/28/2020 - Version 1
+  * Forever21 Common v1.1.1 02/11/2020 - Version 1
   * Copyright Forever21
   * Created by Namhee
 */
@@ -2162,12 +2162,12 @@ html {
   top: -28px;
   }*/
   .main_fixed {
-    z-index: 9;
+    /*20202011 z-index: 9;*/
     padding-top: 67px
   }
   
   footer.main_fixed {
-    z-index: 8; /* Dropdown issue fixe code */
+    /*20202011 z-index: 8;  Dropdown issue fixe code */
     padding-top: 2em
   }
   /* ============================== */
@@ -9381,9 +9381,8 @@ html {
     visibility: hidden;    
 }
   .quick_add.open{
-      opacity: 1;
-      visibility: visible;
-      
+      opacity: 9; /*2020 NAV-890*/
+      visibility: visible;   
   }
 
 /* Abandon Cart Reminder for Salesforce 10/31/2019 Added by Eve */
