@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 02/11/2020 - Version 1
+  * Forever21 Common v1.1.1 02/12/2020 - Version 1
   * Copyright Forever21
   * Created by Namhee
 */
@@ -3926,7 +3926,7 @@ html {
   .side_left_menu {
     position: absolute !important;
     background: #fff;
-    z-index: 999999999999;
+    z-index: 99999999;/* NAV-897 */
     top: 52px;
     left: -1em;
     padding: 0 1em;
