@@ -24,6 +24,7 @@
 		<script type="text/javascript" src="js/jquery.tiny-layer.js"></script>
 		<script type="text/javascript" src="js/jquery.flex-modal.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/chat.css">
+		<link rel="stylesheet" type="text/css" href="css/app.css">
 	</head>
 			<!-- chat S adding-->
 		
@@ -126,7 +127,7 @@
 			</div>
 		</div>
 		<!-- Start of Invitations -->
-		<div class="embeddedServiceInvitation" id="snapins_invite" inert="true" aria-live="assertive" role="dialog" aria-atomic="true"  style="position: fixed;left: 100%;top: 100%;z-index: 10000;visibility: visible;margin-left: -330px;margin-top: -217px;">
+		<div style="display:none" class="embeddedServiceInvitation" id="snapins_invite" inert="true" aria-live="assertive" role="dialog" aria-atomic="true"  style="position: fixed;left: 100%;top: 100%;z-index: 10000;visibility: visible;margin-left: -330px;margin-top: -217px;">
 			<div class="embeddedServiceInvitationHeader" aria-labelledby="snapins_titletext" aria-describedby="snapins_bodytext">
 				<span class="embeddedServiceTitleText" id="snapins_titletext">Need help?</span>
 				<button type="button" id="closeInvite" class="embeddedServiceCloseIcon" aria-label="Exit invitation">&times;</button>
@@ -139,6 +140,81 @@
 				<button type="button" class="embeddedServiceActionButton" id="acceptInvite">Start Chat</button>
 			</div>
 		</div>
+<style>
+.fieldList label {
+	position: absolute;
+    top: 31px;
+    left: 10px;
+    letter-spacing: .8px !important;
+    padding: 0;
+    z-index: 3;
+    font-weight: normal;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding-right: 9px;
+    color: #595959 !important;
+    font-size: .65em !important;
+    -webkit-transition: -webkit-transform 125ms cubic-bezier(0.645,0.045,0.355,1);
+    transition: transform 125ms cubic-bezier(0.645,0.045,0.355,1);
+	cursor: initial;
+	background: #fff;
+	font-size: .8em;
+    clear: left;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.fieldList label.focus {
+	top:8px	
+}
+.fieldList .required {
+	background: #fff;
+}
+.embeddedServiceSidebarFormField .slds-style-inputtext { z-index:2}
+.embeddedServiceSidebarFormField.inputSplitName {
+    width: calc(100% - 12px);
+    display: inline-block;
+    vertical-align: top;
+}
+.embeddedServiceSidebarFormField .uiInput--input {margin-bottom: -6px !important}
+.embeddedServiceSidebarFormField .split-field-container {margin-bottom: 0px !important}
+.embeddedServiceSidebarButton {
+	text-transform: uppercase;
+	background: linear-gradient(to bottom,rgba(76,76,76,1) 0,rgba(89,89,89,1) 12%,rgba(87,87,87,1) 22%,rgba(71,71,71,1) 35%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 60%,rgba(17,17,17,1) 72%,rgba(28,28,28,1) 91%,rgba(0,0,0,1) 100%)!important;
+}
+.embeddedServiceSidebarButton .label {    font-weight: bold;letter-spacing: 1px;font-family: inherit; color: #eee;   padding: .95em!important; font-size: .8em!important;}
+</style>
+<script>
+
+	$(function() {
+		/* Input*/
+		$('.fieldList label').each(function () {
+			$(this).click(function () {
+				$(this).children('input').focus();
+					$('.input_label').each(function () {
+						if ($(this).children('input').val() == '') {
+							$(this).removeClass('focus');
+							$(this).find('.icon_delete').hide();
+						}
+					});
+					$(this).addClass('focus');
+				});
+			});
+		});
+</script>
+
+		<div class="modalContainer sidebarMaximized layout-docked embeddedServiceSidebar" data-aura-rendered-by="567:0" data-aura-class="embeddedServiceSidebar"><!--render facet: 796:0--><button class="sidebarHeader minimizedContainer helpButton embeddedServiceSidebarMinimizedDefaultUI" tabindex="0" data-aura-rendered-by="798:0" data-aura-class="embeddedServiceSidebarMinimizedDefaultUI"><span id="chatButtonAssistiveText" data-aura-rendered-by="799:0">Expand the chat</span><div class="content" data-aura-rendered-by="801:0"><div class="messageContent" data-aura-rendered-by="802:0"><span class="help x-small embeddedServiceIcon" aria-hidden="true" role="presentation" data-aura-rendered-by="807:0" data-aura-class="embeddedServiceIcon"><!--render facet: 808:0--><!--render facet: 809:0--><!--render facet: 810:0--><svg focusable="false" aria-hidden="true" data-key="chat" viewBox="0 0 100 100" class="icon">
+			<path d="M50 7.692c-25.577 0-45.962 18.846-45.962 42.116 0 7.307 2.116 14.23 5.577 20.384.577.962.77 2.116.385 3.27L4.038 89.808c-.576 1.538.962 2.884 2.5 2.5l16.54-6.346c.96-.385 2.114-.193 3.268.384 6.923 3.846 15.192 6.154 24.04 6.154 25.19-.192 45.768-18.846 45.768-42.308-.192-23.654-20.77-42.5-46.154-42.5zm-23.077 50c-4.23 0-7.692-3.46-7.692-7.692s3.462-7.692 7.693-7.692 7.692 3.46 7.692 7.692-3.46 7.692-7.692 7.692zm23.077 0c-4.23 0-7.692-3.46-7.692-7.692s3.46-7.692 7.692-7.692 7.692 3.46 7.692 7.692-3.46 7.692-7.692 7.692zm23.077 0c-4.23 0-7.692-3.46-7.692-7.692s3.46-7.692 7.692-7.692S80.77 45.768 80.77 50s-3.462 7.692-7.693 7.692z"></path>
+			</svg></span><div class="minimizedText" data-aura-rendered-by="811:0"><span class="message" data-aura-rendered-by="812:0"> </span></div><!--render facet: 814:0--><!--render facet: 815:0--></div></div></button><label class="assistiveText" id="sidebarDialogAssistiveText" data-aura-rendered-by="569:0">Embedded Chat</label><div class="dockableContainer" aria-labelledby="sidebarDialogAssistiveText" role="dialog" data-aura-rendered-by="571:0" style=""><div class="sidebarHeader collapsed layout-docked embeddedServiceSidebarHeader" aria-labelledby="headerTextLabel" data-aura-rendered-by="590:0" data-aura-class="embeddedServiceSidebarHeader"><!--render facet: 591:0--><div class="shortHeader" data-aura-rendered-by="592:0"><div class="shortHeaderContent" data-aura-rendered-by="593:0"><button class="minimizeButton headerItem" tabindex="0" data-aura-rendered-by="594:0"><span class="assistiveText" data-aura-rendered-by="595:0">Minimize chat</span><span class="minimize x-small embeddedServiceIcon" aria-hidden="true" role="presentation" data-aura-rendered-by="599:0" data-aura-class="embeddedServiceIcon"><!--render facet: 600:0--><!--render facet: 601:0--><!--render facet: 602:0--><svg focusable="false" aria-hidden="true" data-key="contract_alt" viewBox="0 0 100 100" class="icon">
+			<path d="M56.923 45.962h29.615c1.924 0 2.5-2.116.962-3.654l-9.423-9.616 17.308-17.5c.96-.96.96-2.692 0-3.654L88.27 4.423c-.962-.77-2.5-.77-3.655.192L67.308 21.923 57.5 12.5c-1.538-1.538-3.654-.962-3.654.962v29.615c0 1.346 1.73 2.885 3.077 2.885zm-13.846 7.884H13.462c-1.924 0-2.5 2.116-.962 3.654l9.423 9.615-17.308 17.5c-.96.962-.96 2.693 0 3.654l7.116 7.115c.962.96 2.5.96 3.655 0l17.5-17.5 9.807 9.423c1.346 1.73 3.462 1.154 3.462-.77V57.115c0-1.346-1.73-3.27-3.077-3.27z"></path>
+			</svg></span></button><a class="backButton headerItem" role="button" tabindex="0" data-aura-rendered-by="604:0" href="javascript:void(0);"><span class="assistiveText" data-aura-rendered-by="605:0">["FieldServiceNavigationButton.Back" is not registered in EmbeddedServiceLabelKey.]</span><span class="back x-small embeddedServiceIcon" aria-hidden="true" role="presentation" data-aura-rendered-by="609:0" data-aura-class="embeddedServiceIcon"><!--render facet: 610:0--><!--render facet: 611:0--><!--render facet: 612:0--><svg focusable="false" aria-hidden="true" data-key="chevron_left" viewBox="0 0 100 100" class="icon">
+			<path d="M65.833 91.667l-40-39.167c-1.25-1.25-1.25-3.333 0-4.583l40-39.167c1.25-1.25 2.917-1.25 4.167 0l4.167 4.167c1.25 1.25 1.25 2.916 0 4.166L42.5 47.917c-1.25 1.25-1.25 3.333 0 4.583l31.25 30.833c1.25 1.25 1.25 2.917 0 4.167l-4.167 4.167c-.833.833-2.5.833-3.75 0z"></path>
+			</svg></span></a><h2 class="headerText" aria-hidden="false" data-aura-rendered-by="613:0"><div class="headerTextContent" data-aura-rendered-by="615:0"><span id="headerTextLabel" data-aura-rendered-by="616:0">Forever 21 Chat</span><span id="headerSubtext" data-aura-rendered-by="618:0"></span></div></h2><button class="closeButton headerItem" tabindex="0" data-aura-rendered-by="620:0"><span class="assistiveText" data-aura-rendered-by="621:0">Close dialog</span><span class="x-small embeddedServiceIcon" aria-hidden="true" role="presentation" data-aura-rendered-by="625:0" data-aura-class="embeddedServiceIcon"><!--render facet: 626:0--><!--render facet: 627:0--><!--render facet: 628:0--><svg focusable="false" aria-hidden="true" data-key="close" viewBox="0 0 100 100" class="icon">
+			<path d="M65.577 53.73l27.5-27.71c1.27-1.27 1.27-3.174 0-4.445l-4.23-4.44c-1.272-1.27-3.175-1.27-4.445 0L56.694 44.847c-.847.845-2.115.845-2.96 0L26.018 16.922c-1.27-1.27-3.174-1.27-4.445 0l-4.44 4.442c-1.27 1.27-1.27 3.174 0 4.444l27.71 27.71c.846.846.846 2.116 0 2.962L16.923 84.403c-1.27 1.27-1.27 3.174 0 4.444l4.442 4.442c1.27 1.268 3.174 1.268 4.444 0l27.71-27.713c.846-.847 2.116-.847 2.962 0L84.19 93.29c1.27 1.268 3.174 1.268 4.445 0l4.44-4.445c1.27-1.268 1.27-3.17 0-4.44l-27.5-27.712c-.847-.847-.847-2.115 0-2.96z"></path>
+			</svg></span></button></div></div><div class="extendedHeader invisibleWhileLoading" aria-hidden="true" data-aura-rendered-by="629:0"><!--render facet: 630:0--></div></div><div class="sidebarBody" data-aura-rendered-by="573:0"><div class="sidebarLoadingIndicator" data-aura-rendered-by="574:0"><span class="loadingBallContainer animated embeddedServiceLoadingBalls" aria-hidden="true" role="presentation" tabindex="-1" data-aura-rendered-by="577:0" data-aura-class="embeddedServiceLoadingBalls"><span class="loadingBall first" aria-hidden="true" role="presentation" data-aura-rendered-by="578:0"></span><span class="loadingBall second" aria-hidden="true" role="presentation" data-aura-rendered-by="579:0"></span><span class="loadingBall third" aria-hidden="true" role="presentation" data-aura-rendered-by="580:0"></span></span></div><div class="activeFeature hideWhileLoading" data-aura-rendered-by="581:0"><div class="featureBody embeddedServiceSidebarFeature embeddedServiceLiveAgentSidebarFeature" data-aura-rendered-by="766:0" data-aura-class="embeddedServiceSidebarFeature embeddedServiceLiveAgentSidebarFeature"><div class="stateBody embeddedServiceSidebarState" data-aura-rendered-by="650:0" data-aura-class="embeddedServiceSidebarState"><!--render facet: 826:0--><div class="prechatUI embeddedServiceLiveAgentStatePrechatDefaultUI" data-aura-rendered-by="828:0" data-aura-class="embeddedServiceLiveAgentStatePrechatDefaultUI"><div class="formContent embeddedServiceSidebarForm" data-aura-rendered-by="831:0" data-aura-class="embeddedServiceSidebarForm"><!--render facet: 832:0--><ul class="fieldList" role="presentation" data-aura-rendered-by="833:0"><li class="inputSplitName embeddedServiceSidebarFormField" data-aura-rendered-by="930:0" data-aura-class="embeddedServiceSidebarFormField"><span class="split-field-container" data-aura-rendered-by="932:0"><div data-aura-rendered-by="1017:0" class="uiInput uiInputText uiInput--default uiInput--input" data-aura-class="uiInput uiInputText uiInput--default uiInput--input"><label class="uiLabel-left form-element__label uiLabel" for="FirstName" data-aura-rendered-by="1012:0" data-aura-class="uiLabel"><span class="" data-aura-rendered-by="1013:0">First Name</span><!--render facet: 1015:0--><span class="required" title="Required" data-aura-rendered-by="927:0">*</span></label><input class="FirstName slds-style-inputtext input" maxlength="121" type="text" aria-describedby="" placeholder="" required="" id="FirstName" data-aura-rendered-by="935:0" data-interactive-lib-uid="7" aria-required="true"></div><!--render facet: 938:0--></span><!--render facet: 939:0--><!--render facet: 940:0--><!--render facet: 941:0--><!--render facet: 942:0--></li><li class="inputSplitName embeddedServiceSidebarFormField" data-aura-rendered-by="947:0" data-aura-class="embeddedServiceSidebarFormField"><span class="split-field-container" data-aura-rendered-by="949:0"><div data-aura-rendered-by="1026:0" class="uiInput uiInputText uiInput--default uiInput--input" data-aura-class="uiInput uiInputText uiInput--default uiInput--input"><label class="uiLabel-left form-element__label uiLabel" for="LastName" data-aura-rendered-by="1021:0" data-aura-class="uiLabel"><span class="" data-aura-rendered-by="1022:0">Last Name</span><!--render facet: 1024:0--><span class="required" title="Required" data-aura-rendered-by="944:0">*</span></label><input class="LastName slds-style-inputtext input" maxlength="121" type="text" aria-describedby="" placeholder="" required="" id="LastName" data-aura-rendered-by="952:0" data-interactive-lib-uid="8" aria-required="true"></div><!--render facet: 955:0--></span><!--render facet: 956:0--><!--render facet: 957:0--><!--render facet: 958:0--><!--render facet: 959:0--></li><li class="inputEmail embeddedServiceSidebarFormField" data-aura-rendered-by="964:0" data-aura-class="embeddedServiceSidebarFormField"><!--render facet: 965:0--><!--render facet: 966:0--><div data-aura-rendered-by="1035:0" class="uiInput uiInputEmail uiInput--default uiInput--input" data-aura-class="uiInput uiInputEmail uiInput--default uiInput--input"><label class="uiLabel-left form-element__label uiLabel" for="Email" data-aura-rendered-by="1030:0" data-aura-class="uiLabel"><span class="" data-aura-rendered-by="1031:0">Email</span><!--render facet: 1033:0--><span class="required" title="Required" data-aura-rendered-by="961:0">*</span></label><input class="Email slds-style-inputtext input" maxlength="80" type="email" aria-describedby="" placeholder="" required="" id="Email" data-aura-rendered-by="970:0" data-interactive-lib-uid="9" aria-required="true"></div><!--render facet: 973:0--><!--render facet: 974:0--><!--render facet: 975:0--></li><li class="inputText embeddedServiceSidebarFormField" data-aura-rendered-by="980:0" data-aura-class="embeddedServiceSidebarFormField"><!--render facet: 981:0--><div data-aura-rendered-by="1044:0" class="uiInput uiInputText uiInput--default uiInput--input" data-aura-class="uiInput uiInputText uiInput--default uiInput--input"><label class="uiLabel-left form-element__label uiLabel" for="Order__c" data-aura-rendered-by="1039:0" data-aura-class="uiLabel"><span class="" data-aura-rendered-by="1040:0">Order #</span><!--render facet: 1042:0--><!--render facet: 1043:0--></label><input class="Order__c slds-style-inputtext input" maxlength="15" type="text" aria-describedby="" placeholder="" id="Order__c" data-aura-rendered-by="985:0" data-interactive-lib-uid="10"></div><!--render facet: 988:0--><!--render facet: 989:0--><!--render facet: 990:0--><!--render facet: 991:0--></li><li class="inputText embeddedServiceSidebarFormField" data-aura-rendered-by="996:0" data-aura-class="embeddedServiceSidebarFormField"><!--render facet: 997:0--><div data-aura-rendered-by="1053:0" class="uiInput uiInputText uiInput--default uiInput--input" data-aura-class="uiInput uiInputText uiInput--default uiInput--input"><label class="uiLabel-left form-element__label uiLabel" for="Subject" data-aura-rendered-by="1048:0" data-aura-class="uiLabel"><span class="" data-aura-rendered-by="1049:0">How can we help you?</span><!--render facet: 1051:0--><span class="required" title="Required" data-aura-rendered-by="993:0">*</span></label><input class="Subject slds-style-inputtext input" maxlength="255" type="text" aria-describedby="" placeholder="" required="" id="Subject" data-aura-rendered-by="1001:0" data-interactive-lib-uid="11" aria-required="true"></div><!--render facet: 1004:0--><!--render facet: 1005:0--><!--render facet: 1006:0--><!--render facet: 1007:0--></li></ul></div><div class="buttonWrapper embeddedServiceSidebarForm" data-aura-rendered-by="917:0" data-aura-class="embeddedServiceSidebarForm"><button class="startButton uiButton--default uiButton embeddedServiceSidebarButton" aria-live="off" type="button" data-aura-rendered-by="921:0" data-aura-class="uiButton--default uiButton embeddedServiceSidebarButton"><!--render facet: 922:0--><span class=" label bBody" dir="ltr" data-aura-rendered-by="1008:0">Start Chat</span><!--render facet: 925:0--></button></div></div></div></div></div></div></div><embeddedservice-aria-live-announcer data-aura-rendered-by="583:0" embeddedservice-arialiveannouncer_arialiveannouncer-host=""><div embeddedservice-arialiveannouncer_arialiveannouncer="" aria-live="polite" aria-atomic="true" class="accessibleText"><pre embeddedservice-arialiveannouncer_arialiveannouncer="">Live chat:</pre></div><div embeddedservice-arialiveannouncer_arialiveannouncer="" aria-live="polite" aria-atomic="true" class="accessibleText"><pre embeddedservice-arialiveannouncer_arialiveannouncer=""></pre></div></embeddedservice-aria-live-announcer></div>
+
+
 		<!-- chat E adding -->
 		<span class="scrollToTop t_bold" style="display: inline-block;"></span>
 		<!-- Cookie S -->
@@ -2348,7 +2424,7 @@
 					<!-- Content Container E -->
 					</div>
 				</div>
-			</div>   
+			</div>  
 		</div>
 		<!-- privacypolicy_popup_contents Pop E -->
 	
