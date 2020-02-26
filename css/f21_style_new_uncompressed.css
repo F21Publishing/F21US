@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 02/12/2020 - Version 1
+  * Forever21 Common v1.1.1 02/25/2020 - Version 1
   * Copyright Forever21
   * Created by Namhee
 */
@@ -1549,10 +1549,13 @@ html {
   .bg_light_gray {
     background: #f4f4f4 !important
   }
+
+  .bg_top_gray {
+    background: #f9f9f9
+  }
   
   .bg_pink {
     background: #A02755
-    /*background: #ef5f96*/
   }
   
   .bg_gray {
@@ -5144,7 +5147,6 @@ html {
         float: left;
         margin-bottom: 0
     }
-  
     .btn_checkout {
         display: block;
         width: 100%;
@@ -5535,12 +5537,12 @@ html {
         top: 80px;
         height: fit-content;
         z-index: 999999;
-        padding: 20px; !important
+        padding: 20px !important
     }
     /* Top Bar 09/02/19, Added by Eve */
     .left_slide input{
         height: 30px;
-        border: 0!important;
+        border: 0 !important;
         width: 90%;
         position: relative;
     }  
@@ -5571,7 +5573,6 @@ html {
      }
   }
   
-
   /* ========================================== */
   /* New HP Kicker's copy sizings.  11/01/2018  */
   /*============================================*/
@@ -5592,9 +5593,16 @@ html {
     .sm_font {
         font-size: 90% !important;
     }
+    /* 20200224 */
+    .checkout #quickview_slide.r_container .p_left  {
+        width: 100% !important;
+    }
+    .checkout #quickview_slide .p_right {
+        width: 100% !important;
+        padding:20px 0px 0px 0px !important;
+    }
   }
-  
-  
+
   /* ======================================== */
   /*  New HP Respoisve for Desktop 11/01/2018 */
   /*==========================================*/
@@ -6116,37 +6124,37 @@ html {
         width: auto
     }
   
-        .nav_c ul {
-            width: auto;
-            text-align: left
+    .nav_c ul {
+        width: auto;
+        text-align: left
+    }
+
+    .nav_c li {
+        padding: 0;
+        border-bottom: 0
+    }
+
+    .nav_c > div {
+        width: auto
+    }
+
+    .nav_c dl {
+        display: table-cell;
+        text-align: left
+    }
+
+    .nav_c ul {
+        padding: 0 3em;
+        float: left
+    }
+
+        .nav_c ul:last-child {
+            padding-right: 0
         }
-  
-        .nav_c li {
-            padding: 0;
-            border-bottom: 0
-        }
-  
-        .nav_c > div {
-            width: auto
-        }
-  
-        .nav_c dl {
-            display: table-cell;
-            text-align: left
-        }
-  
-        .nav_c ul {
-            padding: 0 3em;
-            float: left
-        }
-  
-            .nav_c ul:last-child {
-                padding-right: 0
-            }
-  
-        .nav_c a:hover {
-            color: #777
-        }
+
+    .nav_c a:hover {
+        color: #777
+    }
   
     div[clas^="side_"] {
         padding: 10px 0
@@ -6221,10 +6229,10 @@ html {
         box-shadow: 0 0 0 0 rgba(0,0,0,0)
     }
   
-        .side_menu li, .side_left_menu li {
-            font-size: .9em;
-            line-height: 2.2em
-        }
+    .side_menu li, .side_left_menu li {
+        font-size: .9em;
+        line-height: 2.2em
+    }
   
     .side_content .p_grid .pi_container {
         width: 33.33%;
@@ -6232,17 +6240,17 @@ html {
         margin-bottom: 1.5em
     }
   
-        .side_content .p_grid .pi_container:nth-child(2n+1) {
-            clear: none
-        }
-  
-        .side_content .p_grid .pi_container:nth-child(3n+1) {
-            clear: left
-        }
-  
-        .side_content .p_grid .pi_container:nth-child(2n+1), .side_content .p_grid .pi_container:nth-child(2n+2) {
-            padding: 0px
-        }
+    .side_content .p_grid .pi_container:nth-child(2n+1) {
+        clear: none
+    }
+
+    .side_content .p_grid .pi_container:nth-child(3n+1) {
+        clear: left
+    }
+
+    .side_content .p_grid .pi_container:nth-child(2n+1), .side_content .p_grid .pi_container:nth-child(2n+2) {
+        padding: 0px
+    }
   
     .side_content .p_grid .pi_wrapper {
         padding: 0 10px
@@ -6308,13 +6316,13 @@ html {
         text-decoration: none
     }
   
-        .checkout_btn.outline_pink, .checkout_btn.outline_yellow.outline_pink {
-            border: 1px solid #ef5f96 !important
-        }
-  
-        .checkout_btn.outline_yellow {
-            border: 1px solid #ffd800 !important
-        }
+    .checkout_btn.outline_pink, .checkout_btn.outline_yellow.outline_pink {
+        border: 1px solid #ef5f96 !important
+    }
+
+    .checkout_btn.outline_yellow {
+        border: 1px solid #ffd800 !important
+    }
   
     .checkout .p_right, .checkout .p_left {
         padding: 0;
@@ -6349,20 +6357,24 @@ html {
         top: 33px
     }
   
-        .checkout .drop_c dd, .set_item .drop_c dd {
-            border-bottom: 1px dotted #ddd;
-            padding: 0;
-            cursor: pointer
-        }
+    .checkout .drop_c dd, .set_item .drop_c dd {
+        border-bottom: 1px dotted #ddd;
+        padding: 0;
+        cursor: pointer
+    }
   
-            .checkout .drop_c dd:last-child, .set_item .drop_c dd:last-child {
-                border-bottom: 0
-            }
-  
-            .checkout .drop_c dd:hover, .set_item .drop_c dd:hover {
-                color: #ef5f96
-            }
-  
+    .checkout .drop_c dd:last-child, .set_item .drop_c dd:last-child {
+        border-bottom: 0
+    }
+
+    .checkout .drop_c dd:hover, .set_item .drop_c dd:hover {
+        color: #ef5f96
+    }
+    /* 20200224 */
+    .checkout #quickview_slide.r_container .p_left,.checkout #quickview_slide .p_right  {
+      padding-top:20px !important
+    }
+
     .drop_c dd .item_soldout, .checkout #SelectOptionTitle, .checkout #SelectOptionTitle:hover {
         cursor: not-allowed;
         color: initial

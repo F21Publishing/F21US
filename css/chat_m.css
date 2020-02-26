@@ -1,0 +1,270 @@
+/* Forever21 Chat v1.1.1 02/25/2020 - Version 1 by Namhee */
+/*
+.embeddedServiceHelpButton .helpButton .uiButton {
+	padding-left:40px;
+	font-size:0px;
+	font-family:"Arial";
+	background: url("https://f21scpart-customercommunity.cs18.force.com/resource/1579698012000/AskAStylistButton?") no-repeat 0 1px;
+	
+}	
+
+.embeddedServiceHelpButton .helpButton .uiButton:focus {
+	display:none;
+}
+
+.embeddedServiceSidebarMinimizedDefaultUI.helpButton {
+	padding-left:50px;
+	font-size:0px;
+	font-family:"Arial";
+	font-size:0px;
+	background: url("https://f21scpart-customercommunity.cs18.force.com/resource/1579698012000/AskAStylistButton?") no-repeat 0 1px;
+}
+
+.embeddedServiceHelpButton .helpButton .uiButton.helpButtonDisabled {
+	display: none; 
+}
+*/
+.embeddedServiceSidebarMinimizedDefaultUI{
+	font-size:0px;
+	background-color:black;
+	padding-left:50px;
+	background: url("https://f21scpart-customercommunity.cs18.force.com/resource/1579698012000/AskAStylistButton?") no-repeat 0 1px;
+}
+/*
+.embeddedServiceHelpButton .helpButton .helpButtonEnabled:hover::before, .embeddedServiceHelpButton .helpButton .helpButtonEnabled:focus::before{
+	font-size:0px;
+	background: url("https://f21scpart-customercommunity.cs18.force.com/resource/1579698012000/AskAStylistButton?") no-repeat 0 1px;
+}
+*/
+.embeddedServiceSidebarMinimizedDefaultUI:not(:disabled):hover{
+	background: url("https://f21scpart-customercommunity.cs18.force.com/resource/1579698012000/AskAStylistButton?") no-repeat 0 1px;
+}
+
+#snapins_invite { 
+	background-color: #FFFFFF; 
+	font-family: "Arial", sans-serif; 
+	/*overflow: visible;*/
+	border-radius: 8px; 
+	visibility: hidden; 
+}
+/*
+.embeddedServiceInvitation { 
+	background-color: transparent; 
+	max-width: 290px; 
+	max-height: 210px; 
+	-webkit-box-shadow: 0 7px 12px rgba(0,0,0,0.28); 
+	-moz-box-shadow: 0 7px 12px rgba(0,0,0,0.28); 
+	box-shadow: 0 7px 12px rgba(0,0,0,0.28); 
+}
+*/
+/*mobile*/ 
+/*
+@media only screen and (min-width: 48em) { 
+	.embeddedServiceInvitation { 
+		max-width: 332px; max-height: 210px; 
+	} 
+}
+*/
+/*
+.embeddedServiceInvitation > .embeddedServiceInvitationHeader { 
+	width: inherit; 
+	height: 54px; 
+	line-height: 32px; 
+	padding: 10px; 
+	color: #FFFFFF; 
+	background-color: #222222; 
+	overflow: initial; 
+	display: flex; 
+	justify-content: space-between; 
+	align-items: stretch; 
+	border-top-left-radius: 8px; 
+	border-top-right-radius: 8px; 
+}
+.embeddedServiceInvitationHeader #embeddedServiceAvatar { 
+	width: 32px; 
+	height: 32px; 
+	border-radius: 50%; 
+}
+.embeddedServiceInvitationHeader .embeddedServiceTitleText { 
+	font-size: 18px; 
+	color: #FFFFFF; 
+	overflow: hidden; 
+	word-wrap: normal; 
+	white-space: nowrap; 
+	text-overflow: ellipsis; 
+	align-self: stretch; 
+	flex-grow: 1; 
+	max-width: 100%; 
+	margin: 0 12px; 
+}
+.embeddedServiceInvitationHeader .embeddedServiceCloseIcon { 
+	border: none; 
+	border-radius: 3px; 
+	cursor: pointer; 
+	position: relative; 
+	bottom: 3%; 
+	width: 32px; 
+	height: 32px; 
+	font-size: 23px;
+	background-color: #FFFFFF; 
+	color: #005290;
+	padding: 0px !important; }
+.embeddedServiceInvitationHeader .embeddedServiceCloseIcon:focus { 
+	outline: none; 
+}
+.embeddedServiceInvitationHeader .embeddedServiceCloseIcon:focus::before { 
+	content: " "; 
+	position: absolute; 
+	top: 11%; 
+	left: 7%; 
+	width: 85%; 
+	height: 85%; 
+	background-color: rgba(255, 255, 255, 0.2); 
+	border-radius: 4px; 
+	pointer-events: none; 
+}
+.embeddedServiceInvitationHeader .embeddedServiceCloseIcon:active, .embeddedServiceCloseIcon:hover { 
+	background-color: #FFFFFF; 
+	color: rgba(0,0,0,0.7); 
+	opacity: 0.7; 
+}
+.embeddedServiceInvitation > .embeddedServiceInvitationBody { 
+	background-color: #FFFFFF; 
+	max-height: 110px; 
+	min-width: 260px; 
+	margin: 0 8px; 
+	font-size: 14px; 
+	line-height: 20px; 
+	overflow: auto; 
+}
+.embeddedServiceInvitationBody p { 
+	color: #333333; 
+	padding: 8px; 
+	margin: 12px 0; 
+}
+.embeddedServiceInvitation > .embeddedServiceInvitationFooter { 
+	width: inherit; 
+	color: #FFFFFF; 
+	text-align: right; 
+	background-color: #FFFFFF; 
+	padding: 10px; 
+	max-height: 50px; 
+	border-bottom-left-radius: 8px; 
+	border-bottom-right-radius: 8px; 
+}
+.embeddedServiceInvitationFooter > .embeddedServiceActionButton { 
+	font-size: 14px; 
+	max-height: 40px; 
+	border: none; 
+	border-radius: 4px; 
+	padding: 10px; 
+	margin: 4px; 
+	text-align: center; 
+	text-decoration: none; 
+	display: inline-block; 
+	cursor: pointer; 
+}
+.embeddedServiceInvitationFooter > #acceptInvite { 
+	background-color: #FFFFFF; 
+	color: #005290;  
+}
+.embeddedServiceInvitationFooter > #rejectInvite { 
+	background-color: #FFFFFF; 
+	color: #005290; 
+}*/
+/* adding */
+/*
+.embeddedServiceInvitation button {
+	letter-spacing: 0px
+}*/
+/*
+.embeddedServiceHelpButton .helpButton .uiButton {
+	box-shadow:0 0 0 0 rgba(0, 0, 0, 0.5);
+	border-radius: 0px !important
+}
+.embeddedServiceHelpButton .uiButton, .embeddedServiceSidebarMinimizedDefaultUI.minimizedContainer:focus {
+	background-color: transparent
+}
+.embeddedServiceSidebarMinimizedDefaultUI.helpButton{
+	box-shadow:0 0 0 0 rgba(0, 0, 0, 0.5);
+}
+.embeddedServiceHelpButton .helpButton, .embeddedServiceHelpButton .helpButton .uiButton ,.embeddedServiceSidebarMinimizedDefaultUI ,.embeddedServiceSidebarMinimizedDefaultUI:not(:disabled):hover {
+	height: 50px !important;
+}
+*/
+/* input box */
+.embeddedServiceSidebarForm .fieldList {
+    margin: 0px !important;
+    padding: 0px 16px !important
+}
+.fieldList label {
+	position: absolute;
+    top: 31px;
+    left: 10px;
+    letter-spacing: .8px !important;
+    z-index: 3;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding-right: 9px;
+    color: #595959 !important;
+    font-size: .65em !important;
+    -webkit-transition: -webkit-transform 125ms cubic-bezier(0.645,0.045,0.355,1);
+	cursor: initial;
+	background: #fff;
+	font-weight: 500;
+	text-transform: uppercase;
+	/*clear: left;
+	padding: 0;
+	transition: transform 125ms cubic-bezier(0.645,0.045,0.355,1);*/
+}
+.fieldList label.focus {
+	top:8px	
+}
+.fieldList .required {
+	background: #fff;
+}
+.embeddedServiceSidebarFormField .slds-style-inputtext { 
+	z-index:2
+}
+.embeddedServiceSidebarFormField.inputSplitName {
+	width: 100% !important;
+	display:block !important;
+}
+.embeddedServiceSidebarFormField.inputSplitName span {
+	display:inline !important;
+}
+.embeddedServiceSidebarFormField .uiInput--input {
+	margin-bottom: -6px !important
+}
+.embeddedServiceSidebarFormField .split-field-container {
+	margin-bottom: 0px !important
+}
+.embeddedServiceSidebarButton {
+	text-transform: uppercase;
+	background: linear-gradient(to bottom,rgba(76,76,76,1) 0,rgba(89,89,89,1) 12%,rgba(87,87,87,1) 22%,rgba(71,71,71,1) 35%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 60%,rgba(17,17,17,1) 72%,rgba(28,28,28,1) 91%,rgba(0,0,0,1) 100%)!important;
+}
+.embeddedServiceSidebarButton .label {    
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-family: inherit; 
+	color: #eee;   
+	/*padding: .95em!important; */
+	font-size: .8em!important;
+}
+/*
+.embeddedServiceHelpButton .helpButton {
+	bottom: 6em !important;
+}
+*/
+.embeddedServiceSidebar.modalContainer {
+	z-index: 99999999 !important;	
+}
+.embeddedServiceInvitationFooter > .embeddedServiceActionButton {
+	margin:0px !important;
+}
+
+.embeddedServiceSidebarForm .embeddedServiceSidebarFormField {
+	margin-left :0 !important;
+}
