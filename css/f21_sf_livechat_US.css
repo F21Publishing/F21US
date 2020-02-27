@@ -1,4 +1,4 @@
-/* Forever21 Chat v1.1.1 02/25/2020 - Version 1 by Namhee */
+/* Forever21 Chat v1.1.1 02/27/2020 - Version 1 by Namhee */
 
 .embeddedServiceHelpButton .helpButton .uiButton {
 	padding-left:40px;
@@ -6,10 +6,11 @@
 	font-family:"Arial";
 	background: url("https://f21scpart-customercommunity.cs18.force.com/resource/1579698012000/AskAStylistButton?") no-repeat 0 1px;
 	
-}	
+}
+/*	
 .embeddedServiceHelpButton .helpButton .uiButton:focus {
 	display:none;
-}
+}*/
 .embeddedServiceSidebarMinimizedDefaultUI.helpButton {
 	padding-left:50px;
 	font-size:0px;
@@ -257,9 +258,10 @@
 .embeddedServiceSidebarForm .embeddedServiceSidebarFormField {
 	margin-left :0 !important;
 }
-/*test*/
+/*test
 .embeddedServiceHelpButton .helpButton, .embeddedServiceHelpButton .helpButton .uiButton, .embeddedServiceSidebarMinimizedDefaultUI, .embeddedServiceSidebarMinimizedDefaultUI:not(:disabled):hover {
 	width:50px;
 	height:50px;
 	background: url("https://f21scpart-customercommunity.cs18.force.com/resource/1579698012000/AskAStylistButton?") no-repeat 0 1px;
 }
+*/
