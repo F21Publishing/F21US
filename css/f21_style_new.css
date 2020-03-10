@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 02/25/2020 - Version 1
+  * Forever21 Common v1.1.1 03/10/2020 - Version 1
   * Copyright Forever21
   * Created by Namhee
 */
@@ -2958,7 +2958,7 @@ html {
   }
   
   .pi_wrapper .swatch {
-    padding: 10px 0 0 0
+    padding: 0 0 10px 0
   }
     /* Added 4/19/2018 */
     .pi_wrapper .swatch li {

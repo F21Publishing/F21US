@@ -85,38 +85,36 @@
 					});
 				});
 				
-		</script>
-		<style>
-			.popup_fixed {
-				position:fixed;
-				overflow:hidden
-			}
-		</style>		
+		</script>	
+		<!-- 20200303 scroll 제거 S -->
 		<script>
 
 		$(function() {
+
+			var windowWidth = $( window ).width();	
 			
-			var windowWidth = $( window ).width();
+			$('.embeddedServiceHelpButton .helpButton .uiButton').on("click", function () {				
+				if(windowWidth < 768) {
+					$("body").css({position:"fixed",overflow:"hidden"})
+				}
+			});	
+
+
+			//alert("a");
 			if(windowWidth < 768) {
-			$('.helpButton button').on("click", function () {
-				alert("a");
-				
-					alert("c")
-					$("body").css({'position':'fixed','overflow':'hidden'});
+				$(window).resize(function (){
+					$("body").removeAttr("style");
+			
 				});
-			} 
+				
+			}	
+				
 		
 
-			$(window).on('resize load', function(e) { // desktop display
-				alert("b");
-				if (windowWidth > 768) {	
-					alert("d");
-					$("body").css({'position':'','overflow':'visibile'});
-				}
-			});
 		});
 
 		</script>
+		<!-- 20200303 scroll 제거 E -->
 
 		<!-- customer input S -->
 		<div style="display:none" class="modalContainer sidebarMaximized layout-docked embeddedServiceSidebar" data-aura-rendered-by="567:0" data-aura-class="embeddedServiceSidebar"><!--render facet: 796:0--><button class="sidebarHeader minimizedContainer helpButton embeddedServiceSidebarMinimizedDefaultUI" tabindex="0" data-aura-rendered-by="798:0" data-aura-class="embeddedServiceSidebarMinimizedDefaultUI"><span id="chatButtonAssistiveText" data-aura-rendered-by="799:0">Expand the chat</span><div class="content" data-aura-rendered-by="801:0"><div class="messageContent" data-aura-rendered-by="802:0"><span class="help x-small embeddedServiceIcon" aria-hidden="true" role="presentation" data-aura-rendered-by="807:0" data-aura-class="embeddedServiceIcon"><!--render facet: 808:0--><!--render facet: 809:0--><!--render facet: 810:0--><svg focusable="false" aria-hidden="true" data-key="chat" viewBox="0 0 100 100" class="icon">
@@ -143,7 +141,9 @@
 		<path d="M56.923 45.962h29.615c1.924 0 2.5-2.116.962-3.654l-9.423-9.616 17.308-17.5c.96-.96.96-2.692 0-3.654L88.27 4.423c-.962-.77-2.5-.77-3.655.192L67.308 21.923 57.5 12.5c-1.538-1.538-3.654-.962-3.654.962v29.615c0 1.346 1.73 2.885 3.077 2.885zm-13.846 7.884H13.462c-1.924 0-2.5 2.116-.962 3.654l9.423 9.615-17.308 17.5c-.96.962-.96 2.693 0 3.654l7.116 7.115c.962.96 2.5.96 3.655 0l17.5-17.5 9.807 9.423c1.346 1.73 3.462 1.154 3.462-.77V57.115c0-1.346-1.73-3.27-3.077-3.27z"></path>
 		</svg></span></button><!--unrender facet: 45:0--><h2 class="headerText" aria-hidden="false" data-aura-rendered-by="55:0"><div class="headerTextContent" data-aura-rendered-by="57:0"><span id="headerTextLabel" data-aura-rendered-by="58:0">Forever 21 Chat</span><span id="headerSubtext" data-aura-rendered-by="60:0"></span></div></h2><button class="closeButton headerItem" tabindex="0" data-aura-rendered-by="62:0"><span class="assistiveText" data-aura-rendered-by="63:0">Close dialog</span><span class="x-small embeddedServiceIcon" aria-hidden="true" role="presentation" data-aura-rendered-by="67:0" data-aura-class="embeddedServiceIcon"><!--render facet: 68:0--><!--render facet: 69:0--><!--render facet: 70:0--><svg focusable="false" aria-hidden="true" data-key="close" viewBox="0 0 100 100" class="icon">
 		<path d="M65.577 53.73l27.5-27.71c1.27-1.27 1.27-3.174 0-4.445l-4.23-4.44c-1.272-1.27-3.175-1.27-4.445 0L56.694 44.847c-.847.845-2.115.845-2.96 0L26.018 16.922c-1.27-1.27-3.174-1.27-4.445 0l-4.44 4.442c-1.27 1.27-1.27 3.174 0 4.444l27.71 27.71c.846.846.846 2.116 0 2.962L16.923 84.403c-1.27 1.27-1.27 3.174 0 4.444l4.442 4.442c1.27 1.268 3.174 1.268 4.444 0l27.71-27.713c.846-.847 2.116-.847 2.962 0L84.19 93.29c1.27 1.268 3.174 1.268 4.445 0l4.44-4.445c1.27-1.268 1.27-3.17 0-4.44l-27.5-27.712c-.847-.847-.847-2.115 0-2.96z"></path>
-		</svg></span></button></div></div><div class="extendedHeader invisibleWhileLoading" aria-hidden="true" data-aura-rendered-by="71:0"><!--unrender facet: 72:0--></div></div><div class="sidebarBody" data-aura-rendered-by="15:0"><div class="sidebarLoadingIndicator" data-aura-rendered-by="16:0"><span class="loadingBallContainer animated embeddedServiceLoadingBalls" aria-hidden="true" role="presentation" tabindex="-1" data-aura-rendered-by="19:0" data-aura-class="embeddedServiceLoadingBalls"><span class="loadingBall first" aria-hidden="true" role="presentation" data-aura-rendered-by="20:0"></span><span class="loadingBall second" aria-hidden="true" role="presentation" data-aura-rendered-by="21:0"></span><span class="loadingBall third" aria-hidden="true" role="presentation" data-aura-rendered-by="22:0"></span></span></div><div class="activeFeature hideWhileLoading" data-aura-rendered-by="23:0"><div class="featureBody embeddedServiceSidebarFeature" data-aura-rendered-by="231:0" data-aura-class="embeddedServiceSidebarFeature"><div class="stateBody embeddedServiceSidebarState embeddedServiceSidebarDialogState" data-aura-rendered-by="228:0" data-aura-class="embeddedServiceSidebarState embeddedServiceSidebarDialogState"><div class="dialogState" role="alert" data-aura-rendered-by="214:0"><div class="dialogTextContainer" data-aura-rendered-by="215:0"><!--render facet: 216:0--><h3 id="dialogTextTitle" data-aura-rendered-by="217:0">No agents are available.</h3><div aria-live="polite" id="dialogTextBody" data-aura-rendered-by="219:0"><div dir="ltr" data-aura-rendered-by="222:0" class="uiOutputRichText" data-aura-class="uiOutputRichText">We can't chat right now. Try again later.</div></div></div><div class="dialogButtonContainer" data-aura-rendered-by="224:0"><button class="dialogButton dialog-button-0 uiButton embeddedServiceSidebarButton" aria-live="off" type="button" data-aura-rendered-by="580:0" data-aura-class="uiButton embeddedServiceSidebarButton"><!--render facet: 581:0--><span class=" label bBody" dir="ltr" data-aura-rendered-by="583:0">Start a New Chat</span><!--render facet: 585:0--></button><button class="dialogButton dialog-button-1 uiButton embeddedServiceSidebarButton" aria-live="off" type="button" data-aura-rendered-by="589:0" data-aura-class="uiButton embeddedServiceSidebarButton"><!--render facet: 590:0--><span class=" label bBody" dir="ltr" data-aura-rendered-by="592:0">Leave Chat</span><!--render facet: 594:0--></button></div><!--render facet: 226:0--></div></div></div></div></div></div><embeddedservice-aria-live-announcer data-aura-rendered-by="25:0" embeddedservice-arialiveannouncer_arialiveannouncer-host=""><div embeddedservice-arialiveannouncer_arialiveannouncer="" aria-live="polite" aria-atomic="true" class="accessibleText"><pre embeddedservice-arialiveannouncer_arialiveannouncer="">Live chat:</pre></div><div embeddedservice-arialiveannouncer_arialiveannouncer="" aria-live="polite" aria-atomic="true" class="accessibleText"><pre embeddedservice-arialiveannouncer_arialiveannouncer="">Agents Offline</pre></div></embeddedservice-aria-live-announcer></div>
+		</svg></span></button></div></div><div class="extendedHeader invisibleWhileLoading" aria-hidden="true" data-aura-rendered-by="71:0"><!--unrender facet: 72:0--></div></div><div class="sidebarBody" data-aura-rendered-by="15:0"><div class="sidebarLoadingIndicator" data-aura-rendered-by="16:0"><span class="loadingBallContainer animated embeddedServiceLoadingBalls" aria-hidden="true" role="presentation" tabindex="-1" data-aura-rendered-by="19:0" data-aura-class="embeddedServiceLoadingBalls"><span class="loadingBall first" aria-hidden="true" role="presentation" data-aura-rendered-by="20:0"></span><span class="loadingBall second" aria-hidden="true" role="presentation" data-aura-rendered-by="21:0"></span><span class="loadingBall third" aria-hidden="true" role="presentation" data-aura-rendered-by="22:0"></span></span></div><div class="activeFeature hideWhileLoading" data-aura-rendered-by="23:0"><div class="featureBody embeddedServiceSidebarFeature" data-aura-rendered-by="231:0" data-aura-class="embeddedServiceSidebarFeature"><div class="stateBody embeddedServiceSidebarState embeddedServiceSidebarDialogState" data-aura-rendered-by="228:0" data-aura-class="embeddedServiceSidebarState embeddedServiceSidebarDialogState"><div class="dialogState" role="alert" data-aura-rendered-by="214:0"><div class="dialogTextContainer" data-aura-rendered-by="215:0"><!--render facet: 216:0--><h3 id="dialogTextTitle" data-aura-rendered-by="217:0">No agents are available.</h3><div aria-live="polite" id="dialogTextBody" data-aura-rendered-by="219:0"><div dir="ltr" data-aura-rendered-by="222:0" class="uiOutputRichText" data-aura-class="uiOutputRichText">We can't chat right now. Try again later.</div></div></div><div class="dialogButtonContainer" data-aura-rendered-by="224:0"><button class="dialogButton dialog-button-0 uiButton embeddedServiceSidebarButton" aria-live="off" type="button" data-aura-rendered-by="580:0" data-aura-class="uiButton embeddedServiceSidebarButton"><!--render facet: 581:0--><span class=" label bBody" dir="ltr" data-aura-rendered-by="583:0">Start a New Chat</span><!--render facet: 585:0--></button>
+		<button class="dialogButton dialog-button-1 uiButton embeddedServiceSidebarButton" aria-live="off" type="button" data-aura-rendered-by="589:0" data-aura-class="uiButton embeddedServiceSidebarButton"><!--render facet: 590:0--><span class=" label bBody" dir="ltr" data-aura-rendered-by="592:0">Leave Chat</span><!--render facet: 594:0--></button>
+		</div><!--render facet: 226:0--></div></div></div></div></div></div><embeddedservice-aria-live-announcer data-aura-rendered-by="25:0" embeddedservice-arialiveannouncer_arialiveannouncer-host=""><div embeddedservice-arialiveannouncer_arialiveannouncer="" aria-live="polite" aria-atomic="true" class="accessibleText"><pre embeddedservice-arialiveannouncer_arialiveannouncer="">Live chat:</pre></div><div embeddedservice-arialiveannouncer_arialiveannouncer="" aria-live="polite" aria-atomic="true" class="accessibleText"><pre embeddedservice-arialiveannouncer_arialiveannouncer="">Agents Offline</pre></div></embeddedservice-aria-live-announcer></div>
 		<!-- End E -->
 		
 		
@@ -703,7 +703,7 @@
 					</div>
 					<!-- Country / Help E -->
 					<!-- Top Scrolling Banner S -->
-					<div class="col_s_10_of_10 col_m_8_of_12 col_l_8_of_16 vm table sameline p_relative ">
+					<div class="col_s_10_of_10 col_m_12_of_12 col_l_8_of_16 vm table sameline p_relative ">
 						<span class="fc sameline col_s_10_of_10 col_m_9_of_12 col_l_13_of_16 p_relative clearfix vm">
 							<div id="tspbanner" class="owl-carousel owl-loaded pb_10 bg_top_gray">
 								<div class="owl-item pr_20 cloned fc">
@@ -1197,8 +1197,8 @@
 									<span class="col_l_3_of_16 fl t_small underline pt_5 vm t_normal"> 
 										<a data-modal-target="#homepage_disclaimer">Details</a> 
 									</span> 
-									<span class="col_l_3_of_16 fr t_bold underline pt_5 vm"> 
-										<a href="/us/shop/catalog/category/f21/women-new-arrivals">SHOW NOW</a> 
+									<span class="col_l_3_of_16 fr t_bold t_small underline pt_5 vm"> <!-- 20200306 -->
+										<a href="/us/shop/catalog/category/f21/women-new-arrivals">code: PREZ1234567</a> 
 									</span>
 									<div class="col_l_10_of_16 inline vm">
 										<p class="inline vm"> <a href="/us/shop/catalog/category/f21/women-new-arrivals">UP TO 70% OFF SALE ABCDEFGHIJ&nbsp;</a></p>
@@ -1251,7 +1251,8 @@
 									<span class="fc t_bold underline pt_10 vm pl_20"> 
 										<a href="/us/shop/catalog/category/f21/women-new-arrivals">SHOP NOW</a>
 									</span> 
-									<span class="fr t_small underline pt_10 vm"> <a data-modal-target="#homepage_disclaimer">Details</a> </span>
+									<span class="fr t_small underline pt_10 vm" style="padding-top:12px !important"> <!-- 20200306 -->
+									<a data-modal-target="#homepage_disclaimer">Details</a> </span>
 								</div>
 							</div>
 						</div>
