@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 03/10/2020 - Version 1
+  * Forever21 Common v1.1.1 03/12/2020 - Version 1
   * Copyright Forever21
   * Created by Namhee
 */
@@ -2958,12 +2958,13 @@ html {
   }
   
   .pi_wrapper .swatch {
-    padding: 0 0 10px 0
+    padding: 10px 0 0 0 
+
   }
-    /* Added 4/19/2018 */
-    .pi_wrapper .swatch li {
-        margin: 0 8px 5px 0
-    }
+	/* Added 4/19/2018 */
+	.pi_wrapper .swatch li {
+    margin:0 0 5px 0 
+	}
         /* Revised 4/19/2018 */
         .pi_wrapper .swatch li span {
             width: 28px;
@@ -2991,7 +2992,7 @@ html {
     }
   
         .swatch li:last-child {
-            margin: 0 0 5px 0
+            margin:0 0 5px 0
         }
   
         .swatch li img {
@@ -5330,7 +5331,14 @@ html {
         width: 200px!important;
     }
    }
-  
+
+  /* Test */
+  @media(min-device-width:320px) and (max-device-width:1024px) {
+    .swatch li.hide_mobile {
+        display:none !important;
+    }
+  }
+
   /* ============================== */
   /* Tablet Device Portrait Code    */
   /*================================*/
