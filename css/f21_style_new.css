@@ -2957,8 +2957,8 @@ html {
     text-decoration: underline
   }
   
-  .pi_wrapper .swatch {
-    padding: 10px 0 0 0 
+  .pi_wrapper .swatch { /* 20200312 */
+    padding: 0 0 10px 0;
 
   }
 	/* Added 4/19/2018 */
@@ -3072,6 +3072,11 @@ html {
     display: inline-block
   }
   
+  #cat_btn_wishlist { /*20200312*/
+    position:absolute; 
+    right:10px
+  }
+
   .breadcrumb {
     padding: 2px 0;
     color: #727272;
