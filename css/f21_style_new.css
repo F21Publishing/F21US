@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 03/12/2020 - Version 1
+  * Forever21 Common v1.1.1 04/20/2020 - Version 1
   * Copyright Forever21
   * Created by Namhee
 */
@@ -2469,7 +2469,9 @@ html {
     }
   
   .noscroll {
-    overflow: hidden
+    overflow: hidden;
+    position: relative;
+    height: 100%
   }
   
   /* Vertical and Horizontal Scroll 12/09/2019 Added By Eve */
