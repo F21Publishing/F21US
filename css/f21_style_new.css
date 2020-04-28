@@ -1,5 +1,5 @@
 /*
-  * Forever21 Common v1.1.1 04/22/2020 - Version 1
+  * Forever21 Common v1.1.1 03/12/2020 - Version 1
   * Copyright Forever21
   * Created by Namhee
 */
@@ -2464,7 +2464,7 @@ border-bottom: 1px solid #eee;
   }
 
   .second_menu li {
-      font-size: 90%
+      font-size: 90%;
       padding: 1em 0px 1em 60px; /* Top Bar 09/02/19, Added by Eve */
   }
 
@@ -9554,3 +9554,30 @@ padding: unset;
 .swim_tabbed {
   display: none;
 }
+
+html,body {
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+}
+.c_container {
+  overflow:auto !important;
+  height:100%;
+}
+
+.flex-modal-item {
+  overflow:hidden;
+}
+
+.flex-modal-item__content > div  {
+  overflow: auto;
+  position: fixed;
+  top: 50%; 
+  left: 50%; 
+  height: auto; 
+  -webkit-transform: translate(-50%,-50%); 
+  -moz-transform: translate(-50%,-50%); 
+  -ms-transform: translate(-50%,-50%); 
+  -o-transform: translate(-50%,-50%); 
+  transform: translate(-50%,-50%);
+ }

@@ -8,6 +8,15 @@ $(function(){
 		$("body, .c_container, .mobile_overlay, .l_container, .signup_wrapper").removeClass("open");
 	});
 
+	/* Mobile left Menu start  */
+	$(".icon_menu,.top_new_menu").on("click", function () {
+		$('.slider_close, .m_menu_cover, .container.clearfix.bg_white').removeClass('hide').addClass('show');
+		$('.l_container').addClass("open");
+		$('#left_menu').hide();
+		$("html").addClass('noscroll');
+		$('#ihKeyword, #txtBloomreachSearch').val('');
+	});
+
 	/* Test */
 	$(".inline .outline").on("click",function() {
 		$(".r_container").addClass("open");

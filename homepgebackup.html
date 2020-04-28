@@ -38,19 +38,6 @@
 				touch-action: auto;
 			}
 		</style>
-		<style>
-			.noscroll, .c_container, body {
-				height: 100%;
-				overflow: auto;
-				}
-			.l_container.open {
-				height: 100%;
-			}
-			.l_container.open > .container {
-				overflow: scroll;
-				height: 100%;
-			}
-		</style>
 
 		<!-- chat S adding-->
 		<div class="embeddedServiceHelpButton" style="display: block;">
@@ -98,18 +85,6 @@
 					});
 				});
 				
-				
-				$(function(){
-
-					/* Mobile left Menu start  */
-					$(".icon_menu,.top_new_menu").on("click", function () {
-						$('.slider_close, .m_menu_cover, .container.clearfix.bg_white').removeClass('hide').addClass('show');
-						$('.l_container').addClass("open");
-						$('#left_menu').hide();
-						$("html").addClass('noscroll');
-					});
-
-				});
 		</script>	
 		<!-- 20200303 scroll 제거 S -->
 		<script>
@@ -187,191 +162,424 @@
 			<div class="container clearfix bg_white t_futura_light show">
 				<!-- Mega Menu S -->
 				<nav id="NavParent" class="left_slide parent_wrapper show">
-					<!-- Search S -->
-					<div class="fc">
-						<span class="pa_20 pb_0 ws_100 fc">
-							<a cobrowse="viewonly" class="ae-button" data-ae-blurbtype="button" data-ae-form-field="true">
-								<div class="pt_20 pb_20 bb_gray t_gray ms">
-									<span onclick="fnSearch(); return false;" class="icon_search fl vm"></span>
-									<label onclick="javascript:openSearch(false, true); return false;" class="pl_10 t_mid_gray p_absolute p_high mobileleftsearch" id="search_placeholder_mobile">Product name, style or color</label>
-									<input class="mobileleftsearch" onclick="javascript:openSearch(false, true); return false;" id="txtBloomreachSearch" tabindex="1" type="text" name="q" autocomplete="off" onfocus="fnSearchKeyFocusOn(event)" onfocusout="fnSearchKeyFocusOutDesktop(event)" data-ae-blurbtype="input" data-ae-form-field="true">
-								</div>
-							</a>
-						</span>
-					</div>
-					<div class="search_exp fc mobilesearch">
-						<div class="ws_100 table fc">
-							<!-- Search Default S -->
-							<div class="clearfix table" style="display:block">
-								<!-- SYTE Camera Search S -->
-								<button href="javascript:void(0)" id="syte-trending-mobile" class="--syte-start-camera-upload ws_70 outline t_small mb_10" style="" data-camera-button-placement="trending-now-mobile-menu" cobrowse="viewonly">GALLERY SEARCH</button>
-								<!-- SYTE Camera Search E -->
-								<div id="trendingNow" class="vt col_s_10_of_10 col_m_8_of_12 m_pt_15">
-								</div>
-								<div id="recentSearches" class="vt col_s_10_of_10 col_m_8_of_12 m_pt_15" style="display: none;">
-								</div>
+					<!-- Pre Header S -->
+					<div class="nav_primary">
+						<div class="col_s_10_of_10 mobile_myaccount">
+							<!-- Sign In S -->
+							<div class="col_ss_10_of_10 col_s_5_of_10 br_gray pa_10 txl bb_gray">
+								<span id="ddlSignin" class="m_expand_p">
+									<span class="top_new_account_black fc vm ma_0"></span>
+									<span class="p_relative"><span id="m_left_userarea" class="pl_5 m_left arrow_down max_string">Hello, <b>Sign In</b></span></span>
+								</span>
 							</div>
-							<!-- Search Default E -->
-							<!-- Search Suggestion S -->
-							<div class="clearfix table search_suggestion" style="display:none">
-		
-							<div class="vt col_s_10_of_10 col_m_4_of_12 col_l_4_of_16"></div><div class="vt col_s_10_of_10 col_m_4_of_12 col_l_4_of_16"></div></div>
-							<!-- Search Suggestion E -->
-							<!-- Search Suggestion S -->
-							<div class="clearfix table" style="display:none">
-								<div class="vt col_s_10_of_10 col_m_4_of_12">
-									<ul class="category-suggest"></ul>
-								</div>
-								<div class="vt col_s_10_of_10 col_m_8_of_12 m_pt_15 ">
-									<ul class="category-suggest"></ul>
-								</div>
+							<!-- Sign In E -->
+							<!-- Country Selection US S -->
+							<div class="col_ss_10_of_10 col_s_5_of_10 txl pa_10 bb_gray">
+									<span id="ddlCountryTitle_single" class="m_expand_p">
+										<a href="#">
+											<span class="flag_us vm fc"></span>
+											<span class="p_relative"><span class="pl_5 m_left arrow_down">United States</span></span>
+										</a>
+									</span>
 							</div>
-							<!-- Search Suggestion E -->
+							<!-- Country Selection US S -->
 						</div>
+						<!-- My Account Dropdown S -->
+						<div id="ddlMyAccount" class="col_s_10_of_10 bg_white m_expand_c bt_gray t_futura_light">
+							<div class="col_s_10_of_10">
+								<ul>
+									<li><a class="block" href="/us/shop/account/profile">My Profile</a></li>
+									<li><a class="block" href="/us/shop/account/orderhistory">My Orders</a></li>
+									<li><a class="block" href="/us/shop/account/addressbook">Address Book</a></li>
+									<li><a class="block" href="/us/shop/account/wallet">Wallet</a></li>
+									<li><a class="block" href="javascript:fnLogOut();">Sign Out</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- My Account Dropdown E -->
+						<!-- Country US Dropdown S -->
+						<div id="ddlCountryList" class="col_s_10_of_10 bg_white m_expand_c bt_gray t_futura_light">
+							<div class="col_s_10_of_10">
+								<ul>
+									<li><a href="#"><span class="flag_ca vm fc"></span><span class="pl_5">Canada</span></a></li>
+									<li><a href="#"><span class="flag_mx vm fc"></span><span class="pl_5">Mexico</span></a></li>
+									<li><a href="#"><span class="flag_eu vm fc"></span><span class="pl_5">Europe</span></a></li>
+									<li><a href="#"><span class="flag_uk vm fc"></span><span class="pl_5">United Kingdom</span></a></li>
+									<li><a href="#"><span class="flag_jp vm fc"></span><span class="pl_5">Japan</span></a></li>
+									<li><a href="#"><span class="flag_kr vm fc"></span><span class="pl_5">Korea</span></a></li>
+									<li><a href="#"><span class="flag_cn vm fc"></span><span class="pl_5">China</span></a></li>
+									<li><a href="#"><span class="flag_au vm fc"></span><span class="pl_5">Australia</span></a></li>
+									<li><a href="#"><span class="flag_nz vm fc"></span><span class="pl_5">New Zealand</span></a></li>
+									<li><a href="#"><span class="flag_hk vm fc"></span><span class="pl_5">Asia Pacific</span></a></li>
+									<li><a href="#"><span class="flag_in vm fc"></span><span class="pl_5">India</span></a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Country US Dropdown E -->
 					</div>
-					<!-- Search E -->
+					<!-- Pre Header E -->
 					<!-- First Menu S -->
-					
-					<div class="ws_100 pr_20 pl_20 clearfix">
-						<div class="mega_menu active first_menu"><span id="Parent_app-main" data-child="NavChild_app-main">WOMEN + ACC</span></div>
-						<div class="mega_menu active first_menu"><span id="Parent_mens-main" data-child="NavChild_mens-main">MEN</span></div>
-						<div class="mega_menu active first_menu"><span id="Parent_plus_size-main" data-child="NavChild_plus_size-main">PLUS + CURVE</span></div>
-						<div class="mega_menu active first_menu"><span id="Parent_girls_main" data-child="NavChild_girls_main">GIRLS</span></div>
-						<div class="mega_menu active first_menu"><span id="Parent_beauty_main" data-child="NavChild_beauty_main">BEAUTY BY <img src="/us/shop/_common/images/rr.png" style="width:80px; height:13px;"></span></div>
-						<div class="mega_menu active first_menu"><span id="Parent_sale" data-child="NavChild_sale">SALE</span></div>
+					<div class="ws_100 clearfix">
+						<div class="mega_menu active first_menu t_bold"><span id="Parent_app-main" data-child="NavChild_app-main">WOMEN</span></div>
+						<div class="mega_menu active first_menu t_bold"><span id="Parent_acc" data-child="NavChild_acc">ACCESSORIES</span></div>
+						<div class="mega_menu active first_menu t_bold"><span id="Parent_plus_size-main" data-child="NavChild_plus_size-main">PLUS + CURVE</span></div>
+						<div class="mega_menu active first_menu t_bold"><span id="Parent_mens-main" data-child="NavChild_mens-main">MEN</span></div>
+						<div class="mega_menu active first_menu t_bold"><span id="Parent_girls_main" data-child="NavChild_girls_main">GIRLS</span></div>
+						<div class="mega_menu active first_menu t_bold"><span id="Parent_sale" data-child="NavChild_sale">SALE</span></div>
 					</div>
 					<!-- First Menu S -->
 					<!-- Second Menu S -->
-					<div class="ws_100 pr_20 clearfix">
+					<div class="ws_100 clearfix">
 						<div class="mega_menu second_menu no_sub">
 							<span>
-								<span class="top_new_account vm ma_0"></span>
-								<span class="p_relative vm">
-									<span id="userfName" class="pl_10">Sign In</span>
-								</span>
+								<div class="clearfix">
+									<span class="t_bold fl">News &amp; Event</span><!-- 20180828-->
+									<span class="underline fr"><a href="news_room.html"> + もっと見る </a></span>
+								</div>
+								<div class="pt_10">- <a href="news_room.html">台風20号の影響による店舗の営業時間変更のお知らせ</a></div>
+								<div>- <a href="news_room.html">FOREVER 21公式アプリ リニューアルメンテナンスにともなうサービス一時停止のご案内</a></div>
 							</span>
-						</div>
-						<div class="mega_menu second_menu">
+							<!--
 							<span>
-								<span class="icon_help vm"></span>
-								<span class="p_relative vm">
-									<span class="pl_20">Help</span>
-								</span>
-							</span>
-							<div class="mega_sub" style="display:none">
+							<span class="t_bold">News &amp; Event</span>
+							<a href="/shop/info/newsroom"><span class="underline" style="float:right"> + もっと見る </span></a>
+                            <span>- <a href="/shop/info/newsroom/965">台風20号の影響による店舗の営業時間変更のお知らせ</a></span>
+                            <span>- <a href="/shop/info/newsroom/963">FOREVER 21公式アプリ リニューアルメンテナンスにともなうサービス一時停止のご案内</a></span>
+                    		</span>
+							-->
+						</div>
+						<div class="mega_menu second_menu active">
+							<span>Help</span>
+							<div class="mega_sub bg_light_gray">
 								<div class="col_s_10_of_10">
 									<ul>
-										<li><a class="block" href="/us/shop/account/trackorder">Track Order</a></li>
-										<li><a class="block" href="/us/shop/info/shippinginfo">Shipping Info</a></li>
-										
-										<li><a class="block" href="/us/shop/info/returnsinfo">Online Returns &amp; Exchanges</a></li>
-										<li><a class="block" href="/us/shop/info/storereturnsinfo">Store Return &amp; Exchange</a></li>
-										<li><a class="block" href="/us/shop/info/faq">FAQ</a></li>
-										
-										<li><a class="block" href="/us/shop/info/contactus">Contact Us</a></li>
-										<li><a class="block" href="/us/shop/info/privacypolicy">Privacy Center</a></li>
-										
+										<li><a class="block" href="faq.html">ご利用ガイド</a></li>
+										<li><a class="block" href="qna.html">総合Q&amp;A</a></li>
+										<li><a class="block" href="shipping_info.html">配送・返品について</a></li>
+										<li><a class="block" href="contactus.html">お問い合わせ</a></li>
+										<li><a class="block" href="size_guide_jp.html">サイズガイド</a></li>
 									</ul>
 								</div>
-								<!-- BoldChat Live Chat Button HTML v5.00 (Type=HTML,ChatWindow=United States,Department=Bots,Website=Wiki) -->
-								
-								<!-- BoldChat Live Chat Button HTML v5.00 -->
+							</div>
+						</div>
+						<div class="mega_menu second_menu">
+							<span>Company info</span>
+							<div class="mega_sub bg_light_gray">
+								<div class="col_s_10_of_10">
+									<ul>
+										<li><a class="block" href="aboutus.html">会社概要</a></li>
+										<li><a class="block" href="careers.html">採用情報</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 						<div class="mega_menu second_menu no_sub">
-							<span>
-								<span class="flag_us vm" style="background-image: url('http://gepi.global-e.com/content/images/flags/kr.png'); background-position: left center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: cover !important; width: 22px; height: 14px; visibility: visible;"></span>
-								<span class="p_relative vm">
-									<span class="pl_10">Korea (South)</span>
-								</span>
-							</span>
-						</div>
-						<!-- Language Dropdown S -->
-						<div id="divMobileLangSelection" class="mega_menu second_menu">
-							<span>
-								<span class="vm"></span>
-								<span class="p_relative vm">
-									<!-- 20200428 S -->
-									<span class="icon_language vm"></span>
-									<span class="pl_10 pt_5">English</span>
-									<!-- 20200428 E -->
-								</span>
-							</span>
-							<div class="mega_sub" style="display:none">
-								<div class="col_s_10_of_10">
-									<ul>
-											<li><a href="javascript:fnChangeLanguage('en-US');" class="block">English</a></li>
-											<li><a href="javascript:fnChangeLanguage('es-MX');" class="block">Español</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- Language Dropdown E -->
-						<div class="mega_menu second_menu">
-							<span>
-								<span class="icon_more vm"></span>
-								<span class="p_relative vm">
-									<span class="pl_20">More</span>
-								</span>
-							</span>
-							<div class="mega_sub" style="display:none">
-								<div class="col_s_10_of_10">
-									<ul>
-										<li><a class="block" href="/us/shop/info/aboutus">About Us</a></li>
-										<li><a class="block" href="/us/shop/info/findstore">Find a Store</a></li>
-										<li><a class="block" href="/us/shop/info/careers">Careers</a></li>
-										<li><a class="block" href="/us/shop/info/cardbenefit">Forever 21 Credit Card Benefits</a></li>
-										<li><a class="block" href="/us/shop/catalog/giftcard">Gift Cards</a></li>
-										<li><a class="block" href="/us/shop/info/specialoffers">Special Offers</a></li>
-									</ul>
-									<!-- App Icon S -->
-									<div class="txc pt_10 pb_10">
-										<span class="pr_5">
-											<a href="https://go.onelink.me/app/MobileWebiOSAppLink" target="_blank" alt="Open in App Store" data-aesra-score="linkTextContent:0.9;linkNewWindowWarning:1;">
-												<span class="fa_ios"></span>
-												<span class="ae-compliance-indent ae-reader-visible" style="display: none;">Open in App Store</span>
-												<span data-ae-pem-ignore="true" style="display: none;" class="ae-compliance-indent ae-new-window"> Opens a New Window. </span>
-											</a>
-										</span>
-										<span class="pl_5">
-											<a href="https://go.onelink.me/app/MobileWebAppLinkAndroid" target="_blank" alt="Open in Google Play" data-aesra-score="linkTextContent:0.9;linkNewWindowWarning:1;">
-												<span class="fa_android"></span>
-												<span class="ae-compliance-indent ae-reader-visible" style="display: none;">Open in Google Play</span>
-												<span data-ae-pem-ignore="true" style="display: none;" class="ae-compliance-indent ae-new-window"> Opens a New Window. </span>
-											</a>
-										</span>
-									</div>
-									<!-- App Icon E -->
-								</div>
-							</div>
-						</div>
-						<div class="pa_5 second_menu">
-							<span class="sm_font pl_5" style="color: #707070!important; padding-top: 3px;padding-bottom: 3px;"><a href="/us/shop/info/privacypolicy"> Privacy Policy</a></span>
-							<span class="sm_font pl_5" style="color: #707070!important; padding-top: 3px;padding-bottom: 3px;"><a href="/us/shop/info/optout">Do Not Sell My Info</a></span>
-							<span class="sm_font pl_5" style="color: #707070!important; padding-top: 3px;padding-bottom: 3px;"><a id="ycpp" href="/us/shop/info/privacypolicy#ccpa">Your California Privacy Rights</a></span>
-							<script>
-								$(document).ready(function () {
-									if (location.href.indexOf('/privacypolicy') > -1) {
-										$('#ycpp').on('click', function () {
-											$('button.slider_close').trigger('click');
-											if (!$('#ccpa > .expand_p').hasClass('active')) {
-												$('#ccpa > .expand_p').trigger('click');
-											}
-										});
-									}
-								});
-							</script>
-							<span class="sm_font pl_5" style="color: #707070!important; padding-top: 3px;padding-bottom: 3px;"><a href="/us/shop/info/socialresponsibility/casupplychains">CA Transparency in Supply Chains Act</a></span>
-							<span class="sm_font pl_5" style="color: #707070!important; padding-top: 3px;padding-bottom: 3px;"><a href="/us/shop/info/terms">Terms of Use</a></span>
-							<span class="sm_font pl_5" style="color: #707070!important; padding-top: 3px;padding-bottom: 3px;"><a href="/us/shop/info/webaccessibilitystatement">Web Accessibility Statement</a></span>
+							<span><a class="block" href="find_store.html">Find a Store</a></span>
 						</div>
 					</div>
 					<!-- Second Menu E -->
-					<!-- App Icon S -->
-					
-					<!-- App Icon E -->
 				</nav>
 				<!-- Mega Menu S -->
+				<!-- Mega Submenu S -->
+				<nav class="left_slide child_wrapper hide">
+					<div class="ws_100 clearfix">
+						<div class="ws_100 clearfix pa_20 go_back txc"><h3>WOMEN</h3></div>
+						<div id="menuCarousel_app-main"></div>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY CATEGORY</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">New In</a></li>
+									<li><a href="#" class="block">Best Sellers</a></li>
+									<li><a href="#" class="block">Back In Stock</a></li>
+									<li><a href="#" class="block">Dresses</a></li>
+									<li><a href="#" class="block">Sets</a></li>
+									<li><a href="#" class="block">Jumpsuits + Rompers</a></li>
+									<li><a href="#" class="block">Skirts</a></li>
+									<li><a href="#" class="block">Tops</a></li>
+									<li><a href="#" class="block">Swimwear</a></li>
+									<li><a href="#" class="block">Graphic Tees</a></li>
+									<li><a href="#" class="block">Hoodies + Sweatshirts</a></li>
+									<li><a href="#" class="block">Sweaters + Cardigans</a></li>
+									<li><a href="#" class="block">Jackets + Outerwear</a></li>
+									<li><a href="#" class="block">Pants + Shorts</a></li>
+									<li><a href="#" class="block">Denim</a></li>
+									<li><a href="#" class="block">Intimates + Sleepwear</a></li>
+									<li><a href="#" class="block">Activewear</a></li>
+									<li><a href="#" class="block">Shoes</a></li>
+									<li><a href="#" class="block">Accessories</a></li>
+									<li><a href="#" class="block">Gift Cards</a></li>
+									<li><a href="#" class="block">Style Deals</a></li>
+									<li><a href="#" class="block">The Basics Shop</a></li>
+									<li><a href="#" class="block">Coming Soon</a></li>
+									<li><a href="#" class="block">The Outlet</a></li>
+									<li><a href="#" class="block">Sale</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP WHAT'S HOT</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix bb_gray fix_img_big">
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180427/whatshot_brands.png"></span><p class="pt_5">Brands</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180720/WhatsHot-Women-DENIMSHOP-THUMB.png"></span><p class="pt_5">Denim</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180710/Women_BTS.png"></span><p class="pt_5">BTS Preview</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180714/WhatsHot-Women-workwear.png"></span><p class="pt_5">Business Casual</p></a></div>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY OCCASION</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix fix_img_small">
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Vacation</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180427/Occasion_Women_vacation.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Formal</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180427/Occasion_Women_prom.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Going Out</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180427/Occasion_Women_goingout.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Wedding</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180427/Occasion_Women_WEDDING.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Contemporary</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/women/20180710/Occasion_Women_contemporary.png"></span></a></div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</nav>
+				<nav class="left_slide child_wrapper hide">
+					<div class="ws_100 clearfix">
+						<div class="ws_100 clearfix pa_20 go_back txc"><h3>ACCESSORIES</h3></div>
+						<div id="menuCarousel_acc"></div>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY CATEGORY</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">New In</a></li>
+									<li><a href="#" class="block">Back In Stock</a></li>
+									<li><a href="#" class="block">Jewelry</a></li>
+									<li><a href="#" class="block">Shoes</a></li>
+									<li><a href="#" class="block">Bags + Backpacks</a></li>
+									<li><a href="#" class="block">Caps + Hats</a></li>
+									<li><a href="#" class="block">Belts</a></li>
+									<li><a href="#" class="block">Socks + Tights</a></li>
+									<li><a href="#" class="block">Scarves + Gloves</a></li>
+									<li><a href="#" class="block">Sunglasses + Readers</a></li>
+									<li><a href="#" class="block">Hair Accessories</a></li>
+									<li><a href="#" class="block">Beauty</a></li>
+									<li><a href="#" class="block">Home + Tech</a></li>
+									<li><a href="#" class="block">Gift Cards</a></li>
+									<li><a href="#" class="block">Style Deals</a></li>
+									<li><a href="#" class="block">Coming Soon</a></li>
+									<li><a href="#" class="block">Sale</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP WHAT'S HOT</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix bb_gray fix_img_big">
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/acc/20180427/whatshot_bestsellers.png"></span><p class="pt_5">Best Sellers</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/acc/20180427/whatshot_styledeals.png"></span><p class="pt_5">Style Deals</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/acc/20180427/whatshot_trendingnow.png"></span><p class="pt_5">Festival Gear</p></a></div>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY FEATURE</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix fix_img_small">
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Vacation</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/acc/20180427/occasion_vacation.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Hair Accessories</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/acc/20180427/occasion_hairaccessories.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">500 Under $5</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/acc/20180427/occasion_500under5.png"></span></a></div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</nav>
+				<nav class="left_slide child_wrapper hide">
+					<div class="ws_100 clearfix">
+						<div class="ws_100 clearfix pa_20 go_back txc"><h3>PLUS + CURVE</h3></div>
+						<div id="menuCarousel_plus_size-main"></div>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY CATEGORY</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">New In</a></li>
+									<li><a href="#" class="block">Back In Stock</a></li>
+									<li><a href="#" class="block">Dresses</a></li>
+									<li><a href="#" class="block">Sets</a></li>
+									<li><a href="#" class="block">Jumpsuits + Rompers</a></li>
+									<li><a href="#" class="block">Skirts</a></li>
+									<li><a href="#" class="block">Tops</a></li>
+									<li><a href="#" class="block">Graphic Tees</a></li>
+									<li><a href="#" class="block">Hoodies + Sweatshirts</a></li>
+									<li><a href="#" class="block">Sweaters + Cardigans</a></li>
+									<li><a href="#" class="block">Jackets + Outerwear</a></li>
+									<li><a href="#" class="block">Pants + Shorts</a></li>
+									<li><a href="#" class="block">Denim</a></li>
+									<li><a href="#" class="block">Intimates + Sleepwear</a></li>
+									<li><a href="#" class="block">Activewear</a></li>
+									<li><a href="#" class="block">Swimwear</a></li>
+									<li><a href="#" class="block">Gift Cards</a></li>
+									<li><a href="#" class="block">Style Deals</a></li>
+									<li><a href="#" class="block">Coming Soon</a></li>
+									<li><a href="#" class="block">Sale</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP WHAT'S HOT</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix bb_gray fix_img_big">
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/whatshot_bestsellers.png"></span><p class="pt_5">Best Sellers</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/whatshot_brands.png"></span><p class="pt_5">Brands</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180720/WhatsHot-Plus-DENIMSHOP-THUMB.png"></span><p class="pt_5">Denim</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/whatshot_comtemporary.png"></span><p class="pt_5">Contemporary</p></a></div>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY OCCASION</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix fix_img_small">
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Vacation </span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/occasion_swim.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Everyday</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/occasion_festival.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Going Out</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/occasion_goingout.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Wedding</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/occasion_wedding.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="#"><span class="fl hp_midtitle pa_10 t_bold">Gifts</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/plus/20180427/occasion_gifts.png"></span></a></div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</nav>
+				<nav class="left_slide child_wrapper hide">
+					<div class="ws_100 clearfix">
+						<div class="ws_100 clearfix pa_20 go_back txc"><h3>MEN</h3></div>
+						<div id="menuCarousel_mens-main"></div>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY CATEGORY</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">New In</a></li>
+									<li><a href="#" class="block">Back In Stock</a></li>
+									<li><a href="#" class="block">Tees + Tanks</a></li>
+									<li><a href="#" class="block">Shirts</a></li>
+									<li><a href="#" class="block">Polos</a></li>
+									<li><a href="#" class="block">Tops</a></li>
+									<li><a href="#" class="block">Graphic Tees</a></li>
+									<li><a href="#" class="block">Hoodies + Sweatshirts</a></li>
+									<li><a href="#" class="block">Sweaters</a></li>
+									<li><a href="#" class="block">Jackets + Coats</a></li>
+									<li><a href="#" class="block">Pants</a></li>
+									<li><a href="#" class="block">Shorts</a></li>
+									<li><a href="#" class="block">Jeans</a></li>
+									<li><a href="#" class="block">Swimwear</a></li>
+									<li><a href="#" class="block">Accessories</a></li>
+									<li><a href="#" class="block">Shoes</a></li>
+									<li><a href="#" class="block">Socks + Underwear</a></li>
+									<li><a href="#" class="block">Style Deals</a></li>
+									<li><a href="#" class="block">Coming Soon</a></li>
+									<li><a href="#" class="block">Gift Card</a></li>
+									<li><a href="#" class="block">Sale</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP WHAT'S HOT</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix bb_gray fix_img_big">
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180427/whatshot_bestsellers.png"></span><p class="pt_5">Best Sellers</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180517/whatshot-brands.png"></span><p class="pt_5">Brands</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180720/WhatsHot-Men-DENIMSHOP-THUMB.png"></span><p class="pt_5">Denim</p></a></div>
+									<div><a href="#"><span class="auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180517/whatshot-dealsunder10.png"></span><p class="pt_5">Deals Under $10</p></a></div>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY OCCASION</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<div class="ws_100 row_2 pa_20 t_small txc clearfix fix_img_small">
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="/us/shop/catalog/category/21men/promo-mens-resort-woven-knit-tops-chino-joggers"><span class="fl hp_midtitle pa_10 t_bold">Vacation</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180427/occasion_vacation.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="/us/shop/catalog/category/21men/promo-mens-basic-tees-shirts-pants"><span class="fl hp_midtitle pa_10 t_bold">Basic</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180427/occasion_basic.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="/us/shop/catalog/category/21men/promo-mens-workwear"><span class="fl hp_midtitle pa_10 t_bold">Workwear</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180427/occasion_workwear.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="/us/shop/catalog/category/21men/promo-mens-sport-athletic"><span class="fl hp_midtitle pa_10 t_bold">Sport</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180427/occasion_sport.png"></span></a></div>
+									<div class="ws_100 pa_10 clearfix bg_m_gray t_bold mb_10"><a href="/us/shop/catalog/category/21men/mens-accessories"><span class="fl hp_midtitle pa_10 t_bold">Gifts</span><span class="fr auto"><img src="https://www.forever21.com/images/f21/us/nav/men/20180427/occasion_gifts.png"></span></a></div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</nav>
+				<nav class="left_slide child_wrapper hide">
+					<div class="ws_100 clearfix">
+						<div class="ws_100 clearfix pa_20 go_back txc"><h3>GIRLS</h3></div>
+						<div id="menuCarousel_girls_main"></div>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY CATEGORY</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">New Arrivals</a></li>
+									<li><a href="#" class="block">Dresses</a></li>
+									<li><a href="#" class="block">Tops</a></li>
+									<li><a href="#" class="block">Bodysuits</a></li>
+									<li><a href="#" class="block">Graphic Tees</a></li>
+									<li><a href="#" class="block">Sweaters</a></li>
+									<li><a href="#" class="block">Sweatshirts + Hoodies</a></li>
+									<li><a href="#" class="block">Jackets + Outerwear</a></li>
+									<li><a href="#" class="block">Pants + Shorts</a></li>
+									<li><a href="#" class="block">Jeans</a></li>
+									<li><a href="#" class="block">Swimwear</a></li>
+									<li><a href="#" class="block">Sleepwear</a></li>
+									<li><a href="#" class="block">Shoes</a></li>
+									<li><a href="#" class="block">Accessories</a></li>
+									<li><a href="#" class="block">Sale</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP WHAT'S HOT</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">GIRLS UNIFORM</a></li>
+									<li><a href="#" class="block">DRESSES UNDER $20</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</nav>
+				<nav class="left_slide child_wrapper hide">
+					<div class="ws_100 clearfix">
+						<div class="ws_100 clearfix pa_20 go_back txc"><h3>SALE</h3></div>
+						<div id="menuCarousel_sale"></div>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP BY CATEGORY</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">New To Sale</a></li>
+									<li><a href="#" class="block">Women</a></li>
+									<li><a href="#" class="block">Plus</a></li>
+									<li><a href="#" class="block">Men</a></li>
+									<li><a href="#" class="block">Girls</a></li>
+									<li><a href="#" class="block">Accessories</a></li>
+									<li><a href="#" class="block">Shoes</a></li>
+									<li><a href="#" class="block">Beauty</a></li>
+									<li><a href="#" class="block">Home + Tech</a></li>
+									<li><a href="#" class="block">Swimwear</a></li>
+									<li><a href="#" class="block">Activewear</a></li>
+									<li><a href="#" class="block">Intimates + Sleepwear</a></li>
+									<li><a href="#" class="block">Under $5</a></li>
+									<li><a href="#" class="block">Under $10</a></li>
+									<li><a href="#" class="block">Under $15</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dd class="bg_light_gray bb_gray expand_p active"><span class="pl_10 t_mid ls_2x">SHOP WHAT'S HOT</span></dd>
+							<dd class="expand_c" style="display: block; ">
+								<ul>
+									<li><a href="#" class="block">New to Sale</a></li>
+									<li><a href="#" class="block">Last Chance</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</nav>
+				<!-- Mega Submenu E -->
 			</div>
 		</div>
 		<div class="m_menu_cover hide"></div>
@@ -456,41 +664,17 @@
 					</div>
 					<!-- Accessibility Button for Desktop E -->
 					<!-- Country / Help S -->
-					<div class="hide_tablecell_mobile hide_tablecell_tablet col_l_5_of_16 table sameline fr vm"><!-- 20200428 language(0):col_l_5_of_16 /language(x):col_l_3_of_16 -->
+					<div class="hide_tablecell_mobile hide_tablecell_tablet col_l_3_of_16 table sameline fr vm">
 						<!-- Country Selector S -->
 						<div class="table sameline fr">
 							<div class="vm hide_tablecell_mobile show_tablecell_tablet top_bar hover_p" style="visibility: visible;">
-								<span class="pt_10"><!-- 20200428 -->
-									<span class="top_new_flag_us" style="background-image: url('http://gepi.global-e.com/content/images/flags/us.png'); background-position: left center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: cover !important; width: 22px; height: 14px;"></span>
+								<span class="pl_10 pt_10">
+									<span class="top_new_flag_us" style="background-image: url(&quot;//gepi.global-e.com/content/images/flags/us.png&quot;); background-position: left center; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-size: cover !important; width: 22px; height: 14px;"></span>
 									<span class="t_small pl_5 pb_5 pr_5 vm">United States</span>
 								</span>
 							</div>
 						</div>
 						<!-- Country Selector E -->
-						<!-- Language Selection S 20200428-->
-						<div id="divHeaderLangSelection" class="table sameline fr">
-							<div class="vm hide_tablecell_mobile show_tablecell_tablet top_bar hover_p">
-								<span class="pl_10 pt_5">
-									<span class="icon_language vm"></span><!-- 20200428 -->
-									<span class="t_small pl_5 pt_5 pr_5 vm">English</span>
-								</span>
-								<div class="help_hover hover_c t_black t_small">
-									<!-- Language List S -->
-									<div class="ls_1px">
-										<dl>
-												<dd class="pa_5">
-													<a href="javascript:fnChangeLanguage('en-US');" tabindex="0">English</a>
-												</dd>
-												<dd class="pa_5">
-													<a href="javascript:fnChangeLanguage('es-MX');" tabindex="0">Español</a>
-												</dd>
-										</dl>
-									</div>
-									<!-- Language List E -->
-								</div>
-							</div>
-						</div>
-						<!-- Language Selection E 20200427-->
 						<!-- here -->
 						<!-- Help Menu S -->
 						<div class="table sameline fr">
@@ -519,7 +703,7 @@
 					</div>
 					<!-- Country / Help E -->
 					<!-- Top Scrolling Banner S -->
-					<div class="col_s_10_of_10 col_m_12_of_12 col_l_6_of_16 vm table sameline p_relative "><!-- 20200428 language(0):col_l_6_of_16/language(x):col_l_8_of_16 -->
+					<div class="col_s_10_of_10 col_m_12_of_12 col_l_8_of_16 vm table sameline p_relative ">
 						<span class="fc sameline col_s_10_of_10 col_m_9_of_12 col_l_13_of_16 p_relative clearfix vm">
 							<div id="tspbanner" class="owl-carousel owl-loaded pb_10 bg_top_gray">
 								<div class="owl-item pr_20 cloned fc">
@@ -610,9 +794,6 @@
 							<!-- Pre Header S -->
 							<div class="table sameline col_s_10_of_10 col_m_12_of_12 col_l_16_of_16 pt_15 pb_10">
 								<!-- Hamburger Menu S -->
-								<style>
-									.top_new_menu {border:1px solid black}
-								</style>
 								<div class="vm p_relative show_tablecell_mobile show_tablecell_tablet pl_10">
 									<span class="top_new_menu"></span>
 								</div>
