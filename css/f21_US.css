@@ -233,18 +233,6 @@ text-align: center;
   height: 20px!important
 }
 
-.icon_pickup {
-  background: url("../images/icon_pickup.png") no-repeat center left;
-  width: 150px!important;
-  height: 50px!important;
-}
-
-.icon_pickup_check {
-  background: url("../images/icon_pickup_check.png") no-repeat center left;
-  width: 146px!important;
-  height: 40px!important
-}
-
 /*span[class^="btn_"] {
 background: url(/us/shop/_common/images/icon_round_check.png) no-repeat;
 width: 25px;
